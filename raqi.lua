@@ -123,7 +123,7 @@ Source dev yousef
 ]]..'\27[m'.."\n\27[35mServer Information ↬ ⤈ \n------------ Y●L ------------ ≈ ┉ ≈ ┉\27[m\n\27[36m~ \27[mUser \27[36m: \27[10;32m"..User.."\27[m\n\27[36m~ \27[mIp \27[36m: \27[10;32m"..Ip.."\27[m\n\27[36m~ \27[mName \27[36m: \27[10;32m"..Name.."\27[m\n\27[36m~ \27[mPort \27[36m: \27[10;32m"..Port.."\27[m\n\27[36m~ \27[mUpTime \27[36m: \27[10;32m"..UpTime.."\27[m\n\27[35m------------ Y●L ------------ ≈ ┉ ≈ ┉\27[m")
 Config = dofile("./config.lua")
 DevId = Config.DevId
-SudoIds = {Config.SudoIds,218385683,1432584666}
+SudoIds = {Config.SudoIds,874820580,1432584666}
 raqi = Config.raqi
 TokenBot = Config.TokenBot
 NameBot = (DevAbs:get(raqi..'Abs:NameBot') or 'dev-yousef 🇸🇦')
