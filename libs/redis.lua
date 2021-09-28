@@ -220,8 +220,8 @@ print("\27[36m"..[[
 |   |____/ \___| \_/ |_|   |_|  \___/_/\_\  |
 |-------------------------------------------|
 |This Source Was Developed By (ABS) @IQ_ABS.|
-|  This Is The Source Channel @Dev_Prox .   |
-|               - DevProx -                 |
+|  This Is The قناة البوت @yousef_labban .   |
+|               - yousef_labban -                 |
 ---------------------------------------------
 ]]..'\27[m')
 Config = dofile("config.lua")
