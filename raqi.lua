@@ -7461,7 +7461,7 @@ local user_msgs = DevAbs:get(raqi..'Abs:UsersMsgs'..msg.chat_id_..':'..msg.sende
 local user_nkt = tonumber(DevAbs:get(raqi..'Abs:GamesNumber'..msg.chat_id_..msg.sender_user_id_) or 0)
 local cont = (tonumber(DevAbs:get(raqi..'Abs:ContactNumber'..msg.chat_id_..':'..msg.sender_user_id_)) or 0)
 local msguser = tonumber(DevAbs:get(raqi..'Abs:UsersMsgs'..msg.chat_id_..':'..msg.sender_user_id_))
-local Texting = {"مو صورة ظيم بالنبي ،🤤💞","مقتنع بصورتك !؟ 😹🖤","ملاك وناسيك بقروبنه ،🤤💞","وفالله ،🤤💞","كشخه برب ،😉🤍","لزكت بيها دغيرها عاد ،😒😕","صورتك مامرتاحلها ،🙄😶","حلغوم والله ،🥺💘","مو صورة غنبله براسها ٦٠ حظ ،😹🤍"}
+local Texting = {"مو صورة تجنن ،🤤💞","يا حلاتك !؟ 😹🖤","ملاك وناسيك بمجموعتنا ،🤤💞","عسل ،🤤💞","كشيخة ،😉🤍","طالع قمر ،😒😕","هذي صورتك ،🙄😶","بدر البدور ،🥺💘","أنت وردة ،😹🤍"}
 local Description = Texting[math.random(#Texting)]
 if abbas.photos_[0] then
 if not DevAbs:get(raqi..'Abs:Lock:Id'..msg.chat_id_) then 
