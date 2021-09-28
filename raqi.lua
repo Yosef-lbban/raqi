@@ -1331,7 +1331,7 @@ local Text = [[
 🇸🇦︙قفل• فتح -› الطائفيه
 🇸🇦︙قفل• فتح -› الكل
 🇸🇦︙قفل• فتح -› العربية
-🇸🇦︙قفل• فتح -› الانكليزيه
+🇸🇦︙قفل• فتح -› الانجليزية
 🇸🇦︙قفل• فتح -› الفارسية
 🇸🇦︙قفل• فتح -› التفليش
 🇸🇦︙قفل• فتح -› امسح
@@ -4250,7 +4250,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1,[[
 🇸🇦︙لعبة السمايلات -› سمايلات
 🇸🇦︙لعبة المحيبس -› المحيبس
 🇸🇦︙لعبة الرياضيات -› رياضيات
-🇸🇦︙لعبة الانكليزيه -› انكليزيه
+🇸🇦︙لعبة الانجليزية -› انكليزيه
 ------------ Y●L ------------
 🇸🇦︙نقاطي • بيع نقاطي
 ------------ Y●L ------------
@@ -8252,12 +8252,12 @@ else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙العربية بالفعل مقفله في المجموعة', 1, 'md')
 end
 end
-if LockText[2] == "الانكليزيه" then
+if LockText[2] == "الانجليزية" then
 if not DevAbs:get(raqi..'Abs:Lock:English'..msg.chat_id_) then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم قفلالانكليزيه")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم قفلالانجليزية")  
 DevAbs:set(raqi..'Abs:Lock:English'..msg.chat_id_,true)
 else
-Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙الانكليزيه بالفعل مقفله في المجموعة', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙الانجليزية بالفعل مقفله في المجموعة', 1, 'md')
 end
 end
 if LockText[2] == "الملصقات" then
@@ -8442,12 +8442,12 @@ else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙العربية بالفعل مفتوحه في المجموعة', 1, 'md')
 end
 end
-if UnLockText[2] == "الانكليزيه" then
+if UnLockText[2] == "الانجليزية" then
 if DevAbs:get(raqi..'Abs:Lock:English'..msg.chat_id_) then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم فتح الانكليزيه")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم فتح الانجليزية")  
 DevAbs:del(raqi..'Abs:Lock:English'..msg.chat_id_)
 else
-Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙الانكليزيه بالفعل مفتوحه في المجموعة', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙الانجليزية بالفعل مفتوحه في المجموعة', 1, 'md')
 end
 end
 if UnLockText[2] == "الاشعارات" then
@@ -8913,7 +8913,7 @@ local TXTE = "🇸🇦︙اعدادات المجموعة -› ⤈\n------------ 
 .."🇸🇦︙الكفر -› "..lock_kaf.."\n"
 .."🇸🇦︙الطائفيه -› "..lock_taf.."\n"
 .."🇸🇦︙العربية -› "..lock_arabic.."\n"
-.."🇸🇦︙الانكليزيه -› "..lock_english.."\n"
+.."🇸🇦︙الانجليزية -› "..lock_english.."\n"
 .."🇸🇦︙الفارسية -› "..lock_farsi.."\n"
 .."🇸🇦︙التكرار -› "..flood.."\n"
 .."🇸🇦︙عدد التكرار -› "..Flood_Num.."\n"
@@ -9256,7 +9256,7 @@ if text == "الدخول" then if DevAbs:get(raqi..'Abs:Lock:Join'..msg.chat_id_
 if text == "الشبكات" then if DevAbs:get(raqi..'Abs:Lock:WebLinks'..msg.chat_id_) then lock_wp = 'مقفوله' else lock_wp = 'مفتوحه' end local devyousef = "\n" .."🇸🇦︙الشبكات -› "..lock_wp.."\n" Dev_Abs(msg.chat_id_, msg.id_, 1, devyousef, 1, 'md') end
 if text == "المواقع" then if DevAbs:get(raqi..'Abs:Lock:Location'..msg.chat_id_) then lock_location = 'مقفوله' else lock_location = 'مفتوحه' end local devyousef = "\n" .."🇸🇦︙المواقع -› "..lock_location.."\n" Dev_Abs(msg.chat_id_, msg.id_, 1, devyousef, 1, 'md') end
 if text == "العربية" then if DevAbs:get(raqi..'Abs:Lock:Arabic'..msg.chat_id_) then lock_arabic = 'مقفوله' else lock_arabic = 'مفتوحه' end local devyousef = "\n" .."🇸🇦︙العربية -› "..lock_arabic.."\n" Dev_Abs(msg.chat_id_, msg.id_, 1, devyousef, 1, 'md') end
-if text == "الانكليزيه" then if DevAbs:get(raqi..'Abs:Lock:English'..msg.chat_id_) then lock_english = 'مقفوله' else lock_english = 'مفتوحه' end local devyousef = "\n" .."🇸🇦︙الانكليزيه -› "..lock_english.."\n" Dev_Abs(msg.chat_id_, msg.id_, 1, devyousef, 1, 'md') end
+if text == "الانجليزية" then if DevAbs:get(raqi..'Abs:Lock:English'..msg.chat_id_) then lock_english = 'مقفوله' else lock_english = 'مفتوحه' end local devyousef = "\n" .."🇸🇦︙الانجليزية -› "..lock_english.."\n" Dev_Abs(msg.chat_id_, msg.id_, 1, devyousef, 1, 'md') end
 if text == "الكفر" then if DevAbs:get(raqi..'Abs:Lock:Kfr'..msg.chat_id_) then lock_kaf = 'مفتوح' else lock_kaf = 'مقفل' end local devyousef = "\n" .."🇸🇦︙الكفر -› "..lock_kaf.."\n" Dev_Abs(msg.chat_id_, msg.id_, 1, devyousef, 1, 'md') end
 if text == "السب" then if DevAbs:get(raqi..'Abs:Lock:Fshar'..msg.chat_id_) then lock_fshar = 'مفتوح' else lock_fshar = 'مقفل' end local devyousef = "\n" .."🇸🇦︙السب -› "..lock_fshar.."\n" Dev_Abs(msg.chat_id_, msg.id_, 1, devyousef, 1, 'md') end
 if text == "الطائفيه" then if DevAbs:get(raqi..'Abs:Lock:Taf'..msg.chat_id_) then lock_taf = 'مفتوحه' else lock_taf = 'مقفله' end local devyousef = "\n" .."🇸🇦︙الطائفيه -› "..lock_taf.."\n" Dev_Abs(msg.chat_id_, msg.id_, 1, devyousef, 1, 'md') end
@@ -10402,7 +10402,7 @@ local Text = [[
 🇸🇦︙قفل• فتح -› الطائفيه
 🇸🇦︙قفل• فتح -› الكل
 🇸🇦︙قفل• فتح -› العربية
-🇸🇦︙قفل• فتح -› الانكليزيه
+🇸🇦︙قفل• فتح -› الانجليزية
 🇸🇦︙قفل• فتح -› الفارسية
 🇸🇦︙قفل• فتح -› التفليش
 🇸🇦︙قفل• فتح -› امسح
