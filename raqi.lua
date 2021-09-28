@@ -458,7 +458,7 @@ print('( تم وضع ترحيب المجموعات )')
 end
 end
 end
-send(chat,msg.id_,"⌔︙تم رفع النسخه بنجاح \n⌔︙تم تفعيل جميع المجموعات \n⌔︙تم استرجاع مشرفين المجموعات \n⌔︙تم استرجاع اوامر القفل والفتح في جميع مجموعات البوت ")
+send(chat,msg.id_,"⌔︙تم رفع النسخه بنجاح \n⌔︙تم تفعيل جميع المجموعات \n⌔︙تم استرجاع مشرفين المجموعات \n⌔︙تم استرجاع اوامر القفللوالفتح في جميع مجموعات البوت ")
 end
 --     Source dev yousef     --
 function resolve_username(username,cb)
@@ -1302,45 +1302,45 @@ local Help = DevAbs:get(raqi..'Abs:Help1')
 local Text = [[
 ⌔︙اوامر حماية المجموعة -› ⤈
 ━─━─━─ Y⌔L ─━─━─━
-⌔︙قفل • فتح -› الروابط
-⌔︙قفل • فتح -› المعرفات
-⌔︙قفل • فتح -› البوتات
-⌔︙قفل • فتح -› المتحركة
-⌔︙قفل • فتح -› الملصقات
-⌔︙قفل • فتح -› الملفات
-⌔︙قفل • فتح -› الصور
-⌔︙قفل • فتح -› الفيديو
-⌔︙قفل • فتح -› الاونلاين
-⌔︙قفل • فتح -› الدردشة
-⌔︙قفل • فتح -› التوجيه
-⌔︙قفل • فتح -› الاغاني
-⌔︙قفل • فتح -› الصوت
-⌔︙قفل • فتح -› الجهات
-⌔︙قفل • فتح -› الماركداون
-⌔︙قفل • فتح -› التكرار
-⌔︙قفل • فتح -› الهاشتاك
-⌔︙قفل • فتح -› التعديل
-⌔︙قفل • فتح -› التثبيت
-⌔︙قفل • فتح -› الاشعارات
-⌔︙قفل • فتح -› المنشورات
-⌔︙قفل • فتح -› الدخول
-⌔︙قفل • فتح -› الشبكات
-⌔︙قفل • فتح -› المواقع
-⌔︙قفل • فتح -› السب
-⌔︙قفل • فتح -› الكفر
-⌔︙قفل • فتح -› الطائفيه
-⌔︙قفل • فتح -› الكل
-⌔︙قفل • فتح -› العربيه
-⌔︙قفل • فتح -› الانكليزيه
-⌔︙قفل • فتح -› الفارسية
-⌔︙قفل • فتح -› التفليش
-⌔︙قفل • فتح -› امسح
+⌔︙قفلل• فتح -› الروابط
+⌔︙قفلل• فتح -› المعرفات
+⌔︙قفلل• فتح -› البوتات
+⌔︙قفلل• فتح -› المتحركة
+⌔︙قفلل• فتح -› الملصقات
+⌔︙قفلل• فتح -› الملفات
+⌔︙قفلل• فتح -› الصور
+⌔︙قفلل• فتح -› الفيديو
+⌔︙قفلل• فتح -› الاونلاين
+⌔︙قفلل• فتح -› الدردشة
+⌔︙قفلل• فتح -› التوجيه
+⌔︙قفلل• فتح -› الاغاني
+⌔︙قفلل• فتح -› الصوت
+⌔︙قفلل• فتح -› الجهات
+⌔︙قفلل• فتح -› الماركداون
+⌔︙قفلل• فتح -› التكرار
+⌔︙قفلل• فتح -› الهاشتاك
+⌔︙قفلل• فتح -› التعديل
+⌔︙قفلل• فتح -› التثبيت
+⌔︙قفلل• فتح -› الاشعارات
+⌔︙قفلل• فتح -› المنشورات
+⌔︙قفلل• فتح -› الدخول
+⌔︙قفلل• فتح -› الشبكات
+⌔︙قفلل• فتح -› المواقع
+⌔︙قفلل• فتح -› السب
+⌔︙قفلل• فتح -› الكفر
+⌔︙قفلل• فتح -› الطائفيه
+⌔︙قفلل• فتح -› الكل
+⌔︙قفلل• فتح -› العربيه
+⌔︙قفلل• فتح -› الانكليزيه
+⌔︙قفلل• فتح -› الفارسية
+⌔︙قفلل• فتح -› التفليش
+⌔︙قفلل• فتح -› امسح
 ⌔︙تعطيل • تفعيل -› امسح
 ⌔︙تعطيل • تفعيل -› الحذف التقائي
 ━─━─━─ Y⌔L ─━─━─━
 ⌔︙اوامر حماية اخرى -› ⤈
 ━─━─━─ Y⌔L ─━─━─━
-⌔︙قفل • فتح + الامر -› ⤈
+⌔︙قفلل• فتح + الامر -› ⤈
 ⌔︙التكرار بالطرد
 ⌔︙التكرار بالكتم
 ⌔︙التكرار بالتقيد
@@ -7581,27 +7581,27 @@ end
 --     Source dev yousef     --
 if ChatType == 'sp' or ChatType == 'gp'  then
 if Admin(msg) then
-if text and text:match("^قفل (.*)$") then
+if text and text:match("^قفلل(.*)$") then
 local LockText = {string.match(text, "^(قفل) (.*)$")}
 if LockText[2] == "التعديل" then
 if not DevAbs:get(raqi..'Abs:Lock:EditMsgs'..msg.chat_id_) then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفل التعديل")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفللالتعديل")  
 DevAbs:set(raqi..'Abs:Lock:EditMsgs'..msg.chat_id_,true)
 else
-Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙التعديل بالفعل مقفل في المجموعة', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙التعديل بالفعل مقفللفي المجموعة', 1, 'md')
 end
 end
 if LockText[2] == "التعديل الميديا" or LockText[2] == "تعديل الميديا" then
 if not DevAbs:get(raqi..'Abs:Lock:EditMsgs'..msg.chat_id_) then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفل تعديل الميديا")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفللتعديل الميديا")  
 DevAbs:set(raqi..'Abs:Lock:EditMsgs'..msg.chat_id_,true)
 else
-Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙تعديل الميديا بالفعل مقفل في المجموعة', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙تعديل الميديا بالفعل مقفللفي المجموعة', 1, 'md')
 end
 end
 if LockText[2] == "الفارسية" then
 if not DevAbs:get(raqi..'Abs:Lock:Farsi'..msg.chat_id_) then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفل الفارسية")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفللالفارسية")  
 DevAbs:set(raqi..'Abs:Lock:Farsi'..msg.chat_id_,true)
 else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙الفارسية بالفعل مقفله في المجموعة', 1, 'md')
@@ -7609,15 +7609,15 @@ end
 end
 if LockText[2] == "السب" then
 if DevAbs:get(raqi..'Abs:Lock:Fshar'..msg.chat_id_) then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفل السب")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفللالسب")  
 DevAbs:del(raqi..'Abs:Lock:Fshar'..msg.chat_id_)
 else
-Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙السب بالفعل مقفل في المجموعة', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙السب بالفعل مقفللفي المجموعة', 1, 'md')
 end
 end
 if LockText[2] == "الطائفيه" then
 if DevAbs:get(raqi..'Abs:Lock:Taf'..msg.chat_id_) then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفل الطائفيه")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفللالطائفيه")  
 DevAbs:del(raqi..'Abs:Lock:Taf'..msg.chat_id_)
 else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙الطائفيه بالفعل مقفله في المجموعة', 1, 'md')
@@ -7625,57 +7625,57 @@ end
 end
 if LockText[2] == "الكفر" then
 if DevAbs:get(raqi..'Abs:Lock:Kfr'..msg.chat_id_) then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفل الكفر")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفللالكفر")  
 DevAbs:del(raqi..'Abs:Lock:Kfr'..msg.chat_id_)
 else
-Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙الكفر بالفعل مقفل في المجموعة', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙الكفر بالفعل مقفللفي المجموعة', 1, 'md')
 end
 end
 if LockText[2] == "الفارسية بالطرد" then
 if not DevAbs:get(raqi..'Abs:Lock:FarsiBan'..msg.chat_id_) then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفل الفارسية بالطرد")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفللالفارسية بالطرد")  
 DevAbs:set(raqi..'Abs:Lock:FarsiBan'..msg.chat_id_,true)
 else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙الفارسية بالطرد بالفعل مقفله ', 1, 'md')
 end
 end
 if LockText[2] == "البوتات" or LockText[2] == "البوتات بالحذف" then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفل البوتات بالحذف")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفللالبوتات بالحذف")  
 DevAbs:set(raqi.."Abs:Lock:Bots"..msg.chat_id_,"del")  
 end
 if LockText[2] == "البوتات بالطرد" then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفل البوتات بالطرد")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفللالبوتات بالطرد")  
 DevAbs:set(raqi.."Abs:Lock:Bots"..msg.chat_id_,"kick")  
 end
 if LockText[2] == "البوتات بالتقييد" or LockText[2] == "البوتات بالتقيد" then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفل البوتات بالتقيد")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفللالبوتات بالتقيد")  
 DevAbs:set(raqi.."Abs:Lock:Bots"..msg.chat_id_,"ked")  
 end
 if LockText[2] == "التكرار" or LockText[2] == "التكرار بالحذف" then 
 DevAbs:hset(raqi.."Abs:Spam:Group:User"..msg.chat_id_ ,"Spam:User","del")  
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفل التكرار بالحذف")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفللالتكرار بالحذف")  
 end
 if LockText[2] == "التكرار بالطرد" then 
 DevAbs:hset(raqi.."Abs:Spam:Group:User"..msg.chat_id_ ,"Spam:User","kick")  
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفل التكرار بالطرد")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفللالتكرار بالطرد")  
 end
 if LockText[2] == "التكرار بالتقيد" or LockText[2] == "التكرار بالتقييد" then 
 DevAbs:hset(raqi.."Abs:Spam:Group:User"..msg.chat_id_ ,"Spam:User","keed")  
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفل التكرار بالتقيد")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفللالتكرار بالتقيد")  
 end
 if LockText[2] == "التكرار بالكتم" then 
 DevAbs:hset(raqi.."Abs:Spam:Group:User"..msg.chat_id_ ,"Spam:User","mute")  
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفل التكرار بالكتم")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفللالتكرار بالكتم")  
 end
 if BasicConstructor(msg) then
 if LockText[2] == "التثبيت" then
 if not DevAbs:get(raqi..'Abs:Lock:Pin'..msg.chat_id_) then
 tdcli_function ({ ID = "GetChannelFull",  channel_id_ = msg.chat_id_:gsub("-100","") }, function(arg,data)  DevAbs:set(raqi.."Abs:PinnedMsg"..msg.chat_id_,data.pinned_message_id_)  end,nil)
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفل التثبيت")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفللالتثبيت")  
 DevAbs:set(raqi..'Abs:Lock:Pin'..msg.chat_id_,true)
 DevAbs:sadd(raqi.."Abs:Lock:Pinpin",msg.chat_id_) 
 else
-Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙التثبيت بالفعل مقفل في المجموعة', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙التثبيت بالفعل مقفللفي المجموعة', 1, 'md')
 end end end
 end
 end
@@ -8114,11 +8114,11 @@ end
 end
 --     Source dev yousef     --
 if Admin(msg) then
-if text and text:match("^قفل (.*)$") then
+if text and text:match("^قفلل(.*)$") then
 local LockText = {string.match(text, "^(قفل) (.*)$")}
 if LockText[2] == "الدردشة" then
 if not DevAbs:get(raqi..'Abs:Lock:Text'..msg.chat_id_) then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفل الدردشة")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفللالدردشة")  
 DevAbs:set(raqi..'Abs:Lock:Text'..msg.chat_id_,true)
 else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙الدردشة بالفعل مقفله في المجموعة', 1, 'md')
@@ -8126,15 +8126,15 @@ end
 end
 if LockText[2] == "الاونلاين" then
 if not DevAbs:get(raqi..'Abs:Lock:Inline'..msg.chat_id_) then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفل الاونلاين")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفللالاونلاين")  
 DevAbs:set(raqi..'Abs:Lock:Inline'..msg.chat_id_,true)
 else
-Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙الاونلاين بالفعل مقفل في المجموعة', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙الاونلاين بالفعل مقفللفي المجموعة', 1, 'md')
 end
 end
 if LockText[2] == "الصور" then
 if not DevAbs:get(raqi..'Abs:Lock:Photo'..msg.chat_id_) then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفل الصور")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفللالصور")  
 DevAbs:set(raqi..'Abs:Lock:Photo'..msg.chat_id_,true)
 else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙الصور بالفعل مقفله في المجموعة', 1, 'md')
@@ -8142,7 +8142,7 @@ end
 end
 if LockText[2] == "المنشورات" then
 if not DevAbs:get(raqi..'Abs:Lock:Spam'..msg.chat_id_) then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفل المنشورات")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفللالمنشورات")  
 DevAbs:set(raqi..'Abs:Lock:Spam'..msg.chat_id_,true)
 else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙المنشورات بالفعل مقفله في المجموعة', 1, 'md')
@@ -8150,23 +8150,23 @@ end
 end
 if LockText[2] == "الدخول" then
 if not DevAbs:get(raqi..'Abs:Lock:Join'..msg.chat_id_) then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفل الدخول")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفللالدخول")  
 DevAbs:set(raqi..'Abs:Lock:Join'..msg.chat_id_,true)
 else
-Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙الدخول بالفعل مقفل في المجموعة', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙الدخول بالفعل مقفللفي المجموعة', 1, 'md')
 end
 end
 if LockText[2] == "الفيديو" then
 if not DevAbs:get(raqi..'Abs:Lock:Videos'..msg.chat_id_) then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفل الفيديو")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفللالفيديو")  
 DevAbs:set(raqi..'Abs:Lock:Videos'..msg.chat_id_,true)
 else
-Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙الفيديو بالفعل مقفل في المجموعة', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙الفيديو بالفعل مقفللفي المجموعة', 1, 'md')
 end
 end
 if LockText[2] == "المتحركة" then
 if not DevAbs:get(raqi..'Abs:Lock:Gifs'..msg.chat_id_) then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفل المتحركة")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفللالمتحركة")  
 DevAbs:set(raqi..'Abs:Lock:Gifs'..msg.chat_id_,true)
 else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙المتحركة بالفعل مقفله في المجموعة', 1, 'md')
@@ -8174,7 +8174,7 @@ end
 end
 if LockText[2] == "الاغاني" then
 if not DevAbs:get(raqi..'Abs:Lock:Music'..msg.chat_id_) then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفل الاغاني")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفللالاغاني")  
 DevAbs:set(raqi..'Abs:Lock:Music'..msg.chat_id_,true)
 else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙الاغاني بالفعل مقفله في المجموعة', 1, 'md')
@@ -8182,15 +8182,15 @@ end
 end
 if LockText[2] == "الصوت" then
 if not DevAbs:get(raqi..'Abs:Lock:Voice'..msg.chat_id_) then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفل الصوت")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفللالصوت")  
 DevAbs:set(raqi..'Abs:Lock:Voice'..msg.chat_id_,true)
 else
-Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙الصوت بالفعل مقفل في المجموعة', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙الصوت بالفعل مقفللفي المجموعة', 1, 'md')
 end
 end
 if LockText[2] == "الروابط" then
 if not DevAbs:get(raqi..'Abs:Lock:Links'..msg.chat_id_) then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفل الروابط")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفللالروابط")  
 DevAbs:set(raqi..'Abs:Lock:Links'..msg.chat_id_,true)
 else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙الروابط بالفعل مقفله في المجموعة', 1, 'md')
@@ -8198,7 +8198,7 @@ end
 end
 if LockText[2] == "المواقع" then
 if not DevAbs:get(raqi..'Abs:Lock:Location'..msg.chat_id_) then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفل المواقع")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفللالمواقع")  
 DevAbs:set(raqi..'Abs:Lock:Location'..msg.chat_id_,true)
 else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙المواقع بالفعل مقفله في المجموعة', 1, 'md')
@@ -8206,7 +8206,7 @@ end
 end
 if LockText[2] == "المعرف" or LockText[2] == "المعرفات" then
 if not DevAbs:get(raqi..'Abs:Lock:Tags'..msg.chat_id_) then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفل المعرفات")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفللالمعرفات")  
 DevAbs:set(raqi..'Abs:Lock:Tags'..msg.chat_id_,true)
 else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙المعرفات بالفعل مقفله في المجموعة', 1, 'md')
@@ -8214,7 +8214,7 @@ end
 end
 if LockText[2] == "الملفات" then
 if not DevAbs:get(raqi..'Abs:Lock:Document'..msg.chat_id_) then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفل الملفات")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفللالملفات")  
 DevAbs:set(raqi..'Abs:Lock:Document'..msg.chat_id_,true)
 else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙الملفات بالفعل مقفله في المجموعة', 1, 'md')
@@ -8222,15 +8222,15 @@ end
 end
 if LockText[2] == "الهاشتاك" or LockText[2] == "التاك" then
 if not DevAbs:get(raqi..'Abs:Lock:Hashtak'..msg.chat_id_) then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفل الهاشتاك")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفللالهاشتاك")  
 DevAbs:set(raqi..'Abs:Lock:Hashtak'..msg.chat_id_,true)
 else
-Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙الهاشتاك بالفعل مقفل في المجموعة', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙الهاشتاك بالفعل مقفللفي المجموعة', 1, 'md')
 end
 end
 if LockText[2] == "الجهات" then
 if not DevAbs:get(raqi..'Abs:Lock:Contact'..msg.chat_id_) then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفل الجهات")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفللالجهات")  
 DevAbs:set(raqi..'Abs:Lock:Contact'..msg.chat_id_,true)
 else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '️⌔︙الجهات بالفعل مقفله في المجموعة', 1, 'md')
@@ -8238,7 +8238,7 @@ end
 end
 if LockText[2] == "الشبكات" then
 if not DevAbs:get(raqi..'Abs:Lock:WebLinks'..msg.chat_id_) then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفل الشبكات")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفللالشبكات")  
 DevAbs:set(raqi..'Abs:Lock:WebLinks'..msg.chat_id_,true) 
 else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙الشبكات بالفعل مقفله في المجموعة', 1, 'md')
@@ -8246,7 +8246,7 @@ end
 end
 if LockText[2] == "العربيه" then
 if not DevAbs:get(raqi..'Abs:Lock:Arabic'..msg.chat_id_) then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفل العربيه")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفللالعربيه")  
 DevAbs:set(raqi..'Abs:Lock:Arabic'..msg.chat_id_,true)
 else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙العربيه بالفعل مقفله في المجموعة', 1, 'md')
@@ -8254,7 +8254,7 @@ end
 end
 if LockText[2] == "الانكليزيه" then
 if not DevAbs:get(raqi..'Abs:Lock:English'..msg.chat_id_) then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفل الانكليزيه")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفللالانكليزيه")  
 DevAbs:set(raqi..'Abs:Lock:English'..msg.chat_id_,true)
 else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙الانكليزيه بالفعل مقفله في المجموعة', 1, 'md')
@@ -8262,7 +8262,7 @@ end
 end
 if LockText[2] == "الملصقات" then
 if not DevAbs:get(raqi..'Abs:Lock:Stickers'..msg.chat_id_) then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفل الملصقات")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفللالملصقات")  
 DevAbs:set(raqi..'Abs:Lock:Stickers'..msg.chat_id_,true)
 else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙الملصقات بالفعل مقفله في المجموعة', 1, 'md')
@@ -8270,15 +8270,15 @@ end
 end
 if LockText[2] == "الماركداون" then
 if not DevAbs:get(raqi..'Abs:Lock:Markdown'..msg.chat_id_) then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفل الماركداون")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفللالماركداون")  
 DevAbs:set(raqi..'Abs:Lock:Markdown'..msg.chat_id_,true)
 else
-Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙الماركداون بالفعل مقفل في المجموعة', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙الماركداون بالفعل مقفللفي المجموعة', 1, 'md')
 end
 end
 if LockText[2] == "الاشعارات" then
 if not DevAbs:get(raqi..'Abs:Lock:TagServr'..msg.chat_id_) then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفل الاشعارات")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفللالاشعارات")  
 DevAbs:set(raqi..'Abs:Lock:TagServr'..msg.chat_id_,true)
 else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙الاشعارات بالفعل مقفله في المجموعة', 1, 'md')
@@ -8286,10 +8286,10 @@ end
 end
 if LockText[2] == "التوجيه" then
 if not DevAbs:get(raqi..'Abs:Lock:Forwards'..msg.chat_id_) then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفل التوجيه")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفللالتوجيه")  
 DevAbs:set(raqi..'Abs:Lock:Forwards'..msg.chat_id_,true)
 else
-Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙التوجيه بالفعل مقفل في المجموعة', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙التوجيه بالفعل مقفللفي المجموعة', 1, 'md')
 end
 end
 end
@@ -8477,7 +8477,7 @@ end
 end
 end
 --     Source dev yousef     --
-if text and text:match("^قفل التفليش$") or text and text:match("^تفعيل الحماية القصوى$") then
+if text and text:match("^قفللالتفليش$") or text and text:match("^تفعيل الحماية القصوى$") then
 if not Constructor(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙للمنشئين فقط', 1, 'md')
 else
@@ -8486,7 +8486,7 @@ LockList ={'Abs:Lock:Links','Abs:Lock:Contact','Abs:Lock:Forwards','Abs:Lock:Vid
 for i,Lock in pairs(LockList) do
 DevAbs:set(raqi..Lock..msg.chat_id_,true)
 end
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفل التفليش")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفللالتفليش")  
 end
 end
 if text and text:match("^فتح التفليش$") then
@@ -8502,7 +8502,7 @@ ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم فتح التفليش"
 end
 end
 --     Source dev yousef     --
-if text and text:match("^قفل الكل$") then
+if text and text:match("^قفللالكل$") then
 if not Constructor(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙للمنشئين فقط', 1, 'md')
 else
@@ -8512,7 +8512,7 @@ LockList ={'Abs:Lock:EditMsgs','Abs:Lock:Farsi','Abs:Lock:TagServr','Abs:Lock:In
 for i,Lock in pairs(LockList) do
 DevAbs:set(raqi..Lock..msg.chat_id_,true)
 end
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفل جميع الاوامر")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفللجميع الاوامر")  
 end
 end
 if text and text:match("^فتح الكل$") then
@@ -9284,7 +9284,7 @@ absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(m
 DevAbs:set(raqi..'Abs:Lock:Stupid'..msg.chat_id_,true)
 end
 --     Source dev yousef     --
-if text and (text == 'تعطيل التحقق' or text == 'قفل التحقق' or text == 'تعطيل تنبيه الدخول') and Manager(msg) and ChCheck(msg) then 
+if text and (text == 'تعطيل التحقق' or text == 'قفللالتحقق' or text == 'تعطيل تنبيه الدخول') and Manager(msg) and ChCheck(msg) then 
 local devyousef = '⌔︙اهلا عزيزي -› '..AbsRank(msg)..' \n⌔︙تم تعطيل التحقق بنجاح'
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
 DevAbs:del(raqi..'Abs:Lock:Robot'..msg.chat_id_)
@@ -10373,45 +10373,45 @@ local Help = DevAbs:get(raqi..'Abs:Help1')
 local Text = [[
 ⌔︙اوامر حماية المجموعة -› ⤈
 ━─━─━─ Y⌔L ─━─━─━
-⌔︙قفل • فتح -› الروابط
-⌔︙قفل • فتح -› المعرفات
-⌔︙قفل • فتح -› البوتات
-⌔︙قفل • فتح -› المتحركة
-⌔︙قفل • فتح -› الملصقات
-⌔︙قفل • فتح -› الملفات
-⌔︙قفل • فتح -› الصور
-⌔︙قفل • فتح -› الفيديو
-⌔︙قفل • فتح -› الاونلاين
-⌔︙قفل • فتح -› الدردشة
-⌔︙قفل • فتح -› التوجيه
-⌔︙قفل • فتح -› الاغاني
-⌔︙قفل • فتح -› الصوت
-⌔︙قفل • فتح -› الجهات
-⌔︙قفل • فتح -› الماركداون
-⌔︙قفل • فتح -› التكرار
-⌔︙قفل • فتح -› الهاشتاك
-⌔︙قفل • فتح -› التعديل
-⌔︙قفل • فتح -› التثبيت
-⌔︙قفل • فتح -› الاشعارات
-⌔︙قفل • فتح -› المنشورات
-⌔︙قفل • فتح -› الدخول
-⌔︙قفل • فتح -› الشبكات
-⌔︙قفل • فتح -› المواقع
-⌔︙قفل • فتح -› السب
-⌔︙قفل • فتح -› الكفر
-⌔︙قفل • فتح -› الطائفيه
-⌔︙قفل • فتح -› الكل
-⌔︙قفل • فتح -› العربيه
-⌔︙قفل • فتح -› الانكليزيه
-⌔︙قفل • فتح -› الفارسية
-⌔︙قفل • فتح -› التفليش
-⌔︙قفل • فتح -› امسح
+⌔︙قفلل• فتح -› الروابط
+⌔︙قفلل• فتح -› المعرفات
+⌔︙قفلل• فتح -› البوتات
+⌔︙قفلل• فتح -› المتحركة
+⌔︙قفلل• فتح -› الملصقات
+⌔︙قفلل• فتح -› الملفات
+⌔︙قفلل• فتح -› الصور
+⌔︙قفلل• فتح -› الفيديو
+⌔︙قفلل• فتح -› الاونلاين
+⌔︙قفلل• فتح -› الدردشة
+⌔︙قفلل• فتح -› التوجيه
+⌔︙قفلل• فتح -› الاغاني
+⌔︙قفلل• فتح -› الصوت
+⌔︙قفلل• فتح -› الجهات
+⌔︙قفلل• فتح -› الماركداون
+⌔︙قفلل• فتح -› التكرار
+⌔︙قفلل• فتح -› الهاشتاك
+⌔︙قفلل• فتح -› التعديل
+⌔︙قفلل• فتح -› التثبيت
+⌔︙قفلل• فتح -› الاشعارات
+⌔︙قفلل• فتح -› المنشورات
+⌔︙قفلل• فتح -› الدخول
+⌔︙قفلل• فتح -› الشبكات
+⌔︙قفلل• فتح -› المواقع
+⌔︙قفلل• فتح -› السب
+⌔︙قفلل• فتح -› الكفر
+⌔︙قفلل• فتح -› الطائفيه
+⌔︙قفلل• فتح -› الكل
+⌔︙قفلل• فتح -› العربيه
+⌔︙قفلل• فتح -› الانكليزيه
+⌔︙قفلل• فتح -› الفارسية
+⌔︙قفلل• فتح -› التفليش
+⌔︙قفلل• فتح -› امسح
 ⌔︙تعطيل • تفعيل -› امسح
 ⌔︙تعطيل • تفعيل -› الحذف التقائي
 ━─━─━─ Y⌔L ─━─━─━
 ⌔︙اوامر حماية اخرى -› ⤈
 ━─━─━─ Y⌔L ─━─━─━
-⌔︙قفل • فتح + الامر -› ⤈
+⌔︙قفلل• فتح + الامر -› ⤈
 ⌔︙التكرار بالطرد
 ⌔︙التكرار بالكتم
 ⌔︙التكرار بالتقيد
