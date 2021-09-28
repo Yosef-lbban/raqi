@@ -1264,7 +1264,7 @@ end
 if DataText and DataText:match('/HideHelpList:(.*)') then
 local Abbs = DataText:match('/HideHelpList:(.*)')
 if tonumber(Abbs) == tonumber(data.sender_user_id_) then
-EditMsg(Chat_Id2, Msg_Id2, "⌔︙تم اخفاء كليشة الاوامر") 
+EditMsg(Chat_Id2, Msg_Id2, "⌔︙تم اخفاء قائمة الأوامر") 
 else
 return https.request("https://api.telegram.org/bot"..TokenBot..'/answercallbackquery?callback_query_id='..data.id_..'&text='..URL.escape("⌁ عذرا الامر ليس لك .")..'&show_alert=true')
 end
@@ -1276,12 +1276,12 @@ local Help = DevAbs:get(raqi..'Abs:Help')
 local Text = [[
 ⌔︙اهلا بك في قائمة الاوامر -› ⤈ 
 ━─━─━─ Y⌔L ─━─━─━
-⌔︙م1 -› اوامر الحماية
-⌔︙م2 -› اوامر الادامن
-⌔︙م3 -› اوامر المدراء
-⌔︙م4 -› اوامر المنشئين
-⌔︙م5 -› اوامر المطورين
-⌔︙م6 -› اوامر الاعضاء
+⌔︙م1 -› أوامر الحماية
+⌔︙م2 -› أوامر الادامن
+⌔︙م3 -› أوامر المدراء
+⌔︙م4 -› أوامر المنشئين
+⌔︙م5 -› أوامر المطورين
+⌔︙م6 -› أوامر الاعضاء
 ━─━─━─ Y⌔L ─━─━─━
 ⌔︙[Source Channel](https://t.me/yousef_labban1)
 ]] 
@@ -10338,12 +10338,12 @@ local Help = DevAbs:get(raqi..'Abs:Help')
 local Text = [[
 ⌔︙اهلا بك في قائمة الاوامر -› ⤈ 
 ━─━─━─ Y⌔L ─━─━─━
-⌔︙م1 -› اوامر الحماية
-⌔︙م2 -› اوامر الادامن
-⌔︙م3 -› اوامر المدراء
-⌔︙م4 -› اوامر المنشئين
-⌔︙م5 -› اوامر المطورين
-⌔︙م6 -› اوامر الاعضاء
+⌔︙م1 -› أوامر الحماية
+⌔︙م2 -› أوامر الادامن
+⌔︙م3 -› أوامر المدراء
+⌔︙م4 -› أوامر المنشئين
+⌔︙م5 -› أوامر المطورين
+⌔︙م6 -› أوامر الاعضاء
 ━─━─━─ Y⌔L ─━─━─━
 ⌔︙[Source Channel](https://t.me/yousef_labban1)
 ]] 
