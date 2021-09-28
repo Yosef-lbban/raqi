@@ -217,7 +217,7 @@ print("\27[36m"..[[
 ░█░░░█░█░▄▀░█▀▀░░░░▀█▀░█░█░█░▄▀▀░ 
 ░█░░░█░█▀░░░█▀░░▄▄░░█░░█▀█░█░░▀▄░ 
 ░█▄▄░█░█░▀▄░█▄▄░░░░░█░░█░█░█░▄▄▀░
-|This Source Was Developed By (ABS) @IQ_ABS.|
+|This Source Was Developed By (ABS) @Iyousef.|
 |  This Is The قناة البوت @yousef_labban .   |
 |               - yousefLabban -                 |
 ---------------------------------------------
