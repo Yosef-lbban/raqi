@@ -436,7 +436,7 @@ if v.Admins then
 for k,idmod in pairs(v.Admins) do
 vardump(IdAdmins)
 DevAbs:sadd(raqi..'Abs:Admins:'..IdGps,IdAdmins)  
-print('تم رفع ( '..k..' ) ادمنيه')
+print('تم رفع ( '..k..' ) ادامن')
 end
 end
 if v.Vips then
@@ -1330,7 +1330,7 @@ local Text = [[
 ⌔︙قفل• فتح -› الكفر
 ⌔︙قفل• فتح -› الطائفيه
 ⌔︙قفل• فتح -› الكل
-⌔︙قفل• فتح -› العربيه
+⌔︙قفل• فتح -› العربية
 ⌔︙قفل• فتح -› الانكليزيه
 ⌔︙قفل• فتح -› الفارسية
 ⌔︙قفل• فتح -› التفليش
@@ -4093,7 +4093,7 @@ name = string.gsub(name,'30','⌔︙كم جزء يحتوي القران الكر
 name = string.gsub(name,'بوتين','⌔︙من هوه اغنى رئيس في العالم ؟\n1- ترامب\n2- اوباما\n3- بوتين')
 name = string.gsub(name,'ستيف جوبر','⌔︙من هوه مؤسس شركه ابل العالميه  ؟\n1- لاري بايج\n2- بيل جيتس\n3- ستيف جوبر')
 name = string.gsub(name,'باريس','ماهي عاصمه فرنسا ؟\n1- باريس\n2- لوين\n3- موسكو')
-name = string.gsub(name,'10','⌔︙ماعدد دول العربيه التي توجد في افريقيا ؟\n1- 10\n2- 17\n3- 9')
+name = string.gsub(name,'10','⌔︙ماعدد دول العربية التي توجد في افريقيا ؟\n1- 10\n2- 17\n3- 9')
 name = string.gsub(name,'النمل','⌔︙ماهو الحيوان الذي يحمل 50 فوق وزنه ؟\n1- الفيل\n2- النمل\n3- الثور')
 name = string.gsub(name,'حرف الواو','⌔︙ماذا يوجد بيني وبينك ؟\n1- الضل\n2- الاخلاق\n3- حرف الواو')
 name = string.gsub(name,'الشعر','⌔︙ماهو الشيء النبات ينبت للانسان بلا بذر ؟\n1- الاضافر\n2- الاسنان\n3- الشعر')
@@ -4323,7 +4323,7 @@ DevAbs:sadd(raqi..'Abs:AbsConstructor:'..msg.chat_id_,Manager_id)
 end  
 end  
 if num == 0 then
-Dev_Abs(msg.chat_id_, msg.id_, 1, "⌔︙لا يوجد ادمنيه ليتم رفعهم\n⌔︙تم رفع مالك المجموعة", 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, "⌔︙لا يوجد ادامن ليتم رفعهم\n⌔︙تم رفع مالك المجموعة", 1, 'md')
 else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙تم رفع '..num..' من الادامن \n⌔︙تم رفع مالك المجموعة', 1, 'md')
 end
@@ -6640,7 +6640,7 @@ else
 text = text..k.."~ : `"..v.."`\n"
 end end
 if #List == 0 then
-text = "⌔︙*لا يوجد ادمنيه*"
+text = "⌔︙*لا يوجد ادامن*"
 end
 Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end end
@@ -6943,7 +6943,7 @@ else
 text = text..k.."~ : `"..v.."`\n"
 end end
 if #List == 0 then
-text = "⌔︙*لا يوجد ادمنيه عامين*"
+text = "⌔︙*لا يوجد ادامن عامين*"
 end
 Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end  
@@ -8244,12 +8244,12 @@ else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙الشبكات بالفعل مقفله في المجموعة', 1, 'md')
 end
 end
-if LockText[2] == "العربيه" then
+if LockText[2] == "العربية" then
 if not DevAbs:get(raqi..'Abs:Lock:Arabic'..msg.chat_id_) then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفلالعربيه")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم قفلالعربية")  
 DevAbs:set(raqi..'Abs:Lock:Arabic'..msg.chat_id_,true)
 else
-Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙العربيه بالفعل مقفله في المجموعة', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙العربية بالفعل مقفله في المجموعة', 1, 'md')
 end
 end
 if LockText[2] == "الانكليزيه" then
@@ -8434,12 +8434,12 @@ else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙الشبكات بالفعل مفتوحه في المجموعة', 1, 'md')
 end
 end
-if UnLockText[2] == "العربيه" then
+if UnLockText[2] == "العربية" then
 if DevAbs:get(raqi..'Abs:Lock:Arabic'..msg.chat_id_) then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم فتح العربيه")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","⌔︙تم فتح العربية")  
 DevAbs:del(raqi..'Abs:Lock:Arabic'..msg.chat_id_)
 else
-Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙العربيه بالفعل مفتوحه في المجموعة', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '⌔︙العربية بالفعل مفتوحه في المجموعة', 1, 'md')
 end
 end
 if UnLockText[2] == "الانكليزيه" then
@@ -8912,7 +8912,7 @@ local TXTE = "⌔︙اعدادات المجموعة -› ⤈\n━─━─━─
 .."⌔︙السب -› "..lock_fshar.."\n"
 .."⌔︙الكفر -› "..lock_kaf.."\n"
 .."⌔︙الطائفيه -› "..lock_taf.."\n"
-.."⌔︙العربيه -› "..lock_arabic.."\n"
+.."⌔︙العربية -› "..lock_arabic.."\n"
 .."⌔︙الانكليزيه -› "..lock_english.."\n"
 .."⌔︙الفارسية -› "..lock_farsi.."\n"
 .."⌔︙التكرار -› "..flood.."\n"
@@ -9255,7 +9255,7 @@ if text == "المنشورات" then if DevAbs:get(raqi..'Abs:Lock:Spam'..msg.ch
 if text == "الدخول" then if DevAbs:get(raqi..'Abs:Lock:Join'..msg.chat_id_) then lock_Join = 'مقفول' else lock_Join = 'مفتوح' end local devyousef = "\n" .."⌔︙الدخول -› "..lock_Join.."\n" Dev_Abs(msg.chat_id_, msg.id_, 1, devyousef, 1, 'md') end
 if text == "الشبكات" then if DevAbs:get(raqi..'Abs:Lock:WebLinks'..msg.chat_id_) then lock_wp = 'مقفوله' else lock_wp = 'مفتوحه' end local devyousef = "\n" .."⌔︙الشبكات -› "..lock_wp.."\n" Dev_Abs(msg.chat_id_, msg.id_, 1, devyousef, 1, 'md') end
 if text == "المواقع" then if DevAbs:get(raqi..'Abs:Lock:Location'..msg.chat_id_) then lock_location = 'مقفوله' else lock_location = 'مفتوحه' end local devyousef = "\n" .."⌔︙المواقع -› "..lock_location.."\n" Dev_Abs(msg.chat_id_, msg.id_, 1, devyousef, 1, 'md') end
-if text == "العربيه" then if DevAbs:get(raqi..'Abs:Lock:Arabic'..msg.chat_id_) then lock_arabic = 'مقفوله' else lock_arabic = 'مفتوحه' end local devyousef = "\n" .."⌔︙العربيه -› "..lock_arabic.."\n" Dev_Abs(msg.chat_id_, msg.id_, 1, devyousef, 1, 'md') end
+if text == "العربية" then if DevAbs:get(raqi..'Abs:Lock:Arabic'..msg.chat_id_) then lock_arabic = 'مقفوله' else lock_arabic = 'مفتوحه' end local devyousef = "\n" .."⌔︙العربية -› "..lock_arabic.."\n" Dev_Abs(msg.chat_id_, msg.id_, 1, devyousef, 1, 'md') end
 if text == "الانكليزيه" then if DevAbs:get(raqi..'Abs:Lock:English'..msg.chat_id_) then lock_english = 'مقفوله' else lock_english = 'مفتوحه' end local devyousef = "\n" .."⌔︙الانكليزيه -› "..lock_english.."\n" Dev_Abs(msg.chat_id_, msg.id_, 1, devyousef, 1, 'md') end
 if text == "الكفر" then if DevAbs:get(raqi..'Abs:Lock:Kfr'..msg.chat_id_) then lock_kaf = 'مفتوح' else lock_kaf = 'مقفل' end local devyousef = "\n" .."⌔︙الكفر -› "..lock_kaf.."\n" Dev_Abs(msg.chat_id_, msg.id_, 1, devyousef, 1, 'md') end
 if text == "السب" then if DevAbs:get(raqi..'Abs:Lock:Fshar'..msg.chat_id_) then lock_fshar = 'مفتوح' else lock_fshar = 'مقفل' end local devyousef = "\n" .."⌔︙السب -› "..lock_fshar.."\n" Dev_Abs(msg.chat_id_, msg.id_, 1, devyousef, 1, 'md') end
@@ -10401,7 +10401,7 @@ local Text = [[
 ⌔︙قفل• فتح -› الكفر
 ⌔︙قفل• فتح -› الطائفيه
 ⌔︙قفل• فتح -› الكل
-⌔︙قفل• فتح -› العربيه
+⌔︙قفل• فتح -› العربية
 ⌔︙قفل• فتح -› الانكليزيه
 ⌔︙قفل• فتح -› الفارسية
 ⌔︙قفل• فتح -› التفليش
