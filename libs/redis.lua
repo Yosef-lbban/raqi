@@ -219,7 +219,7 @@ print("\27[36m"..[[
 ░█▄▄░█░█░▀▄░█▄▄░░░░░█░░█░█░█░▄▄▀░
 |This Source Was Developed By (ABS) @IQ_ABS.|
 |  This Is The قناة البوت @yousef_labban .   |
-|               - DevProx -                 |
+|               - yousefLabban -                 |
 ---------------------------------------------
 ]]..'\27[m')
 Config = dofile("config.lua")
