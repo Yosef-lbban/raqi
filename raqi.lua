@@ -3559,7 +3559,7 @@ end
 if ChatType == 'sp' or ChatType == 'gp'  then
 if text == 'بوت' or text == 'بوتت' then 
 NameBot = (DevAbs:get(raqi..'Abs:NameBot') or 'dev-yousef 🇸🇦')
-local devyousef = {' قول حبيبي ؟ اني '..NameBot..' ',' وياك الجميل '..NameBot..' ',' اسمي الجميل '..NameBot..' '}
+local devyousef = {' قول حبيبي ؟ أنا '..NameBot..' ',' وياك الجميل '..NameBot..' ',' اسمي الجميل '..NameBot..' '}
 Dev_Abs(msg.chat_id_, msg.id_, 1, devyousef[math.random(#devyousef)] , 1, 'html') 
 return false
 end
@@ -3571,7 +3571,7 @@ return false
 end
 if text and text == (DevAbs:get(raqi..'Abs:NameBot') or 'dev-yousef 🇸🇦') then 
 NameBot = (DevAbs:get(raqi..'Abs:NameBot') or 'dev-yousef 🇸🇦')
-local devyousef = {'قول حبيبي ؟ اني '..NameBot..' ',' وياك الجميل '..NameBot..' '} 
+local devyousef = {'قول حبيبي ؟ أنا '..NameBot..' ',' وياك الجميل '..NameBot..' '} 
 Dev_Abs(msg.chat_id_, msg.id_, 1, devyousef[math.random(#devyousef)] , 1, 'html') 
 return false 
 end
