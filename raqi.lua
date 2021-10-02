@@ -919,7 +919,7 @@ vipmem = 'المميزين • ' else vipmem = '' end
 if DevAbs:sismember(raqi..'Abs:Cleaner:'..data.chat_id_, data.sender_user_id_) then
 cleaner = 'المنظفين • ' else cleaner = '' end
 if DevAbs:sismember(raqi..'User:Donky:'..data.chat_id_, data.sender_user_id_) then
-donky = 'المطايه • ' else donky = '' end
+donky = 'المطايا • ' else donky = '' end
 if DevAbs:sismember(raqi..'Abs:Constructor:'..data.chat_id_, data.sender_user_id_) or DevAbs:sismember(raqi..'Abs:Managers:'..data.chat_id_, data.sender_user_id_) or DevAbs:sismember(raqi..'Abs:Admins:'..data.chat_id_, data.sender_user_id_) or DevAbs:sismember(raqi..'Abs:VipMem:'..data.chat_id_, data.sender_user_id_) or DevAbs:sismember(raqi..'Abs:Cleaner:'..data.chat_id_, data.sender_user_id_) or DevAbs:sismember(raqi..'User:Donky:'..data.chat_id_, data.sender_user_id_) then
 DevAbs:srem(raqi..'Abs:Constructor:'..data.chat_id_,data.sender_user_id_)
 DevAbs:srem(raqi..'Abs:Managers:'..data.chat_id_,data.sender_user_id_)
@@ -1374,7 +1374,7 @@ local Text = [[
 🇸🇦︙ضع رابط
 🇸🇦︙ضع صورة
 🇸🇦︙حذف الرابط
-🇸🇦︙حذف المطايه
+🇸🇦︙حذف المطايا
 🇸🇦︙كشف البوتات
 🇸🇦︙طرد البوتات
 🇸🇦︙تنظيف + العدد
@@ -6479,7 +6479,7 @@ function donky_by_reply(extra, result, success)
 if DevAbs:sismember(raqi..'User:Donky:'..msg.chat_id_, result.sender_user_id_) then
 ReplyStatus(msg,result.sender_user_id_,"Reply","🇸🇦︙هو مطي شرفع منه بعد😹💔") 
 else
-ReplyStatus(msg,result.sender_user_id_,"Reply","🇸🇦︙تم رفعه في قائمة المطايه") 
+ReplyStatus(msg,result.sender_user_id_,"Reply","🇸🇦︙تم رفعه في قائمة المطايا") 
 DevAbs:sadd(raqi..'User:Donky:'..msg.chat_id_, result.sender_user_id_)
 end end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,donky_by_reply)
@@ -6492,7 +6492,7 @@ if not DevAbs:sismember(raqi..'User:Donky:'..msg.chat_id_, result.sender_user_id
 ReplyStatus(msg,result.sender_user_id_,"Reply","🇸🇦︙هو ليس مطي ليتم تنزيله") 
 else
 DevAbs:srem(raqi..'User:Donky:'..msg.chat_id_, result.sender_user_id_)
-ReplyStatus(msg,result.sender_user_id_,"Reply","🇸🇦︙تم تنزيله من قائمة المطايه") 
+ReplyStatus(msg,result.sender_user_id_,"Reply","🇸🇦︙تم تنزيله من قائمة المطايا") 
 end end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,donky_by_reply)
 end end
@@ -6816,7 +6816,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, 'md')
 end
 end 
 --     Source dev yousef     --
-if text == "المطايه" and ChCheck(msg) or text == "المطاية" and ChCheck(msg) then
+if text == "المطايا" and ChCheck(msg) or text == "المطاية" and ChCheck(msg) then
 local List = DevAbs:smembers(raqi..'User:Donky:'..msg.chat_id_)
 text = "🇸🇦︙قائمة مطاية المجموعة 😹💔 -› ⤈ \n------------ Y●L ------------\n"
 for k,v in pairs(List) do
@@ -6827,7 +6827,7 @@ else
 text = text..k.."~ : `"..v.."`\n"
 end end
 if #List == 0 then
-text = "🇸🇦︙*لا يوجد مطايه كلها اوادم* 😹💔"
+text = "🇸🇦︙*لا يوجد مطايا كلها اوادم* 😹💔"
 end
 Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end
@@ -8738,8 +8738,8 @@ if txts[2] == 'قوانين' or txtss[2] == 'قوانين' then
 ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم حذف القوانين")  
 DevAbs:del(raqi..'Abs:rules'..msg.chat_id_)
 end
-if txts[2] == 'المطايه' or txtss[2] == 'المطايه' then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم حذف المطايه")  
+if txts[2] == 'المطايا' or txtss[2] == 'المطايا' then
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم حذف المطايا")  
 DevAbs:del(raqi..'User:Donky:'..msg.chat_id_)
 end
 if txts[2] == 'الرابط' or txtss[2] == 'الرابط' then
@@ -8793,7 +8793,7 @@ if not BasicConstructor(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙للمنشئ الاساسي فقط', 1, 'md')
 else
 DevAbs:del(raqi..'Abs:Ban:'..msg.chat_id_) DevAbs:del(raqi..'Abs:Admins:'..msg.chat_id_) DevAbs:del(raqi..'User:Donky:'..msg.chat_id_) DevAbs:del(raqi..'Abs:VipMem:'..msg.chat_id_) DevAbs:del(raqi..'Abs:Filters:'..msg.chat_id_) DevAbs:del(raqi..'Abs:Muted:'..msg.chat_id_)
-Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم حذف -› ❨ قائمة المنع • المحظورين • المكتومين • الادامن • المميزين • المطايه ❩ بنجاح \n ✓", 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم حذف -› ❨ قائمة المنع • المحظورين • المكتومين • الادامن • المميزين • المطايا ❩ بنجاح \n ✓", 1, 'md')
 end end
 --     Source dev yousef     --
 if text and text:match("^حذف جميع الرتب$") and ChCheck(msg) or text and text:match("^مسح جميع الرتب$") and ChCheck(msg) or text and text:match("^تنزيل جميع الرتب$") and ChCheck(msg) then
@@ -8811,7 +8811,7 @@ if #constructor ~= 0 then constructort = 'المنشئين • ' else constructo
 if #Managers ~= 0 then Managerst = 'المدراء • ' else Managerst = '' end
 if #admins ~= 0 then adminst = 'الادامن • ' else adminst = '' end
 if #vipmem ~= 0 then vipmemt = 'المميزين • ' else vipmemt = '' end
-if #donky ~= 0 then donkyt = 'المطايه • ' else donkyt = '' end
+if #donky ~= 0 then donkyt = 'المطايا • ' else donkyt = '' end
 if #basicconstructor ~= 0 or #constructor ~= 0 or #Managers ~= 0 or #admins ~= 0 or #vipmem ~= 0 or #donky ~= 0 then 
 DevAbs:del(raqi..'Abs:BasicConstructor:'..msg.chat_id_)
 DevAbs:del(raqi..'Abs:Constructor:'..msg.chat_id_)
@@ -10453,7 +10453,7 @@ local Text = [[
 🇸🇦︙ضع رابط
 🇸🇦︙ضع صورة
 🇸🇦︙حذف الرابط
-🇸🇦︙حذف المطايه
+🇸🇦︙حذف المطايا
 🇸🇦︙كشف البوتات
 🇸🇦︙طرد البوتات
 🇸🇦︙تنظيف + العدد
