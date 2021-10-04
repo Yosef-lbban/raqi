@@ -8120,7 +8120,7 @@ if text and text:match("^قفل(.*)$") then
 local LockText = {string.match(text, "^(قفل) (.*)$")}
 if LockText[2] == "الدردشة" then
 if not DevAbs:get(raqi..'Abs:Lock:Text'..msg.chat_id_) then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم قفل الدردشة")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم قفل الدردشة من قبل المشرفين .. نراكم على خير")  
 DevAbs:set(raqi..'Abs:Lock:Text'..msg.chat_id_,true)
 else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙الدردشة بالفعل مقفلة في المجموعة', 1, 'md')
