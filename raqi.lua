@@ -5726,7 +5726,7 @@ getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
 end 
 end
 --     Source dev yousef     --
-if text ==('تحكم') and ChCheck(msg) then
+if text ==('تحكممم') and ChCheck(msg) then
 function prom_reply(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,dp) 
 if dp.first_name_ == false then
