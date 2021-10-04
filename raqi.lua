@@ -8302,7 +8302,7 @@ if text and text:match("^فتح (.*)$") then
 local UnLockText = {string.match(text, "^(فتح) (.*)$")}
 if UnLockText[2] == "الدردشة" then
 if DevAbs:get(raqi..'Abs:Lock:Text'..msg.chat_id_) then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم فتح الدردشة")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم فتح الدردشة .. على بركة الله")  
 DevAbs:del(raqi..'Abs:Lock:Text'..msg.chat_id_)
 else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙الدردشة بالفعل مفتوحة في المجموعة', 1, 'md')
