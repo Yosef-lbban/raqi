@@ -6590,7 +6590,7 @@ if DevAbs:get(raqi..'Abs:Lock:Clean'..msg.chat_id_) then if msg.content_.video_ 
 if Manager(msg) and msg.reply_to_message_id_ ~= 0 then
 if text and text:match("^تثبيت$") and ChCheck(msg) then 
 if DevAbs:sismember(raqi.."Abs:Lock:Pinpin",msg.chat_id_) and not BasicConstructor(msg) then
-Dev_Abs(msg.chat_id_,msg.id_, 1, "🇸🇦︙التثبيت والغاء واعادة التثبيت تم قفل ه من قبل المنشئين الاساسيين", 1, 'md')
+Dev_Abs(msg.chat_id_,msg.id_, 1, "🇸🇦︙التثبيت والغاء واعادة التثبيت تم قفله من قبل المنشئين الاساسيين", 1, 'md')
 return false  
 end
 tdcli_function ({ID = "PinChannelMessage",channel_id_ = msg.chat_id_:gsub("-100",""),message_id_ = msg.reply_to_message_id_,disable_notification_ = 1},function(arg,data) 
@@ -9395,7 +9395,7 @@ end
 if Manager(msg) then
 if text and text:match("^الغاء تثبيت$") and ChCheck(msg) or text and text:match("^الغاء التثبيت$") and ChCheck(msg) then
 if DevAbs:sismember(raqi.."Abs:Lock:Pinpin",msg.chat_id_) and not BasicConstructor(msg) then
-Dev_Abs(msg.chat_id_,msg.id_, 1, "🇸🇦︙التثبيت والغاء واعادة التثبيت تم قفل ه من قبل المنشئين الاساسيين", 1, 'md')
+Dev_Abs(msg.chat_id_,msg.id_, 1, "🇸🇦︙التثبيت والغاء واعادة التثبيت تم قفله من قبل المنشئين الاساسيين", 1, 'md')
 return false  
 end
 tdcli_function({ID="UnpinChannelMessage",channel_id_ = msg.chat_id_:gsub("-100","")},function(arg,data) 
@@ -9418,7 +9418,7 @@ end
 --     Source dev yousef     --
 if text and text:match("^الغاء تثبيت الكل$") then  
 if DevAbs:sismember(raqi.."Abs:Lock:Pinpin",msg.chat_id_) and not BasicConstructor(msg) then
-Dev_Abs(msg.chat_id_,msg.id_, 1, "🇸🇦︙التثبيت والغاء واعادة التثبيت تم قفل ه من قبل المنشئين الاساسيين", 1, 'md')
+Dev_Abs(msg.chat_id_,msg.id_, 1, "🇸🇦︙التثبيت والغاء واعادة التثبيت تم قفله من قبل المنشئين الاساسيين", 1, 'md')
 return false  
 end
 tdcli_function({ID="UnpinChannelMessage",channel_id_ = msg.chat_id_:gsub("-100","")},function(arg,data) 
@@ -9442,7 +9442,7 @@ end
 --     Source dev yousef     --
 if text and text:match("^اعاده تثبيت$") and ChCheck(msg) or text and text:match("^اعاده التثبيت$") and ChCheck(msg) or text and text:match("^اعادة التثبيت$") and ChCheck(msg) then
 if DevAbs:sismember(raqi.."Abs:Lock:Pinpin",msg.chat_id_) and not BasicConstructor(msg) then
-Dev_Abs(msg.chat_id_,msg.id_, 1, "🇸🇦︙التثبيت والغاء واعادة التثبيت تم قفل ه من قبل المنشئين الاساسيين", 1, 'md')
+Dev_Abs(msg.chat_id_,msg.id_, 1, "🇸🇦︙التثبيت والغاء واعادة التثبيت تم قفله من قبل المنشئين الاساسيين", 1, 'md')
 return false  
 end
 local PinId = DevAbs:get(raqi..'Abs:PinnedMsg'..msg.chat_id_)
