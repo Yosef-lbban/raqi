@@ -1411,9 +1411,9 @@ local Text = [[
 🇸🇦︙كتم • الغاء كتم
 🇸🇦︙تقيد • الغاء تقيد
 🇸🇦︙حظر • الغاء حظر
-🇸🇦︙المكتومين • حذف المكتومين
-🇸🇦︙المقيدين • حذف المقيدين
-🇸🇦︙المحظورين • حذف المحظورين
+🇸🇦︙المكتومين • مسح المكتومين
+🇸🇦︙المقيدين • مسح المقيدين
+🇸🇦︙المحظورين • مسح المحظورين
 ------------ Y●L ------------
 🇸🇦︙تقييد دقيقة + عدد الدقائق
 🇸🇦︙تقييد ساعة + عدد الساعات
@@ -8752,7 +8752,7 @@ DevAbs:del(raqi..'Abs:VipMem:'..msg.chat_id_)
 end
 if txts[2] == 'المكتومين' or txtss[2] == 'المكتومين' then
 DevAbs:del(raqi..'Abs:Muted:'..msg.chat_id_)
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم حذف المكتومين")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم مسح المكتومين")  
 end
 if txts[2] == 'المقيدين' or txtss[2] == 'المقيدين' then     
 local List = DevAbs:smembers(raqi..'Abs:Tkeed:'..msg.chat_id_)
@@ -8760,7 +8760,7 @@ for k,v in pairs(List) do
 HTTPS.request("https://api.telegram.org/bot"..TokenBot.."/restrictChatMember?chat_id="..msg.chat_id_.."&user_id="..v.."&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True") 
 DevAbs:srem(raqi..'Abs:Tkeed:'..msg.chat_id_, v)
 end 
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم حذف المقيدين")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم مسح المقيدين")  
 end
 if txts[2] == 'قائمة المنع' or txtss[2] == 'قائمة المنع' then
 ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم حذف قائمة المنع")  
@@ -9466,7 +9466,7 @@ ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم طرد المحذ
 end,nil)
 end
 --     Source dev yousef     --
-if text and text:match("^مسح المحظورين$") or text and text:match("^حذف المحظورين$") and ChCheck(msg) or text and text:match("^مسح المطرودين$") or text and text:match("^حذف المطرودين$") and ChCheck(msg) then
+if text and text:match("^مسح المحظورين$") or text and text:match("^مسح المحظورين$") and ChCheck(msg) or text and text:match("^مسح المطرودين$") or text and text:match("^حذف المطرودين$") and ChCheck(msg) then
 local function RemoveBlockList(extra, result)
 if tonumber(result.total_count_) == 0 then 
 Dev_Abs(msg.chat_id_, msg.id_, 0,'🇸🇦︙*لا يوجد محظورين*', 1, 'md')
@@ -9478,7 +9478,7 @@ tdcli_function ({ ID = "ChangeChatMemberStatus", chat_id_ = msg.chat_id_, user_i
 DevAbs:del(raqi..'Abs:Ban:'..msg.chat_id_)
 x = x + 1
 end
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم حذف المحظورين")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم مسح المحظورين")  
 end
 end
 tdcli_function({ID="GetChannelMembers",channel_id_ = msg.chat_id_:gsub("-100",""),filter_ = {ID = "ChannelMembersKicked"},offset_ = 0,limit_ = 200}, RemoveBlockList, {chat_id_ = msg.chat_id_, msg_id_ = msg.id_})    
@@ -10490,9 +10490,9 @@ local Text = [[
 🇸🇦︙كتم • الغاء كتم
 🇸🇦︙تقيد • الغاء تقيد
 🇸🇦︙حظر • الغاء حظر
-🇸🇦︙المكتومين • حذف المكتومين
-🇸🇦︙المقيدين • حذف المقيدين
-🇸🇦︙المحظورين • حذف المحظورين
+🇸🇦︙المكتومين • مسح المكتومين
+🇸🇦︙المقيدين • مسح المقيدين
+🇸🇦︙المحظورين • مسح المحظورين
 ------------ Y●L ------------
 🇸🇦︙تقييد دقيقة + عدد الدقائق
 🇸🇦︙تقييد ساعة + عدد الساعات
