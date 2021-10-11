@@ -2030,7 +2030,7 @@ if result.forward_info_.sender_user_id_ then
 id_user = result.forward_info_.sender_user_id_    
 end 
 tdcli_function ({ID = "GetUser",user_id_ = id_user},function(arg,data) 
-if text == 'حظر' or text == 'حضر' then
+if text == 'حظر' or text == 'حظر' then
 local Text = '🇸🇦︙العضو -› ['..string.sub(data.first_name_,0, 40)..'](tg://user?id='..data.id_..')'..'\n🇸🇦︙تم حظره من التواصل'
 SendText(DevId,Text,msg.id_/2097152/0.5,'md') 
 DevAbs:sadd(raqi..'Abs:Ban:Pv',data.id_)  
@@ -2935,7 +2935,7 @@ tdcli_function ({ID = "GetUserProfilePhotos",user_id_ = raqi,offset_ = 0,limit_ 
 for i=0,#msg.content_.members_ do    
 BotWelcome = msg.content_.members_[i].id_    
 if BotWelcome and BotWelcome == tonumber(raqi) then 
-if DevAbs:sismember(raqi..'Abs:Groups',msg.chat_id_) then BotText = "مفعله في السابق\n🇸🇦︙ارسل -› الاوامر واستمتع بالمميزيات" else BotText = "معطله يجب رفعي مشرف\n🇸🇦︙بعد ذلك يرجى ارسال امر -› تفعيل\n🇸🇦︙سيتم رفع الادامن والمنشئ تلقائيا" end 
+if DevAbs:sismember(raqi..'Abs:Groups',msg.chat_id_) then BotText = "مفعله في السابق\n🇸🇦︙ارسل -› الاوامر واستمتع بالمميزيات" else BotText = "معطلة يجب رفعي مشرف\n🇸🇦︙بعد ذلك يرجى ارسال امر -› تفعيل\n🇸🇦︙سيتم رفع الادامن والمنشئ تلقائيا" end 
 if DevAbs:get(raqi.."Abs:Text:BotWelcome") then AbsText = DevAbs:get(raqi.."Abs:Text:BotWelcome") else AbsText = "🇸🇦︙مرحبا انا بوت اسمي "..NameBot.."\n🇸🇦︙حالة المجموعة -› "..BotText.."\n------------ Y●L ------------" end 
 if DevAbs:get(raqi.."Abs:Photo:BotWelcome") then AbsPhoto = DevAbs:get(raqi.."Abs:Photo:BotWelcome") elseif abbas.photos_[0] then AbsPhoto = abbas.photos_[0].sizes_[1].photo_.persistent_id_ else AbsPhoto = nil end 
 if AbsPhoto ~= nil then
@@ -4259,7 +4259,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1,[[
 🇸🇦︙[قناة البوت](https://t.me/yousef_labban1)
 ]], 1, 'md')
 else
-Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙عذرا الالعاب معطله في المجموعة', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙عذرا الالعاب معطلة في المجموعة', 1, 'md')
 end
 end
 if text == "الالعاب المتطوره" or text == "الالعاب الاحترافيه" or text == "-› الالعاب المتطوره 🇸🇦" then
@@ -4334,7 +4334,7 @@ end
 --     Source dev yousef     --
 if text == 'غادر' and SudoBot(msg) then
 if DevAbs:get(raqi.."Abs:Left:Bot"..raqi) and not SecondSudo(msg) then
-Dev_Abs(msg.chat_id_,msg.id_, 1, "🇸🇦︙المغادره معطله من قبل المطور الاساسي", 1, 'md')
+Dev_Abs(msg.chat_id_,msg.id_, 1, "🇸🇦︙المغادره معطلة من قبل المطور الاساسي", 1, 'md')
 return false  
 end
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم مغادرة المجموعة \n🇸🇦︙تم حذف جميع بياناتها ', 1, 'md')
@@ -4427,7 +4427,7 @@ if SudoBot(msg) then
 if text == 'اذاعه للكل بالتوجيه' and tonumber(msg.reply_to_message_id_) > 0 then
 function devyousef(extra,result,success)
 if DevAbs:get(raqi.."Abs:Send:Bot"..raqi) and not SecondSudo(msg) then 
-send(msg.chat_id_, msg.id_,"🇸🇦︙الاذاعه معطله من قبل المطور الاساسي")
+send(msg.chat_id_, msg.id_,"🇸🇦︙الاذاعه معطلة من قبل المطور الاساسي")
 return false
 end
 local GpList = DevAbs:smembers(raqi.."Abs:Groups")
@@ -4467,7 +4467,7 @@ end
 if ChatType == 'sp' or ChatType == 'gp'  then
 if text == "اطردني" and ChCheck(msg) or text == "ادفرني" and ChCheck(msg) then
 if DevAbs:get(raqi.."Abs:Kick:Me"..msg.chat_id_) then
-Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙عذرا هذه الخاصيه معطله ', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙عذرا هذه الخاصية معطلة ', 1, 'md')
 return false
 end
 DevAbs:set(raqi..'yes'..msg.sender_user_id_, 'delyes')
@@ -4492,7 +4492,7 @@ end
 --     Source dev yousef     --
 if text == "نزلني" and ChCheck(msg) then
 if DevAbs:get(raqi.."Abs:Del:Me"..msg.chat_id_) then
-Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙عذرا هذه الخاصيه معطله ', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙عذرا هذه الخاصية معطلة ', 1, 'md')
 return false
 end
 DevAbs:set(raqi..'yesdel'..msg.sender_user_id_, 'delyes')
@@ -5985,7 +5985,7 @@ end
 --     Source dev yousef     --
 --          Ban           --
 if Admin(msg) then
-if text ==('حضر') or text ==('حظر') and ChCheck(msg) then
+if text ==('حظر') or text ==('حظر') and ChCheck(msg) then
 function BanReply(extra, result, success)
 if not Constructor(msg) and DevAbs:get(raqi.."Abs:Lock:KickBan"..msg.chat_id_) then 
 send(msg.chat_id_, msg.id_,'🇸🇦︙لقد تم تعطيل الطرد والحظر من قبل المنشئين')
@@ -6012,8 +6012,8 @@ end
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),BanReply)
 end end
-if text and (text:match('^حضر @(.*)') or text:match('^حظر @(.*)')) and ChCheck(msg) then
-local username = text:match('^حضر @(.*)') or text:match('^حظر @(.*)')
+if text and (text:match('^حظر @(.*)') or text:match('^حظر @(.*)')) and ChCheck(msg) then
+local username = text:match('^حظر @(.*)') or text:match('^حظر @(.*)')
 function BanUser(extra,result,success)
 if not Constructor(msg) and DevAbs:get(raqi.."Abs:Lock:KickBan"..msg.chat_id_) then 
 send(msg.chat_id_, msg.id_,'🇸🇦︙لقد تم تعطيل الطرد والحظر من قبل المنشئين')
@@ -6042,8 +6042,8 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙*المعرف غير صحيح*', 1
 end end 
 resolve_username(username,BanUser)
 end
-if text and (text:match('^حضر (%d+)') or text:match('^حظر (%d+)')) and ChCheck(msg) then
-local user = text:match('حضر (%d+)') or text:match('حظر (%d+)')
+if text and (text:match('^حظر (%d+)') or text:match('^حظر (%d+)')) and ChCheck(msg) then
+local user = text:match('حظر (%d+)') or text:match('حظر (%d+)')
 if not Constructor(msg) and DevAbs:get(raqi.."Abs:Lock:KickBan"..msg.chat_id_) then 
 send(msg.chat_id_, msg.id_,'🇸🇦︙لقد تم تعطيل الطرد والحظر من قبل المنشئين')
 return false
@@ -6286,7 +6286,7 @@ end
 --     Source dev yousef     --
 --         BanAll         --
 if SecondSudo(msg) then
-if text ==('حضر عام') or text ==('حظر عام') then
+if text ==('حظر عام') or text ==('حظر عام') then
 function BanAllReply(extra, result, success)
 if tonumber(result.sender_user_id_) == tonumber(raqi) then  
 Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙*لاتستطيع حظر البوت عام*", 1, 'md')
@@ -6307,8 +6307,8 @@ end
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),BanAllReply)
 end end
-if text and (text:match('^حضر عام @(.*)') or text:match('^حظر عام @(.*)')) then
-local username = text:match('^حضر عام @(.*)') or text:match('^حظر عام @(.*)')
+if text and (text:match('^حظر عام @(.*)') or text:match('^حظر عام @(.*)')) then
+local username = text:match('^حظر عام @(.*)') or text:match('^حظر عام @(.*)')
 function BanAllUser(extra,result,success)
 if tonumber(result.id_) == tonumber(raqi) then  
 Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙*لاتستطيع حظر البوت عام*", 1, 'md')
@@ -6331,8 +6331,8 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙*المعرف غير صحيح*', 1
 end end 
 resolve_username(username,BanAllUser)
 end
-if text and (text:match('^حضر عام (%d+)') or text:match('^حظر عام (%d+)')) then
-local user = text:match('حضر عام (%d+)') or text:match('حظر عام (%d+)')
+if text and (text:match('^حظر عام (%d+)') or text:match('^حظر عام (%d+)')) then
+local user = text:match('حظر عام (%d+)') or text:match('حظر عام (%d+)')
 if tonumber(user) == tonumber(raqi) then  
 Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙*لاتستطيع حظر البوت عام*", 1, 'md')
 return false 
@@ -9688,7 +9688,7 @@ if text == 'تعطيل' and SudoBot(msg) and ChCheck(msg) then
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,dp) 
 if not DevAbs:sismember(raqi..'Abs:Groups',msg.chat_id_) then
-Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙المجموعة بالتاكيد معطله', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙المجموعة بالتاكيد معطلة', 1, 'md')
 else
 ReplyStatus(msg,result.id_,"ReplyBy","🇸🇦︙تم تعطيل المجموعة "..dp.title_)  
 DevAbs:srem(raqi.."Abs:Groups",msg.chat_id_)
@@ -9789,7 +9789,7 @@ end
 --     Source dev yousef     --
 if text == "اذاعه خاص" and msg.reply_to_message_id_ == 0 and SudoBot(msg) or text == "-› اذاعه خاص ⌁" and msg.reply_to_message_id_ == 0 and SudoBot(msg) then 
 if DevAbs:get(raqi.."Abs:Send:Bot"..raqi) and not SecondSudo(msg) then 
-send(msg.chat_id_, msg.id_,"🇸🇦︙الاذاعه معطله من قبل المطور الاساسي")
+send(msg.chat_id_, msg.id_,"🇸🇦︙الاذاعه معطلة من قبل المطور الاساسي")
 return false
 end
 DevAbs:setex(raqi.."Abs:Send:Pv"..msg.chat_id_..":" .. msg.sender_user_id_, 600, true) 
@@ -9856,7 +9856,7 @@ end
 --     Source dev yousef     --
 if text == "اذاعه" and msg.reply_to_message_id_ == 0 and SudoBot(msg) or text == "-› اذاعه عام ⌁" and msg.reply_to_message_id_ == 0 and SudoBot(msg) then 
 if DevAbs:get(raqi.."Abs:Send:Bot"..raqi) and not SecondSudo(msg) then 
-send(msg.chat_id_, msg.id_,"🇸🇦︙الاذاعه معطله من قبل المطور الاساسي")
+send(msg.chat_id_, msg.id_,"🇸🇦︙الاذاعه معطلة من قبل المطور الاساسي")
 return false
 end
 DevAbs:setex(raqi.."Abs:Send:Gp"..msg.chat_id_..":" .. msg.sender_user_id_, 600, true) 
@@ -9923,7 +9923,7 @@ end
 --     Source dev yousef     --
 if text == "اذاعه بالتوجيه" and msg.reply_to_message_id_ == 0 and SudoBot(msg) or text == "-› اذاعه عام بالتوجيه ⌁" and msg.reply_to_message_id_ == 0 and SudoBot(msg) then 
 if DevAbs:get(raqi.."Abs:Send:Bot"..raqi) and not SecondSudo(msg) then 
-send(msg.chat_id_, msg.id_,"🇸🇦︙الاذاعه معطله من قبل المطور الاساسي")
+send(msg.chat_id_, msg.id_,"🇸🇦︙الاذاعه معطلة من قبل المطور الاساسي")
 return false
 end
 DevAbs:setex(raqi.."Abs:Send:FwdGp"..msg.chat_id_..":" .. msg.sender_user_id_, 600, true) 
@@ -9947,7 +9947,7 @@ end
 --     Source dev yousef     --
 if text == "اذاعه خاص بالتوجيه" and msg.reply_to_message_id_ == 0 and SudoBot(msg) or text == "-› اذاعه خاص بالتوجيه ⌁" and msg.reply_to_message_id_ == 0 and SudoBot(msg) then 
 if DevAbs:get(raqi.."Abs:Send:Bot"..raqi) and not SecondSudo(msg) then 
-send(msg.chat_id_, msg.id_,"🇸🇦︙الاذاعه معطله من قبل المطور الاساسي")
+send(msg.chat_id_, msg.id_,"🇸🇦︙الاذاعه معطلة من قبل المطور الاساسي")
 return false
 end
 DevAbs:setex(raqi.."Abs:Send:FwdPv"..msg.chat_id_..":" .. msg.sender_user_id_, 600, true) 
@@ -9971,7 +9971,7 @@ end
 --     Source dev yousef     --
 if text == "اذاعه بالتثبيت" and msg.reply_to_message_id_ == 0 and SudoBot(msg) or text == "-› اذاعه بالتثبيت ⌁" and msg.reply_to_message_id_ == 0 and SudoBot(msg) then 
 if DevAbs:get(raqi.."Abs:Send:Bot"..raqi) and not SecondSudo(msg) then 
-send(msg.chat_id_, msg.id_,"🇸🇦︙الاذاعه معطله من قبل المطور الاساسي")
+send(msg.chat_id_, msg.id_,"🇸🇦︙الاذاعه معطلة من قبل المطور الاساسي")
 return false
 end
 DevAbs:setex(raqi.."Abs:Send:Gp:Pin"..msg.chat_id_..":" .. msg.sender_user_id_, 600, true) 
