@@ -1415,10 +1415,10 @@ local Text = [[
 🇸🇦︙المقيدين • مسح المقيدين
 🇸🇦︙المحظورين • مسح المحظورين
 ------------ Y●L ------------
-🇸🇦︙تقييد دقيقة + عدد الدقائق
-🇸🇦︙تقييد ساعة + عدد الساعات
-🇸🇦︙تقييد يوم + عدد الايام
-🇸🇦︙الغاء تقييد -› لالغاء التقييد بالوقت
+🇸🇦︙تقيد دقيقة + عدد الدقائق
+🇸🇦︙تقيد ساعة + عدد الساعات
+🇸🇦︙تقيد يوم + عدد الايام
+🇸🇦︙الغاء تقيد -› لالغاء التقيد بالوقت
 ------------ Y●L ------------
 🇸🇦︙[قناة البوت](https://t.me/yousef_labban1)
 ]]
@@ -5879,12 +5879,12 @@ DevAbs:set(raqi.."Abs:Lock:KickBan"..msg.chat_id_,"true")
 local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙تم تعطيل الطرد والحظر'
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
 end
-if text == "تفعيل الكتم" and ChCheck(msg) or text == "تفعيل التقييد" and ChCheck(msg) then
+if text == "تفعيل الكتم" and ChCheck(msg) or text == "تفعيل التقيد" and ChCheck(msg) then
 DevAbs:del(raqi.."Abs:Lock:MuteTked"..msg.chat_id_)
 local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙تم تفعيل الكتم والتقيد'
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
 end
-if text == "تعطيل الكتم" and ChCheck(msg) or text == "تعطيل التقييد" and ChCheck(msg) then
+if text == "تعطيل الكتم" and ChCheck(msg) or text == "تعطيل التقيد" and ChCheck(msg) then
 DevAbs:set(raqi.."Abs:Lock:MuteTked"..msg.chat_id_,"true")
 local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙تم تعطيل الكتم والتقيد'
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
@@ -6201,7 +6201,7 @@ end
 --     Source dev yousef     --
 --          Tkeed           --
 if Admin(msg) then
-if text ==('تقييد') or text ==('تقيد') and ChCheck(msg) then
+if text ==('تقيد') or text ==('تقيد') and ChCheck(msg) then
 function TkeedReply(extra, result, success)
 if not Constructor(msg) and DevAbs:get(raqi.."Abs:Lock:MuteTked"..msg.chat_id_) then 
 send(msg.chat_id_, msg.id_,'🇸🇦︙لقد تم تعطيل الكتم والتقيد من قبل المنشئين')
@@ -6218,8 +6218,8 @@ end
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),TkeedReply)
 end end
-if text and (text:match('^تقييد @(.*)') or text:match('^تقيد @(.*)')) and ChCheck(msg) then
-local username = text:match('^تقييد @(.*)') or text:match('^تقيد @(.*)')
+if text and (text:match('^تقيد @(.*)') or text:match('^تقيد @(.*)')) and ChCheck(msg) then
+local username = text:match('^تقيد @(.*)') or text:match('^تقيد @(.*)')
 function TkeedUser(extra,result,success)
 if not Constructor(msg) and DevAbs:get(raqi.."Abs:Lock:MuteTked"..msg.chat_id_) then 
 send(msg.chat_id_, msg.id_,'🇸🇦︙لقد تم تعطيل الكتم والتقيد من قبل المنشئين')
@@ -6238,8 +6238,8 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙*المعرف غير صحيح*', 1
 end end 
 resolve_username(username,TkeedUser)
 end
-if text and (text:match('^تقييد (%d+)') or text:match('^تقيد (%d+)')) and ChCheck(msg) then
-local user = text:match('تقييد (%d+)') or text:match('تقيد (%d+)')
+if text and (text:match('^تقيد (%d+)') or text:match('^تقيد (%d+)')) and ChCheck(msg) then
+local user = text:match('تقيد (%d+)') or text:match('تقيد (%d+)')
 if not Constructor(msg) and DevAbs:get(raqi.."Abs:Lock:MuteTked"..msg.chat_id_) then 
 send(msg.chat_id_, msg.id_,'🇸🇦︙لقد تم تعطيل الكتم والتقيد من قبل المنشئين')
 return false
@@ -6254,7 +6254,7 @@ end
 end
 --     Source dev yousef     --
 --         UnTkeed          --
-if text ==('الغاء تقييد') or text ==('الغاء تقيد') and ChCheck(msg) then
+if text ==('الغاء تقيد') or text ==('الغاء تقيد') and ChCheck(msg) then
 function UnTkeedReply(extra, result, success)
 HTTPS.request("https://api.telegram.org/bot"..TokenBot.."/restrictChatMember?chat_id="..msg.chat_id_.."&user_id="..result.sender_user_id_.."&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")
 DevAbs:srem(raqi..'Abs:Tkeed:'..msg.chat_id_, result.sender_user_id_)
@@ -6263,8 +6263,8 @@ end
 if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),UnTkeedReply)
 end end
-if text and (text:match('^الغاء تقييد @(.*)') or text:match('^الغاء تقيد @(.*)')) and ChCheck(msg) then
-local username = text:match('^الغاء تقييد @(.*)') or text:match('^الغاء تقيد @(.*)')
+if text and (text:match('^الغاء تقيد @(.*)') or text:match('^الغاء تقيد @(.*)')) and ChCheck(msg) then
+local username = text:match('^الغاء تقيد @(.*)') or text:match('^الغاء تقيد @(.*)')
 function UnTkeedUser(extra,result,success)
 if result.id_ then
 HTTPS.request("https://api.telegram.org/bot"..TokenBot.."/restrictChatMember?chat_id="..msg.chat_id_.."&user_id="..result.id_.."&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")
@@ -6275,8 +6275,8 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙*المعرف غير صحيح*', 1
 end end 
 resolve_username(username,UnTkeedUser)
 end
-if text and (text:match('^الغاء تقييد (%d+)') or text:match('^الغاء تقيد (%d+)')) and ChCheck(msg) then
-local user = text:match('الغاء تقييد (%d+)') or text:match('الغاء تقيد (%d+)')
+if text and (text:match('^الغاء تقيد (%d+)') or text:match('^الغاء تقيد (%d+)')) and ChCheck(msg) then
+local user = text:match('الغاء تقيد (%d+)') or text:match('الغاء تقيد (%d+)')
 HTTPS.request("https://api.telegram.org/bot"..TokenBot.."/restrictChatMember?chat_id="..msg.chat_id_.."&user_id="..user.."&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")
 DevAbs:srem(raqi..'Abs:Tkeed:'..msg.chat_id_, user)
 ReplyStatus(msg,user,"Reply","🇸🇦︙تم الغاء تقيده من المجموعة")  
@@ -6498,9 +6498,9 @@ getMessage(msg.chat_id_, msg.reply_to_message_id_,donky_by_reply)
 end end
 --     Source dev yousef     --
 if Admin(msg) then
-if text and (text:match('^تقييد دقيقة (%d+)$') or text:match('^كتم دقيقة (%d+)$') or text:match('^تقيد دقيقة (%d+)$')) and ChCheck(msg) then 
+if text and (text:match('^تقيد دقيقة (%d+)$') or text:match('^كتم دقيقة (%d+)$') or text:match('^تقيد دقيقة (%d+)$')) and ChCheck(msg) then 
 local function mut_time(extra, result,success)
-local mutept = text:match('^تقييد دقيقة (%d+)$') or text:match('^كتم دقيقة (%d+)$') or text:match('^تقيد دقيقة (%d+)$')
+local mutept = text:match('^تقيد دقيقة (%d+)$') or text:match('^كتم دقيقة (%d+)$') or text:match('^تقيد دقيقة (%d+)$')
 local Minutes = string.gsub(mutept, 'm', '')
 local num1 = tonumber(Minutes) * 60 
 if RankChecking(result.sender_user_id_, msg.chat_id_) then 
@@ -6513,9 +6513,9 @@ end end
 if tonumber(msg.reply_to_message_id_) == 0 then else
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, mut_time,nil) end 
 end
-if text and (text:match('^تقييد ساعة (%d+)$') or text:match('^كتم ساعة (%d+)$') or text:match('^تقيد ساعة (%d+)$')) and ChCheck(msg) then 
+if text and (text:match('^تقيد ساعة (%d+)$') or text:match('^كتم ساعة (%d+)$') or text:match('^تقيد ساعة (%d+)$')) and ChCheck(msg) then 
 local function mut_time(extra, result,success)
-local mutept = text:match('^تقييد ساعة (%d+)$') or text:match('^كتم ساعة (%d+)$') or text:match('^تقيد ساعة (%d+)$')
+local mutept = text:match('^تقيد ساعة (%d+)$') or text:match('^كتم ساعة (%d+)$') or text:match('^تقيد ساعة (%d+)$')
 local hour = string.gsub(mutept, 'h', '')
 local num1 = tonumber(hour) * 3600 
 if RankChecking(result.sender_user_id_, msg.chat_id_) then 
@@ -6528,9 +6528,9 @@ end end
 if tonumber(msg.reply_to_message_id_) == 0 then else
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, mut_time,nil) end 
 end 
-if text and (text:match('^تقييد يوم (%d+)$') or text:match('^كتم يوم (%d+)$') or text:match('^تقيد يوم (%d+)$')) and ChCheck(msg) then 
+if text and (text:match('^تقيد يوم (%d+)$') or text:match('^كتم يوم (%d+)$') or text:match('^تقيد يوم (%d+)$')) and ChCheck(msg) then 
 local function mut_time(extra, result,success)
-local mutept = text:match('^تقييد يوم (%d+)$') or text:match('^كتم يوم (%d+)$') or text:match('^تقيد يوم (%d+)$')
+local mutept = text:match('^تقيد يوم (%d+)$') or text:match('^كتم يوم (%d+)$') or text:match('^تقيد يوم (%d+)$')
 local day = string.gsub(mutept, 'd', '')
 local num1 = tonumber(day) * 86400 
 if RankChecking(result.sender_user_id_, msg.chat_id_) then 
@@ -7649,7 +7649,7 @@ if LockText[2] == "البوتات بالطرد" then
 ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم قفل البوتات بالطرد")  
 DevAbs:set(raqi.."Abs:Lock:Bots"..msg.chat_id_,"kick")  
 end
-if LockText[2] == "البوتات بالتقييد" or LockText[2] == "البوتات بالتقيد" then
+if LockText[2] == "البوتات بالتقيد" or LockText[2] == "البوتات بالتقيد" then
 ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم قفل البوتات بالتقيد")  
 DevAbs:set(raqi.."Abs:Lock:Bots"..msg.chat_id_,"ked")  
 end
@@ -7661,7 +7661,7 @@ if LockText[2] == "التكرار بالطرد" then
 DevAbs:hset(raqi.."Abs:Spam:Group:User"..msg.chat_id_ ,"Spam:User","kick")  
 ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم قفل التكرار بالطرد")  
 end
-if LockText[2] == "التكرار بالتقيد" or LockText[2] == "التكرار بالتقييد" then 
+if LockText[2] == "التكرار بالتقيد" or LockText[2] == "التكرار بالتقيد" then 
 DevAbs:hset(raqi.."Abs:Spam:Group:User"..msg.chat_id_ ,"Spam:User","keed")  
 ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم قفل التكرار بالتقيد")  
 end
@@ -8095,7 +8095,7 @@ else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙الفارسية بالطرد بالفعل مفتوحة', 1, 'md')
 end
 end
-if UnLockText[2] == "البوتات" or UnLockText[2] == "البوتات بالطرد" or UnLockText[2] == "البوتات بالتقييد" or UnLockText[2] == "البوتات بالتقيد" then
+if UnLockText[2] == "البوتات" or UnLockText[2] == "البوتات بالطرد" or UnLockText[2] == "البوتات بالتقيد" or UnLockText[2] == "البوتات بالتقيد" then
 ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم فتح البوتات")  
 DevAbs:del(raqi.."Abs:Lock:Bots"..msg.chat_id_)  
 end
@@ -10494,10 +10494,10 @@ local Text = [[
 🇸🇦︙المقيدين • مسح المقيدين
 🇸🇦︙المحظورين • مسح المحظورين
 ------------ Y●L ------------
-🇸🇦︙تقييد دقيقة + عدد الدقائق
-🇸🇦︙تقييد ساعة + عدد الساعات
-🇸🇦︙تقييد يوم + عدد الايام
-🇸🇦︙الغاء تقييد -› لالغاء التقييد بالوقت
+🇸🇦︙تقيد دقيقة + عدد الدقائق
+🇸🇦︙تقيد ساعة + عدد الساعات
+🇸🇦︙تقيد يوم + عدد الايام
+🇸🇦︙الغاء تقيد -› لالغاء التقيد بالوقت
 ------------ Y●L ------------
 🇸🇦︙[قناة البوت](https://t.me/yousef_labban1)
 ]]
