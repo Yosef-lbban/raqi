@@ -9199,7 +9199,7 @@ absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(m
 DevAbs:set(raqi..'Abs:Audios:Abs'..msg.chat_id_,true)  
 end
 if text == "غنيلي" and not DevAbs:get(raqi..'Abs:Audios:Abs'..msg.chat_id_) and ChCheck(msg) then
-data,res = https.request('https://apiabs.ml/Audios.php')
+data,res = https.request('https://t.me/wtheq/245')
 if res == 200 then
 Audios = json:decode(data)
 if Audios.Info == true then
