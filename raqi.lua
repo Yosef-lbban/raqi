@@ -1646,7 +1646,7 @@ local Text = [[
 🇸🇦︙احسب + تاريخ ميلادك
 🇸🇦︙صلاحياته -› بالرد • بالمعرف • بالايدي
 🇸🇦︙ايدي • كشف  -› بالرد • بالمعرف • بالايدي
-🇸🇦︙تحويل + بالرد -› صورة • ملصق • صوت • بصمه
+🇸🇦︙تحويل + بالرد -› صورة • ملصق • صوت • بصمة
 ------------ Y●L ------------
 🇸🇦︙[قناة البوت](https://t.me/yousef_labban1)
 ]]
@@ -2062,7 +2062,7 @@ sendDocument(id_user, msg.id_, 0, 1,nil, msg.content_.animation_.animation_.pers
 Text = '🇸🇦︙تم ارسال المتحركة الى -› ⤈'
 elseif msg.content_.ID == 'MessageVoice' then    
 sendVoice(id_user, msg.id_, 0, 1,nil, msg.content_.voice_.voice_.persistent_id_)    
-Text = '🇸🇦︙تم ارسال البصمه الى -› ⤈'
+Text = '🇸🇦︙تم ارسال البصمة الى -› ⤈'
 end     
 SendText(DevId, Text..'\n'..'['..string.sub(data.first_name_,0, 40)..'](tg://user?id='..data.id_..')',0,'md') 
 end,nil);
@@ -7049,7 +7049,7 @@ end
 if result.content_.audio_ then 
 local Abs = json:decode(https.request('https://api.telegram.org/bot'.. TokenBot..'/getfile?file_id='..result.content_.audio_.audio_.persistent_id_)) 
 download_to_file('https://api.telegram.org/file/bot'..TokenBot..'/'..Abs.result.file_path,msg.sender_user_id_..'.ogg') 
-sendVoice(msg.chat_id_, msg.id_, 0, 1,nil, './'..msg.sender_user_id_..'.ogg',"🇸🇦︙تم تحويل الـMp3 الى بصمه")
+sendVoice(msg.chat_id_, msg.id_, 0, 1,nil, './'..msg.sender_user_id_..'.ogg',"🇸🇦︙تم تحويل الـMp3 الى بصمة")
 os.execute('rm -rf ./'..msg.sender_user_id_..'.ogg') 
 end   
 if result.content_.voice_ then 
@@ -9793,7 +9793,7 @@ send(msg.chat_id_, msg.id_,"🇸🇦︙الاذاعة معطلة من قبل ا�
 return false
 end
 DevAbs:setex(raqi.."Abs:Send:Pv"..msg.chat_id_..":" .. msg.sender_user_id_, 600, true) 
-local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙ارسل لي سواء -› ⤈ \n❨ ملف • ملصق • متحركة • صورة\n • فيديو • بصمه • صوت • رسالة ❩\n🇸🇦︙للخروج ارسل -› ( الغاء ) \n ✓'
+local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙ارسل لي سواء -› ⤈ \n❨ ملف • ملصق • متحركة • صورة\n • فيديو • بصمة • صوت • رسالة ❩\n🇸🇦︙للخروج ارسل -› ( الغاء ) \n ✓'
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
 return false
 end 
@@ -9831,7 +9831,7 @@ sendVideo(v, 0, 0, 1, nil, msg.content_.video_.video_.persistent_id_,(msg.conten
 end 
 elseif msg.content_.voice_ then
 for k,v in pairs(List) do 
-AbsText = "البصمه"
+AbsText = "البصمة"
 sendVoice(v, 0, 0, 1, nil, msg.content_.voice_.voice_.persistent_id_,(msg.content_.caption_ or '')) 
 end 
 elseif msg.content_.audio_ then
@@ -9860,7 +9860,7 @@ send(msg.chat_id_, msg.id_,"🇸🇦︙الاذاعة معطلة من قبل ا�
 return false
 end
 DevAbs:setex(raqi.."Abs:Send:Gp"..msg.chat_id_..":" .. msg.sender_user_id_, 600, true) 
-local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙ارسل لي سواء -› ⤈ \n❨ ملف • ملصق • متحركة • صورة\n • فيديو • بصمه • صوت • رسالة ❩\n🇸🇦︙للخروج ارسل -› ( الغاء ) \n ✓'
+local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙ارسل لي سواء -› ⤈ \n❨ ملف • ملصق • متحركة • صورة\n • فيديو • بصمة • صوت • رسالة ❩\n🇸🇦︙للخروج ارسل -› ( الغاء ) \n ✓'
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
 return false
 end 
@@ -9898,7 +9898,7 @@ sendVideo(v, 0, 0, 1, nil, msg.content_.video_.video_.persistent_id_,(msg.conten
 end 
 elseif msg.content_.voice_ then
 for k,v in pairs(List) do 
-AbsText = "البصمه"
+AbsText = "البصمة"
 sendVoice(v, 0, 0, 1, nil, msg.content_.voice_.voice_.persistent_id_,(msg.content_.caption_ or '')) 
 end 
 elseif msg.content_.audio_ then
@@ -9975,7 +9975,7 @@ send(msg.chat_id_, msg.id_,"🇸🇦︙الاذاعة معطلة من قبل ا�
 return false
 end
 DevAbs:setex(raqi.."Abs:Send:Gp:Pin"..msg.chat_id_..":" .. msg.sender_user_id_, 600, true) 
-local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙ارسل لي سواء -› ⤈ \n❨ ملف • ملصق • متحركة • صورة\n • فيديو • بصمه • صوت • رسالة ❩\n🇸🇦︙للخروج ارسل -› ( الغاء ) \n ✓'
+local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙ارسل لي سواء -› ⤈ \n❨ ملف • ملصق • متحركة • صورة\n • فيديو • بصمة • صوت • رسالة ❩\n🇸🇦︙للخروج ارسل -› ( الغاء ) \n ✓'
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
 return false
 end 
@@ -10017,7 +10017,7 @@ DevAbs:set(raqi..'Abs:PinnedMsgs'..v,msg.content_.video_.video_.persistent_id_)
 end 
 elseif msg.content_.voice_ then
 for k,v in pairs(List) do 
-AbsText = "البصمه"
+AbsText = "البصمة"
 sendVoice(v, 0, 0, 1, nil, msg.content_.voice_.voice_.persistent_id_,(msg.content_.caption_ or '')) 
 DevAbs:set(raqi..'Abs:PinnedMsgs'..v,msg.content_.voice_.voice_.persistent_id_)
 end 
@@ -10134,7 +10134,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم الغاء الامر" ,  1, 
 DevAbs:del(raqi..'Abs:Add:GpRed'..msg.sender_user_id_..msg.chat_id_)
 return false
 end
-Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙ارسل لي الرد سواء كان -› ⤈\n❨ ملف • ملصق • متحركة • صورة\n • فيديو • بصمه • صوت • رسالة ❩\n🇸🇦︙يمكنك اضافة الى النص -› ⤈\n------------ Y●L ------------\n `#username` ↬ معرف المستخدم\n `#msgs` ↬ عدد الرسائل\n `#name` ↬ اسم المستخدم\n `#id` ↬ ايدي المستخدم\n `#stast` ↬ رتبة المستخدم\n `#edit` ↬ عدد التعديلات\n------------ Y●L ------------\n🇸🇦︙للخروج ارسل -› ( الغاء )\n ✓" ,  1, "md")
+Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙ارسل لي الرد سواء كان -› ⤈\n❨ ملف • ملصق • متحركة • صورة\n • فيديو • بصمة • صوت • رسالة ❩\n🇸🇦︙يمكنك اضافة الى النص -› ⤈\n------------ Y●L ------------\n `#username` ↬ معرف المستخدم\n `#msgs` ↬ عدد الرسائل\n `#name` ↬ اسم المستخدم\n `#id` ↬ ايدي المستخدم\n `#stast` ↬ رتبة المستخدم\n `#edit` ↬ عدد التعديلات\n------------ Y●L ------------\n🇸🇦︙للخروج ارسل -› ( الغاء )\n ✓" ,  1, "md")
 DevAbs:set(raqi..'Abs:Add:GpRed'..msg.sender_user_id_..msg.chat_id_,'SaveGpRed')
 DevAbs:set(raqi..'Abs:Add:GpText'..msg.sender_user_id_..msg.chat_id_,text)
 DevAbs:sadd(raqi..'Abs:Manager:GpRed'..msg.chat_id_,text)
@@ -10165,7 +10165,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم الغاء الامر" ,  1, 
 DevAbs:del(raqi..'Abs:Add:AllRed'..msg.sender_user_id_)
 return false
 end
-Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙ارسل لي الرد سواء كان -› ⤈\n❨ ملف • ملصق • متحركة • صورة\n • فيديو • بصمه • صوت • رسالة ❩\n🇸🇦︙يمكنك اضافة الى النص -› ⤈\n------------ Y●L ------------\n `#username` ↬ معرف المستخدم\n `#msgs` ↬ عدد الرسائل\n `#name` ↬ اسم المستخدم\n `#id` ↬ ايدي المستخدم\n `#stast` ↬ رتبة المستخدم\n `#edit` ↬ عدد التعديلات\n------------ Y●L ------------\n🇸🇦︙للخروج ارسل -› ( الغاء )\n ✓" ,  1, "md")
+Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙ارسل لي الرد سواء كان -› ⤈\n❨ ملف • ملصق • متحركة • صورة\n • فيديو • بصمة • صوت • رسالة ❩\n🇸🇦︙يمكنك اضافة الى النص -› ⤈\n------------ Y●L ------------\n `#username` ↬ معرف المستخدم\n `#msgs` ↬ عدد الرسائل\n `#name` ↬ اسم المستخدم\n `#id` ↬ ايدي المستخدم\n `#stast` ↬ رتبة المستخدم\n `#edit` ↬ عدد التعديلات\n------------ Y●L ------------\n🇸🇦︙للخروج ارسل -› ( الغاء )\n ✓" ,  1, "md")
 DevAbs:set(raqi.."Abs:Add:AllRed"..msg.sender_user_id_,'SaveAllRed')
 DevAbs:set(raqi.."Abs:Add:AllText"..msg.sender_user_id_, text)
 DevAbs:sadd(raqi.."Abs:Sudo:AllRed",text)
@@ -10205,7 +10205,7 @@ for k,v in pairs(redod) do
 if DevAbs:get(raqi.."Abs:Gif:GpRed"..v..msg.chat_id_) then
 dp = 'متحركة 🎭'
 elseif DevAbs:get(raqi.."Abs:Voice:GpRed"..v..msg.chat_id_) then
-dp = 'بصمه 🎙'
+dp = 'بصمة 🎙'
 elseif DevAbs:get(raqi.."Abs:Stecker:GpRed"..v..msg.chat_id_) then
 dp = 'ملصق 🃏'
 elseif DevAbs:get(raqi.."Abs:Text:GpRed"..v..msg.chat_id_) then
@@ -10254,7 +10254,7 @@ for k,v in pairs(redod) do
 if DevAbs:get(raqi.."Abs:Gif:AllRed"..v) then
 dp = 'متحركة 🎭'
 elseif DevAbs:get(raqi.."Abs:Voice:AllRed"..v) then
-dp = 'بصمه 🎙'
+dp = 'بصمة 🎙'
 elseif DevAbs:get(raqi.."Abs:Stecker:AllRed"..v) then
 dp = 'ملصق 🃏'
 elseif DevAbs:get(raqi.."Abs:Text:AllRed"..v) then
@@ -10749,7 +10749,7 @@ local Text = [[
 🇸🇦︙احسب + تاريخ ميلادك
 🇸🇦︙صلاحياته -› بالرد • بالمعرف • بالايدي
 🇸🇦︙ايدي • كشف  -› بالرد • بالمعرف • بالايدي
-🇸🇦︙تحويل + بالرد -› صورة • ملصق • صوت • بصمه
+🇸🇦︙تحويل + بالرد -› صورة • ملصق • صوت • بصمة
 
 ------------ Y●L ------------
 🇸🇦︙[قناة البوت](https://t.me/yousef_labban1)
@@ -10995,7 +10995,7 @@ DeleteMessage(msg.chat_id_,{[0] = data.message_id_})
 Media = 'الميديا'
 if result.content_.ID == "MessagePhoto" then Media = 'الصورة'
 elseif result.content_.ID == "MessageSticker" then Media = 'الملصق'
-elseif result.content_.ID == "MessageVoice" then Media = 'البصمه'
+elseif result.content_.ID == "MessageVoice" then Media = 'البصمة'
 elseif result.content_.ID == "MessageAudio" then Media = 'الصوت'
 elseif result.content_.ID == "MessageVideo" then Media = 'الفيديو'
 elseif result.content_.ID == "MessageAnimation" then Media = 'المتحركة'
