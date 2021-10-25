@@ -1468,9 +1468,9 @@ local Text = [[
 🇸🇦︙المميز • المنظف • العضو
 🇸🇦︙حذف ردود الرتب
 ------------ Y●L ------------
-🇸🇦︙تغيير الايدي -› لتغيير الكليشه
-🇸🇦︙تعيين الايدي -› لتعيين الكليشه
-🇸🇦︙حذف الايدي -› لحذف الكليشه
+🇸🇦︙تغيير الايدي -› لتغيير الرسالة
+🇸🇦︙تعيين الايدي -› لتعيين الرسالة
+🇸🇦︙حذف الايدي -› لحذف الرسالة
 ------------ Y●L ------------
 🇸🇦︙تفعيل • تعطيل + الامر -› ⤈
 🇸🇦︙اطردني • الايدي بالصورة •
@@ -1596,13 +1596,13 @@ local Text = [[
 🇸🇦︙جلب نسخه القروبات
 🇸🇦︙رفع النسخه + بالرد على الملف
 🇸🇦︙تعيين • حذف -› قناة الاشتراك
-🇸🇦︙جلب كليشه الاشتراك
-🇸🇦︙تغيير • حذف -› كليشه الاشتراك
+🇸🇦︙جلب رسالة الاشتراك
+🇸🇦︙تغيير • حذف -› رسالة الاشتراك
 🇸🇦︙رفع • تنزيل -› مطور
 🇸🇦︙المطورين • حذف المطورين
 🇸🇦︙رفع • تنزيل -› مطور ثانوي
 🇸🇦︙الثانويين • حذف الثانويين
-🇸🇦︙تعيين • حذف -› كليشة الايدي
+🇸🇦︙تعيين • حذف -› رسالة الايدي
 🇸🇦︙اذاعه للكل بالتوجيه -› بالرد
 ------------ Y●L ------------
 🇸🇦︙تفعيل ملف + اسم الملف
@@ -1959,7 +1959,7 @@ if text == '/start' or text == 'رجوع ،🔙‘' then
 if SecondSudo(msg) then 
 local Sudo_Welcome = '🇸🇦︙مرحبا عزيزي المطور \n🇸🇦︙انت المطور الاساسي هنا \n🇸🇦︙اليك ازرار سورس dev-yousef 🇸🇦 \n🇸🇦︙تستطيع التحكم بكل الاوامر فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
-{'وضع اسم البوت','-› تحديث ⌁','وضع كليشه المطور'},
+{'وضع اسم البوت','-› تحديث ⌁','وضع رسالة المطور'},
 {'-› المطورين ⌁','-› الاحصائيات ⌁'},
 {'-› المجموعات ⌁','روابط القروبات','-› المشتركين ⌁'},
 {'-› تعطيل التواصل ⌁','-› تفعيل التواصل ⌁'},
@@ -1972,26 +1972,26 @@ local key = {
 {'-› اذاعه بالتثبيت ⌁'},
 {'-› اذاعه عام ⌁','-› اذاعه خاص ⌁'},
 {'-› اذاعه عام بالتوجيه ⌁','-› اذاعه خاص بالتوجيه ⌁'},
-{'~ تعيين كلايش الاوامر ~'},
+{'~ تعيين رسائل الاوامر ~'},
 {'تعطيل البوت الخدمي','تفعيل البوت الخدمي'},
 {'جلب نسخه السورس','تحديث السورس','جلب نسخه القروبات'},
 {'-› حذف رد عام ⌁','-› الردود العام ⌁','-› اضف رد عام ⌁'},
 {'-› حذف رد الخاص ⌁','-› تعيين رد الخاص ⌁'},
 {'حذف قناة الاشتراك','قناة الاشتراك','تعيين قناة الاشتراك'},
-{'حذف كليشه الاشتراك','كليشه الاشتراك','تغير كليشه الاشتراك'},
+{'حذف رسالة الاشتراك','رسالة الاشتراك','تغير رسالة الاشتراك'},
 }
 SendInline(msg.chat_id_,Sudo_Welcome,key)
 return false
 end end
-if text == '~ تعيين كلايش الاوامر ~' then 
+if text == '~ تعيين رسائل الاوامر ~' then 
 if SecondSudo(msg) then 
-local Sudo_Welcome = '🇸🇦︙اهلا بك مجددا عزيزي المطور \n🇸🇦︙اليك الازرار الخاصه بتعديل وتغيير كلايش سورس dev-yousef 🇸🇦 فقط اضغط على الامر الذي تريد تنفيذه'
+local Sudo_Welcome = '🇸🇦︙اهلا بك مجددا عزيزي المطور \n🇸🇦︙اليك الازرار الخاصه بتعديل وتغيير رسائل سورس dev-yousef 🇸🇦 فقط اضغط على الامر الذي تريد تنفيذه'
 local key = {
-{'حذف كليشة الايدي','تعيين كليشة الايدي'},
+{'حذف رسالة الايدي','تعيين رسالة الايدي'},
 {'تعيين امر الاوامر'},
 {'تعيين امر م3','تعيين امر م2','تعيين امر م1'},
 {'تعيين امر م6','تعيين امر م5','تعيين امر م4'},
-{'استعادة كلايش الاوامر'},
+{'استعادة رسائل الاوامر'},
 {'رجوع ،🔙‘'},
 }
 SendInline(msg.chat_id_,Sudo_Welcome,key)
@@ -2050,7 +2050,7 @@ return false
 end 
 if text then
 Dev_Abs(id_user, 0, 1, text, 1, "md")  
-Text = '🇸🇦︙تم ارسال الرساله الى -› ⤈'
+Text = '🇸🇦︙تم ارسال الرسالة الى -› ⤈'
 elseif msg.content_.ID == 'MessageSticker' then    
 sendSticker(id_user, msg.id_, 0, 1,nil, msg.content_.sticker_.sticker_.persistent_id_)   
 Text = '🇸🇦︙تم ارسال الملصق الى -› ⤈'
@@ -2074,24 +2074,24 @@ end
 --     Source dev yousef     --
 if text and DevAbs:get(raqi..'Abs:Start:Bots'..msg.sender_user_id_) then
 if text == 'الغاء' then   
-Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم الغاء حفظ كليشة الستارت', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم الغاء حفظ رسالة الستارت', 1, 'md')
 DevAbs:del(raqi..'Abs:Start:Bots'..msg.sender_user_id_) 
 return false
 end
 DevAbs:set(raqi.."Abs:Start:Bot",text)  
-Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم حفظ كليشة الستارت', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم حفظ رسالة الستارت', 1, 'md')
 DevAbs:del(raqi..'Abs:Start:Bots'..msg.sender_user_id_) 
 return false
 end
 if SecondSudo(msg) then
-if text == 'تعيين رد الخاص' or text == 'ضع كليشه ستارت' or text == '-› تعيين رد الخاص ⌁' then 
+if text == 'تعيين رد الخاص' or text == 'ضع رسالة ستارت' or text == '-› تعيين رد الخاص ⌁' then 
 DevAbs:set(raqi..'Abs:Start:Bots'..msg.sender_user_id_,true) 
-Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙ارسل لي كليشة الستارت الان', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙ارسل لي رسالة الستارت الان', 1, 'md')
 return false
 end
-if text == 'حذف رد الخاص' or text == 'حذف كليشه ستارت' or text == '-› حذف رد الخاص ⌁' then 
+if text == 'حذف رد الخاص' or text == 'حذف رسالة ستارت' or text == '-› حذف رد الخاص ⌁' then 
 DevAbs:del(raqi..'Start:Bot') 
-Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم حذف كليشة الستارت بنجاح', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم حذف رسالة الستارت بنجاح', 1, 'md')
 end
 if text == 'جلب رد الخاص' then  
 local start = DevAbs:get(raqi.."Abs:Start:Bot")
@@ -3315,7 +3315,7 @@ DevAbs:del('devyousef:'..raqi.."numadd:user"..msg.chat_id_.."" .. msg.sender_use
 local numadded = string.match(text, "(%d+)") 
 local iduserr = DevAbs:get('devyousef:'..raqi..'id:user'..msg.chat_id_)  
 DevAbs:incrby(raqi..'Abs:UsersMsgs'..msg.chat_id_..':'..iduserr,numadded)
-Dev_Abs(msg.chat_id_, msg.id_,  1, "🇸🇦︙تم اضافة "..numadded..' رساله', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_,  1, "🇸🇦︙تم اضافة "..numadded..' رسالة', 1, 'md')
 DevAbs:del('devyousef:'..raqi..'id:user'..msg.chat_id_) 
 end
 end
@@ -3526,7 +3526,7 @@ end
 DevAbs:del(raqi.."Abs:DevText"..msg.chat_id_..":" .. msg.sender_user_id_)
 local DevText = msg.content_.text_:match("(.*)")
 DevAbs:set(raqi.."DevText", DevText)
-Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم حفظ كليشة المطور", 1, "md")
+Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم حفظ رسالة المطور", 1, "md")
 end
 if DevAbs:get(raqi..'Abs:NameBot'..msg.sender_user_id_) == 'msg' then
 if text and text:match("^الغاء$") then 
@@ -4297,7 +4297,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1,'🇸🇦︙لم تربح اي نقطه\n🇸�
 else
 DevAbs0 = (DevAbs:get(raqi..'Abs:GamesNumber'..msg.chat_id_..msg.sender_user_id_) * 50)
 DevAbs:incrby(raqi..'Abs:UsersMsgs'..msg.chat_id_..':'..msg.sender_user_id_,DevAbs0)
-Dev_Abs(msg.chat_id_, msg.id_, 1,'🇸🇦︙تم بيع '..(DevAbs:get(raqi..'Abs:GamesNumber'..msg.chat_id_..msg.sender_user_id_))..' من نقاطك\n🇸🇦︙كل نقطه تساوي 50 رساله', 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1,'🇸🇦︙تم بيع '..(DevAbs:get(raqi..'Abs:GamesNumber'..msg.chat_id_..msg.sender_user_id_))..' من نقاطك\n🇸🇦︙كل نقطه تساوي 50 رسالة', 'md')
 DevAbs:del(raqi..'Abs:GamesNumber'..msg.chat_id_..msg.sender_user_id_)
 end
 end
@@ -5865,7 +5865,7 @@ if msg.reply_to_message_id_ ~= 0 then
 if text and (text:match("^مسح$") or text:match("^حذف$")) and ChCheck(msg) then
 DeleteMessage(msg.chat_id_,{[0] = msg.reply_to_message_id_})
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})
-Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم حذف الرساله مع رسالة الامر', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم حذف الرسالة مع رسالة الامر', 1, 'md')
 end end end
 --     Source dev yousef     --
 if Constructor(msg) then
@@ -6561,7 +6561,7 @@ local Num = text:match("^اضف رسائل (%d+)$")
 function Reply(extra, result, success)
 DevAbs:del(raqi..'Abs:UsersMsgs'..msg.chat_id_..':'..result.sender_user_id_) 
 DevAbs:incrby(raqi..'Abs:UsersMsgs'..msg.chat_id_..':'..result.sender_user_id_,Num) 
-Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم اضافة "..Num..' رساله', 1, 'md') 
+Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم اضافة "..Num..' رسالة', 1, 'md') 
 end
 tdcli_function ({ID = "GetMessage",chat_id_=msg.chat_id_,message_id_=tonumber(msg.reply_to_message_id_)},Reply, nil)
 return false
@@ -6596,7 +6596,7 @@ end
 tdcli_function ({ID = "PinChannelMessage",channel_id_ = msg.chat_id_:gsub("-100",""),message_id_ = msg.reply_to_message_id_,disable_notification_ = 1},function(arg,data) 
 if data.ID == "Ok" then
 DevAbs:set(raqi..'Abs:PinnedMsg'..msg.chat_id_,msg.reply_to_message_id_)
-local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙تم تثبيت الرساله بنجاح'
+local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙تم تثبيت الرسالة بنجاح'
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
 return false  
 end
@@ -6977,19 +6977,19 @@ function filter_by_reply(extra, result, success)
 if result.content_.sticker_ then
 local idsticker = result.content_.sticker_.sticker_.persistent_id_
 DevAbs:sadd(raqi.."Abs:FilterSteckr"..msg.chat_id_,idsticker)
-Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم منع الملصق بنجاح لن يتم ارساله مجددا', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم منع الملصق بنجاح لن يتم ارسالة مجددا', 1, 'md')
 return false
 end
 if result.content_.ID == "MessagePhoto" then
 local photo = result.content_.photo_.id_
 DevAbs:sadd(raqi.."Abs:FilterPhoto"..msg.chat_id_,photo)
-Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم منع الصورة بنجاح لن يتم ارسالها مجددا', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم منع الصورة بنجاح لن يتم ارسالةا مجددا', 1, 'md')
 return false
 end
 if result.content_.animation_ then
 local idanimation = result.content_.animation_.animation_.persistent_id_
 DevAbs:sadd(raqi.."Abs:FilterAnimation"..msg.chat_id_,idanimation)
-Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم منع المتحركة بنجاح لن يتم ارسالها مجددا', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم منع المتحركة بنجاح لن يتم ارسالةا مجددا', 1, 'md')
 return false
 end
 end
@@ -7001,19 +7001,19 @@ function unfilter_by_reply(extra, result, success)
 if result.content_.sticker_ then
 local idsticker = result.content_.sticker_.sticker_.persistent_id_
 DevAbs:srem(raqi.."Abs:FilterSteckr"..msg.chat_id_,idsticker)
-Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم الغاء منع الملصق يمكنهم ارساله الان', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم الغاء منع الملصق يمكنهم ارسالة الان', 1, 'md')
 return false
 end
 if result.content_.ID == "MessagePhoto" then
 local photo = result.content_.photo_.id_
 DevAbs:srem(raqi.."Abs:FilterPhoto"..msg.chat_id_,photo)
-Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم الغاء منع الصورة يمكنهم ارسالها الان', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم الغاء منع الصورة يمكنهم ارسالةا الان', 1, 'md')
 return false
 end
 if result.content_.animation_.animation_ then
 local idanimation = result.content_.animation_.animation_.persistent_id_
 DevAbs:srem(raqi.."Abs:FilterAnimation"..msg.chat_id_,idanimation)
-Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم الغاء منع المتحركة يمكنهم ارسالها الان', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم الغاء منع المتحركة يمكنهم ارسالةا الان', 1, 'md')
 return false
 end
 end
@@ -7401,50 +7401,50 @@ local List = {
 ]]}
 local Text_Rand = List[math.random(#List)]
 DevAbs:set(raqi.."Abs:GpIds:Text"..msg.chat_id_,Text_Rand)
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم تغير كليشة الايدي")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم تغير رسالة الايدي")  
 end
 --     Source dev yousef     --
 if SecondSudo(msg) then
-if text and text:match("^تعيين الايدي العام$") or text and text:match("^تعين الايدي العام$") or text and text:match("^تعيين كليشة الايدي$") then
-Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙رجائا اتبع التعليمات للتعيين \n🇸🇦︙لطبع كليشة الايدي ارسل كليشه تحتوي على النصوص التي باللغه الانجليزيه ادناه -› ⤈\n------------ Y●L ------------\n `#username` ↬ لطبع المعرف\n `#id` ↬ لطبع الايدي \n `#photos` ↬ لطبع عدد الصور \n `#stast` ↬ لطبع الرتب \n `#msgs` ↬ لطبع عدد الرسائل \n `#msgday` ↬ لطبع الرسائل اليوميه \n `#CustomTitle` ↬ لطبع اللقب \n `#bio` ↬ لطبع البايو \n `#auto` ↬ لطبع التفاعل \n `#game` ↬ لطبع عدد النقاط \n `#cont` ↬ لطبع عدد الجهات \n `#edit` ↬ لطبع عدد التعديلات \n `#Description` ↬ لطبع تعليق الصور\n------------ Y●L ------------', 1, 'md')
+if text and text:match("^تعيين الايدي العام$") or text and text:match("^تعين الايدي العام$") or text and text:match("^تعيين رسالة الايدي$") then
+Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙رجائا اتبع التعليمات للتعيين \n🇸🇦︙لطبع رسالة الايدي ارسل رسالة تحتوي على النصوص التي باللغه الانجليزيه ادناه -› ⤈\n------------ Y●L ------------\n `#username` ↬ لطبع المعرف\n `#id` ↬ لطبع الايدي \n `#photos` ↬ لطبع عدد الصور \n `#stast` ↬ لطبع الرتب \n `#msgs` ↬ لطبع عدد الرسائل \n `#msgday` ↬ لطبع الرسائل اليوميه \n `#CustomTitle` ↬ لطبع اللقب \n `#bio` ↬ لطبع البايو \n `#auto` ↬ لطبع التفاعل \n `#game` ↬ لطبع عدد النقاط \n `#cont` ↬ لطبع عدد الجهات \n `#edit` ↬ لطبع عدد التعديلات \n `#Description` ↬ لطبع تعليق الصور\n------------ Y●L ------------', 1, 'md')
 DevAbs:set("raqi:New:id:"..raqi..msg.sender_user_id_,'devyousef')
 return "devyousef"
 end
 if text and DevAbs:get("raqi:New:id:"..raqi..msg.sender_user_id_) then 
 if text == 'الغاء' then   
-Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم الغاء حفظ كليشة الايدي', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم الغاء حفظ رسالة الايدي', 1, 'md')
 DevAbs:del("raqi:New:id:"..raqi..msg.sender_user_id_)
 return false
 end
 DevAbs:del("raqi:New:id:"..raqi..msg.sender_user_id_)
-Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم حفظ كليشة الايدي العامه', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم حفظ رسالة الايدي العامه', 1, 'md')
 DevAbs:set(raqi.."Abs:AllIds:Text",text)
 return false
 end
-if text and text:match("^حذف الايدي العام$") or text and text:match("^مسح الايدي العام$") or text and text:match("^حذف كليشة الايدي$") then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم حذف كليشة الايدي العامه")  
+if text and text:match("^حذف الايدي العام$") or text and text:match("^مسح الايدي العام$") or text and text:match("^حذف رسالة الايدي$") then
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم حذف رسالة الايدي العامه")  
 DevAbs:del(raqi.."Abs:AllIds:Text")
 end
 end
 --     Source dev yousef     --
 if text and text:match("^تعيين الايدي$") and ChCheck(msg) or text and text:match("^تعين الايدي$") and ChCheck(msg) then
-Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙رجائا اتبع التعليمات للتعيين \n🇸🇦︙لطبع كليشة الايدي ارسل كليشه تحتوي على النصوص التي باللغه الانجليزيه ادناه -› ⤈\n------------ Y●L ------------\n `#username` ↬ لطبع المعرف\n `#id` ↬ لطبع الايدي \n `#photos` ↬ لطبع عدد الصور \n `#stast` ↬ لطبع الرتب \n `#msgs` ↬ لطبع عدد الرسائل \n `#msgday` ↬ لطبع الرسائل اليوميه \n `#CustomTitle` ↬ لطبع اللقب \n `#bio` ↬ لطبع البايو \n `#auto` ↬ لطبع التفاعل \n `#game` ↬ لطبع عدد النقاط \n `#cont` ↬ لطبع عدد الجهات \n `#edit` ↬ لطبع عدد التعديلات \n `#Description` ↬ لطبع تعليق الصور\n------------ Y●L ------------', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙رجائا اتبع التعليمات للتعيين \n🇸🇦︙لطبع رسالة الايدي ارسل رسالة تحتوي على النصوص التي باللغه الانجليزيه ادناه -› ⤈\n------------ Y●L ------------\n `#username` ↬ لطبع المعرف\n `#id` ↬ لطبع الايدي \n `#photos` ↬ لطبع عدد الصور \n `#stast` ↬ لطبع الرتب \n `#msgs` ↬ لطبع عدد الرسائل \n `#msgday` ↬ لطبع الرسائل اليوميه \n `#CustomTitle` ↬ لطبع اللقب \n `#bio` ↬ لطبع البايو \n `#auto` ↬ لطبع التفاعل \n `#game` ↬ لطبع عدد النقاط \n `#cont` ↬ لطبع عدد الجهات \n `#edit` ↬ لطبع عدد التعديلات \n `#Description` ↬ لطبع تعليق الصور\n------------ Y●L ------------', 1, 'md')
 DevAbs:set("raqi:New:id:"..raqi..msg.chat_id_..msg.sender_user_id_,'devyousef')
 return "devyousef"
 end
 if text and Manager(msg) and DevAbs:get("raqi:New:id:"..raqi..msg.chat_id_..msg.sender_user_id_) then 
 if text == 'الغاء' then   
-Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم الغاء حفظ كليشة الايدي', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم الغاء حفظ رسالة الايدي', 1, 'md')
 DevAbs:del("raqi:New:id:"..raqi..msg.chat_id_..msg.sender_user_id_)
 return false
 end
 DevAbs:del("raqi:New:id:"..raqi..msg.chat_id_..msg.sender_user_id_)
-Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم حفظ الكليشه الجديده', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم حفظ الرسالة الجديده', 1, 'md')
 DevAbs:set(raqi.."Abs:GpIds:Text"..msg.chat_id_,text)
 return false
 end
 if text and text:match("^حذف الايدي$") and ChCheck(msg) or text and text:match("^مسح الايدي$") and ChCheck(msg) then
-ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم حذف كليشة الايدي")  
+ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم حذف رسالة الايدي")  
 DevAbs:del(raqi.."Abs:GpIds:Text"..msg.chat_id_)
 end
 end
@@ -7769,14 +7769,14 @@ DevAbs:del(raqi.."Abs:Lock:Welcome"..msg.chat_id_)
 end
 if DevAbs:get(raqi..'Abs:setwelcome'..msg.chat_id_..':'..msg.sender_user_id_) then 
 if text == 'الغاء' then 
-Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم الغاء حفظ كليشة الترحيب', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم الغاء حفظ رسالة الترحيب', 1, 'md')
 DevAbs:del(raqi..'Abs:setwelcome'..msg.chat_id_..':'..msg.sender_user_id_)
 return false  
 end 
 DevAbs:del(raqi..'Abs:setwelcome'..msg.chat_id_..':'..msg.sender_user_id_)
 Welcomes = text:gsub('"',"") Welcomes = text:gsub("'","") Welcomes = text:gsub(",","") Welcomes = text:gsub("*","") Welcomes = text:gsub(";","") Welcomes = text:gsub("`","") Welcomes = text:gsub("{","") Welcomes = text:gsub("}","") 
 DevAbs:set(raqi..'Abs:Groups:Welcomes'..msg.chat_id_,Welcomes)
-Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم حفظ كليشة الترحيب', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم حفظ رسالة الترحيب', 1, 'md')
 return false   
 end
 if text and text:match("^ضع ترحيب$") and ChCheck(msg) or text and text:match("^وضع ترحيب$") and ChCheck(msg) or text and text:match("^اضف ترحيب$") and ChCheck(msg) then
@@ -7869,7 +7869,7 @@ if text and text:match('^تنظيف (%d+)$') and ChCheck(msg) then
 if not DevAbs:get(raqi..'Delete:Time'..msg.chat_id_..':'..msg.sender_user_id_) then  
 local Number = tonumber(text:match('^تنظيف (%d+)$')) 
 if Number > 1000 then 
-Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙لاتستطيع تنظيف اكثر من 1000 رساله', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙لاتستطيع تنظيف اكثر من 1000 رسالة', 1, 'md')
 return false  
 end  
 local Message = msg.id_
@@ -9401,7 +9401,7 @@ end
 tdcli_function({ID="UnpinChannelMessage",channel_id_ = msg.chat_id_:gsub("-100","")},function(arg,data) 
 if data.ID == "Ok" then
 DevAbs:del(raqi..'Abs:PinnedMsg'..msg.chat_id_)
-local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙تم الغاء تثبيت الرساله'
+local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙تم الغاء تثبيت الرسالة'
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
 return false  
 end
@@ -9448,7 +9448,7 @@ end
 local PinId = DevAbs:get(raqi..'Abs:PinnedMsg'..msg.chat_id_)
 if PinId then
 Pin(msg.chat_id_,PinId,0)
-local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙تم اعادة تثبيت الرساله'
+local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙تم اعادة تثبيت الرسالة'
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
 end end
 end
@@ -9793,7 +9793,7 @@ send(msg.chat_id_, msg.id_,"🇸🇦︙الاذاعه معطلة من قبل ا�
 return false
 end
 DevAbs:setex(raqi.."Abs:Send:Pv"..msg.chat_id_..":" .. msg.sender_user_id_, 600, true) 
-local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙ارسل لي سواء -› ⤈ \n❨ ملف • ملصق • متحركة • صورة\n • فيديو • بصمه • صوت • رساله ❩\n🇸🇦︙للخروج ارسل -› ( الغاء ) \n ✓'
+local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙ارسل لي سواء -› ⤈ \n❨ ملف • ملصق • متحركة • صورة\n • فيديو • بصمه • صوت • رسالة ❩\n🇸🇦︙للخروج ارسل -› ( الغاء ) \n ✓'
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
 return false
 end 
@@ -9806,7 +9806,7 @@ end
 List = DevAbs:smembers(raqi..'Abs:Users') 
 if msg.content_.text_ then
 for k,v in pairs(List) do 
-AbsText = "الرساله"
+AbsText = "الرسالة"
 send(v, 0,"["..msg.content_.text_.."]") 
 end
 elseif msg.content_.photo_ then
@@ -9860,7 +9860,7 @@ send(msg.chat_id_, msg.id_,"🇸🇦︙الاذاعه معطلة من قبل ا�
 return false
 end
 DevAbs:setex(raqi.."Abs:Send:Gp"..msg.chat_id_..":" .. msg.sender_user_id_, 600, true) 
-local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙ارسل لي سواء -› ⤈ \n❨ ملف • ملصق • متحركة • صورة\n • فيديو • بصمه • صوت • رساله ❩\n🇸🇦︙للخروج ارسل -› ( الغاء ) \n ✓'
+local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙ارسل لي سواء -› ⤈ \n❨ ملف • ملصق • متحركة • صورة\n • فيديو • بصمه • صوت • رسالة ❩\n🇸🇦︙للخروج ارسل -› ( الغاء ) \n ✓'
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
 return false
 end 
@@ -9873,7 +9873,7 @@ end
 List = DevAbs:smembers(raqi..'Abs:Groups') 
 if msg.content_.text_ then
 for k,v in pairs(List) do 
-AbsText = "الرساله"
+AbsText = "الرسالة"
 send(v, 0,"["..msg.content_.text_.."]") 
 end
 elseif msg.content_.photo_ then
@@ -9927,7 +9927,7 @@ send(msg.chat_id_, msg.id_,"🇸🇦︙الاذاعه معطلة من قبل ا�
 return false
 end
 DevAbs:setex(raqi.."Abs:Send:FwdGp"..msg.chat_id_..":" .. msg.sender_user_id_, 600, true) 
-local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙ارسل الرساله الان لتوجيها \n🇸🇦︙للخروج ارسل -› ( الغاء ) \n ✓'
+local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙ارسل الرسالة الان لتوجيها \n🇸🇦︙للخروج ارسل -› ( الغاء ) \n ✓'
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
 return false
 end 
@@ -9951,7 +9951,7 @@ send(msg.chat_id_, msg.id_,"🇸🇦︙الاذاعه معطلة من قبل ا�
 return false
 end
 DevAbs:setex(raqi.."Abs:Send:FwdPv"..msg.chat_id_..":" .. msg.sender_user_id_, 600, true) 
-local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙ارسل الرساله الان لتوجيها \n🇸🇦︙للخروج ارسل -› ( الغاء ) \n ✓'
+local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙ارسل الرسالة الان لتوجيها \n🇸🇦︙للخروج ارسل -› ( الغاء ) \n ✓'
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
 return false
 end 
@@ -9975,7 +9975,7 @@ send(msg.chat_id_, msg.id_,"🇸🇦︙الاذاعه معطلة من قبل ا�
 return false
 end
 DevAbs:setex(raqi.."Abs:Send:Gp:Pin"..msg.chat_id_..":" .. msg.sender_user_id_, 600, true) 
-local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙ارسل لي سواء -› ⤈ \n❨ ملف • ملصق • متحركة • صورة\n • فيديو • بصمه • صوت • رساله ❩\n🇸🇦︙للخروج ارسل -› ( الغاء ) \n ✓'
+local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙ارسل لي سواء -› ⤈ \n❨ ملف • ملصق • متحركة • صورة\n • فيديو • بصمه • صوت • رسالة ❩\n🇸🇦︙للخروج ارسل -› ( الغاء ) \n ✓'
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
 return false
 end 
@@ -9988,7 +9988,7 @@ end
 local List = DevAbs:smembers(raqi.."Abs:Groups") 
 if msg.content_.text_ then
 for k,v in pairs(List) do 
-AbsText = "الرساله"
+AbsText = "الرسالة"
 send(v, 0,"["..msg.content_.text_.."]") 
 DevAbs:set(raqi..'Abs:PinnedMsgs'..v,msg.content_.text_) 
 end
@@ -10134,7 +10134,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم الغاء الامر" ,  1, 
 DevAbs:del(raqi..'Abs:Add:GpRed'..msg.sender_user_id_..msg.chat_id_)
 return false
 end
-Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙ارسل لي الرد سواء كان -› ⤈\n❨ ملف • ملصق • متحركة • صورة\n • فيديو • بصمه • صوت • رساله ❩\n🇸🇦︙يمكنك اضافة الى النص -› ⤈\n------------ Y●L ------------\n `#username` ↬ معرف المستخدم\n `#msgs` ↬ عدد الرسائل\n `#name` ↬ اسم المستخدم\n `#id` ↬ ايدي المستخدم\n `#stast` ↬ رتبة المستخدم\n `#edit` ↬ عدد التعديلات\n------------ Y●L ------------\n🇸🇦︙للخروج ارسل -› ( الغاء )\n ✓" ,  1, "md")
+Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙ارسل لي الرد سواء كان -› ⤈\n❨ ملف • ملصق • متحركة • صورة\n • فيديو • بصمه • صوت • رسالة ❩\n🇸🇦︙يمكنك اضافة الى النص -› ⤈\n------------ Y●L ------------\n `#username` ↬ معرف المستخدم\n `#msgs` ↬ عدد الرسائل\n `#name` ↬ اسم المستخدم\n `#id` ↬ ايدي المستخدم\n `#stast` ↬ رتبة المستخدم\n `#edit` ↬ عدد التعديلات\n------------ Y●L ------------\n🇸🇦︙للخروج ارسل -› ( الغاء )\n ✓" ,  1, "md")
 DevAbs:set(raqi..'Abs:Add:GpRed'..msg.sender_user_id_..msg.chat_id_,'SaveGpRed')
 DevAbs:set(raqi..'Abs:Add:GpText'..msg.sender_user_id_..msg.chat_id_,text)
 DevAbs:sadd(raqi..'Abs:Manager:GpRed'..msg.chat_id_,text)
@@ -10165,7 +10165,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم الغاء الامر" ,  1, 
 DevAbs:del(raqi..'Abs:Add:AllRed'..msg.sender_user_id_)
 return false
 end
-Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙ارسل لي الرد سواء كان -› ⤈\n❨ ملف • ملصق • متحركة • صورة\n • فيديو • بصمه • صوت • رساله ❩\n🇸🇦︙يمكنك اضافة الى النص -› ⤈\n------------ Y●L ------------\n `#username` ↬ معرف المستخدم\n `#msgs` ↬ عدد الرسائل\n `#name` ↬ اسم المستخدم\n `#id` ↬ ايدي المستخدم\n `#stast` ↬ رتبة المستخدم\n `#edit` ↬ عدد التعديلات\n------------ Y●L ------------\n🇸🇦︙للخروج ارسل -› ( الغاء )\n ✓" ,  1, "md")
+Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙ارسل لي الرد سواء كان -› ⤈\n❨ ملف • ملصق • متحركة • صورة\n • فيديو • بصمه • صوت • رسالة ❩\n🇸🇦︙يمكنك اضافة الى النص -› ⤈\n------------ Y●L ------------\n `#username` ↬ معرف المستخدم\n `#msgs` ↬ عدد الرسائل\n `#name` ↬ اسم المستخدم\n `#id` ↬ ايدي المستخدم\n `#stast` ↬ رتبة المستخدم\n `#edit` ↬ عدد التعديلات\n------------ Y●L ------------\n🇸🇦︙للخروج ارسل -› ( الغاء )\n ✓" ,  1, "md")
 DevAbs:set(raqi.."Abs:Add:AllRed"..msg.sender_user_id_,'SaveAllRed')
 DevAbs:set(raqi.."Abs:Add:AllText"..msg.sender_user_id_, text)
 DevAbs:sadd(raqi.."Abs:Sudo:AllRed",text)
@@ -10209,7 +10209,7 @@ dp = 'بصمه 🎙'
 elseif DevAbs:get(raqi.."Abs:Stecker:GpRed"..v..msg.chat_id_) then
 dp = 'ملصق 🃏'
 elseif DevAbs:get(raqi.."Abs:Text:GpRed"..v..msg.chat_id_) then
-dp = 'رساله ✉'
+dp = 'رسالة ✉'
 elseif DevAbs:get(raqi.."Abs:Photo:GpRed"..v..msg.chat_id_) then
 dp = 'صورة 🎇'
 elseif DevAbs:get(raqi.."Abs:Video:GpRed"..v..msg.chat_id_) then
@@ -10258,7 +10258,7 @@ dp = 'بصمه 🎙'
 elseif DevAbs:get(raqi.."Abs:Stecker:AllRed"..v) then
 dp = 'ملصق 🃏'
 elseif DevAbs:get(raqi.."Abs:Text:AllRed"..v) then
-dp = 'رساله ✉'
+dp = 'رسالة ✉'
 elseif DevAbs:get(raqi.."Abs:Photo:AllRed"..v) then
 dp = 'صورة 🎇'
 elseif DevAbs:get(raqi.."Abs:Video:AllRed"..v) then
@@ -10315,7 +10315,7 @@ local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
 end end 
 --     Source dev yousef     --
-if text and text:match("^استعاده الاوامر$") and SecondSudo(msg) or text and text:match("^استعادة كلايش الاوامر$") and SecondSudo(msg) then
+if text and text:match("^استعاده الاوامر$") and SecondSudo(msg) or text and text:match("^استعادة رسائل الاوامر$") and SecondSudo(msg) then
 HelpList ={'Abs:Help','Abs:Help1','Abs:Help2','Abs:Help3','Abs:Help4','Abs:Help5','Abs:Help6'}
 for i,Help in pairs(HelpList) do
 DevAbs:del(raqi..Help) 
@@ -10323,7 +10323,7 @@ end
 Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم استعادة المنشورات الاصليه" ,  1, "md") 
 end
 if text == "تعيين الاوامر" and SecondSudo(msg) or text == "تعيين امر الاوامر" and SecondSudo(msg) then
-Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙ارسل كليشة (الاوامر) الان " ,  1, "md")
+Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙ارسل رسالة (الاوامر) الان " ,  1, "md")
 DevAbs:set(raqi..'Abs:Help0'..msg.sender_user_id_, 'msg')
 return false end
 if text and text:match("^(.*)$") then
@@ -10332,7 +10332,7 @@ if devyousef == 'msg' then
 Dev_Abs(msg.chat_id_, msg.id_, 1, text , 1, 'md')
 DevAbs:del(raqi..'Abs:Help0'..msg.sender_user_id_)
 DevAbs:set(raqi..'Abs:Help', text)
-Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم حفظ الكليشه الجديده " ,  1, "md")
+Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم حفظ الرسالة الجديده " ,  1, "md")
 return false end
 end
 if text == "الاوامر" or text == "اوامر" or text == "مساعده" then
@@ -10355,7 +10355,7 @@ Msg_id = msg.id_/2097152/0.5
 return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Help or Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
 if text == "تعيين امر م1" and SecondSudo(msg) or text == "تعيين امر م١" and SecondSudo(msg) then
-Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙ارسل كليشة (م1) الان " ,  1, "md")
+Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙ارسل رسالة (م1) الان " ,  1, "md")
 DevAbs:set(raqi..'Abs:Help01'..msg.sender_user_id_, 'msg')
 return false end
 if text and text:match("^(.*)$") then
@@ -10364,7 +10364,7 @@ if devyousef == 'msg' then
 Dev_Abs(msg.chat_id_, msg.id_, 1, text , 1, 'md')
 DevAbs:del(raqi..'Abs:Help01'..msg.sender_user_id_)
 DevAbs:set(raqi..'Abs:Help1', text)
-Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم حفظ الكليشه الجديده " ,  1, "md")
+Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم حفظ الرسالة الجديده " ,  1, "md")
 return false end
 end
 if text == "م1" or text == "م١" or text == "اوامر1" or text == "اوامر١" then
@@ -10426,7 +10426,7 @@ local Text = [[
 Dev_Abs(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end end
 if text == "تعيين امر م2" and SecondSudo(msg) or text == "تعيين امر م٢" and SecondSudo(msg) then
-Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙ارسل كليشة (م2) الان " ,  1, "md")
+Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙ارسل رسالة (م2) الان " ,  1, "md")
 DevAbs:set(raqi..'Abs:Help21'..msg.sender_user_id_, 'msg')
 return false end
 if text and text:match("^(.*)$") then
@@ -10435,7 +10435,7 @@ if devyousef == 'msg' then
 Dev_Abs(msg.chat_id_, msg.id_, 1, text , 1, 'md')
 DevAbs:del(raqi..'Abs:Help21'..msg.sender_user_id_)
 DevAbs:set(raqi..'Abs:Help2', text)
-Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم حفظ الكليشه الجديده " ,  1, "md")
+Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم حفظ الرسالة الجديده " ,  1, "md")
 return false end
 end
 if text == "م2" or text == "م٢" or text == "اوامر2" or text == "اوامر٢" then
@@ -10504,7 +10504,7 @@ local Text = [[
 Dev_Abs(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end end
 if text == "تعيين امر م3" and SecondSudo(msg) or text == "تعيين امر م٣" and SecondSudo(msg) then
-Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙ارسل كليشة (م3) الان " ,  1, "md")
+Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙ارسل رسالة (م3) الان " ,  1, "md")
 DevAbs:set(raqi..'Abs:Help31'..msg.sender_user_id_, 'msg')
 return false end
 if text and text:match("^(.*)$") then
@@ -10513,7 +10513,7 @@ if devyousef == 'msg' then
 Dev_Abs(msg.chat_id_, msg.id_, 1, text , 1, 'md')
 DevAbs:del(raqi..'Abs:Help31'..msg.sender_user_id_)
 DevAbs:set(raqi..'Abs:Help3', text)
-Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم حفظ الكليشه الجديده " ,  1, "md")
+Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم حفظ الرسالة الجديده " ,  1, "md")
 return false end
 end
 if text == "م3" or text == "م٣" or text == "اوامر3" or text == "اوامر٣" then
@@ -10553,9 +10553,9 @@ local Text = [[
 🇸🇦︙المميز • المنظف • العضو
 🇸🇦︙حذف ردود الرتب
 ------------ Y●L ------------
-🇸🇦︙تغيير الايدي -› لتغيير الكليشه
-🇸🇦︙تعيين الايدي -› لتعيين الكليشه
-🇸🇦︙حذف الايدي -› لحذف الكليشه
+🇸🇦︙تغيير الايدي -› لتغيير الرسالة
+🇸🇦︙تعيين الايدي -› لتعيين الرسالة
+🇸🇦︙حذف الايدي -› لحذف الرسالة
 ------------ Y●L ------------
 🇸🇦︙تفعيل • تعطيل + الامر -› ⤈
 🇸🇦︙اطردني • الايدي بالصورة •
@@ -10569,7 +10569,7 @@ local Text = [[
 Dev_Abs(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end end
 if text == "تعيين امر م4" and SecondSudo(msg) or text == "تعيين امر م٤" and SecondSudo(msg) then
-Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙ارسل كليشة (م4) الان " ,  1, "md")
+Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙ارسل رسالة (م4) الان " ,  1, "md")
 DevAbs:set(raqi..'Abs:Help41'..msg.sender_user_id_, 'msg')
 return false end
 if text and text:match("^(.*)$") then
@@ -10578,7 +10578,7 @@ if devyousef == 'msg' then
 Dev_Abs(msg.chat_id_, msg.id_, 1, text , 1, 'md')
 DevAbs:del(raqi..'Abs:Help41'..msg.sender_user_id_)
 DevAbs:set(raqi..'Abs:Help4', text)
-Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم حفظ الكليشه الجديده" ,  1, "md")
+Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم حفظ الرسالة الجديده" ,  1, "md")
 return false end
 end
 if text == "م٤" or text == "م4" or text == "اوامر4" or text == "اوامر٤" then
@@ -10628,7 +10628,7 @@ local Text = [[
 Dev_Abs(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end end
 if text == "تعيين امر م5" and SecondSudo(msg) or text == "تعيين امر م٥" and SecondSudo(msg) then
-Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙ارسل كليشة (م5) الان " ,  1, "md")
+Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙ارسل رسالة (م5) الان " ,  1, "md")
 DevAbs:set(raqi..'Abs:Help51'..msg.sender_user_id_, 'msg')
 return false end
 if text and text:match("^(.*)$") then
@@ -10637,7 +10637,7 @@ if devyousef == 'msg' then
 Dev_Abs(msg.chat_id_, msg.id_, 1, text , 1, 'md')
 DevAbs:del(raqi..'Abs:Help51'..msg.sender_user_id_)
 DevAbs:set(raqi..'Abs:Help5', text)
-Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم حفظ الكليشه الجديده " ,  1, "md")
+Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم حفظ الرسالة الجديده " ,  1, "md")
 return false end
 end
 if text == "م٥" or text == "م5" or text == "اوامر5" or text == "اوامر٥" then
@@ -10693,13 +10693,13 @@ local Text = [[
 🇸🇦︙جلب نسخه القروبات
 🇸🇦︙رفع النسخه + بالرد على الملف
 🇸🇦︙تعيين • حذف -› قناة الاشتراك
-🇸🇦︙جلب كليشه الاشتراك
-🇸🇦︙تغيير • حذف -› كليشه الاشتراك
+🇸🇦︙جلب رسالة الاشتراك
+🇸🇦︙تغيير • حذف -› رسالة الاشتراك
 🇸🇦︙رفع • تنزيل -› مطور
 🇸🇦︙المطورين • حذف المطورين
 🇸🇦︙رفع • تنزيل -› مطور ثانوي
 🇸🇦︙الثانويين • حذف الثانويين
-🇸🇦︙تعيين • حذف -› كليشة الايدي
+🇸🇦︙تعيين • حذف -› رسالة الايدي
 🇸🇦︙اذاعه للكل بالتوجيه -› بالرد
 ------------ Y●L ------------
 🇸🇦︙تفعيل ملف + اسم الملف
@@ -10714,7 +10714,7 @@ local Text = [[
 Dev_Abs(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end end
 if text == "تعيين امر م6" and SecondSudo(msg) or text == "تعيين امر م٦" and SecondSudo(msg) then
-Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙ارسل كليشة (م6) الان " ,  1, "md")
+Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙ارسل رسالة (م6) الان " ,  1, "md")
 DevAbs:set(raqi..'Abs:Help61'..msg.sender_user_id_, 'msg')
 return false end
 if text and text:match("^(.*)$") then
@@ -10723,7 +10723,7 @@ if devyousef == 'msg' then
 Dev_Abs(msg.chat_id_, msg.id_, 1, text , 1, 'md')
 DevAbs:del(raqi..'Abs:Help61'..msg.sender_user_id_)
 DevAbs:set(raqi..'Abs:Help6', text)
-Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم حفظ الكليشه الجديده" ,  1, "md")
+Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم حفظ الرسالة الجديده" ,  1, "md")
 return false end
 end
 if text == "م٦" or text == "م6" or text == "اوامر6" or text == "اوامر٦" then
@@ -10895,18 +10895,18 @@ end
 return false
 end
 --     Source dev yousef     --
-if text and text:match("^ضع كليشه المطور$") or text and text:match("^وضع كليشه المطور$") or text and text:match("^تغيير كليشه المطور$") then
+if text and text:match("^ضع رسالة المطور$") or text and text:match("^وضع رسالة المطور$") or text and text:match("^تغيير رسالة المطور$") then
 if not SecondSudo(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙للمطور الاساسي فقط ', 1, 'md')
 else
-Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙ارسل كليشة المطور الان ", 1, "md")
+Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙ارسل رسالة المطور الان ", 1, "md")
 DevAbs:setex(raqi.."Abs:DevText"..msg.chat_id_..":" .. msg.sender_user_id_, 300, true)
 end end
-if text and text:match("^مسح كليشه المطور$") or text and text:match("^حذف كليشه المطور$") then
+if text and text:match("^مسح رسالة المطور$") or text and text:match("^حذف رسالة المطور$") then
 if not SecondSudo(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙للمطور الاساسي فقط ', 1, 'md')
 else
-Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم حذف كليشة المطور", 1, "md")
+Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم حذف رسالة المطور", 1, "md")
 DevAbs:del(raqi.."DevText")
 end end
 --     Source dev yousef     --
@@ -10918,28 +10918,28 @@ return false  end
 DevAbs:del(raqi.."textch:user"..msg.chat_id_.."" .. msg.sender_user_id_)  
 local texxt = string.match(text, "(.*)") 
 DevAbs:set(raqi..'Abs:ChText',texxt)
-Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم تغيير كليشة الاشتراك الاجباري', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم تغيير رسالة الاشتراك الاجباري', 1, 'md')
 end
-if text and text:match("^تغير كليشه الاشتراك$") and SecondSudo(msg) or text and text:match("^تغيير كليشه الاشتراك$") and SecondSudo(msg) then  
+if text and text:match("^تغير رسالة الاشتراك$") and SecondSudo(msg) or text and text:match("^تغيير رسالة الاشتراك$") and SecondSudo(msg) then  
 DevAbs:setex(raqi.."textch:user"..msg.chat_id_.."" .. msg.sender_user_id_, 300, true)  
-local text = '🇸🇦︙حسنا ارسل كليشة الاشتراك الجديده'  
+local text = '🇸🇦︙حسنا ارسل رسالة الاشتراك الجديده'  
 Dev_Abs(msg.chat_id_, msg.id_, 1,text, 1, 'md') 
 end
-if text == "حذف كليشه الاشتراك الاجباري" or text == "حذف كليشه الاشتراك" then  
+if text == "حذف رسالة الاشتراك الاجباري" or text == "حذف رسالة الاشتراك" then  
 if not SecondSudo(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙للمطور الاساسي فقط ', 1, 'md')
 else
 DevAbs:del(raqi..'Abs:ChText')
-textt = "🇸🇦︙تم حذف كليشة الاشتراك الاجباري"
+textt = "🇸🇦︙تم حذف رسالة الاشتراك الاجباري"
 Dev_Abs(msg.chat_id_, msg.id_, 1,textt, 1, 'md') 
 end end
-if text == 'كليشه الاشتراك' or text == 'جلب كليشه الاشتراك' then
+if text == 'رسالة الاشتراك' or text == 'جلب رسالة الاشتراك' then
 if not SecondSudo(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙للمطور الاساسي فقط ', 1, 'md')
 else
 local chtext = DevAbs:get(raqi.."Abs:ChText")
 if chtext then
-Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙كليشة الاشتراك -› ⤈ \n------------ Y●L ------------\n['..chtext..']', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙رسالة الاشتراك -› ⤈ \n------------ Y●L ------------\n['..chtext..']', 1, 'md')
 else
 if DevAbs:get(raqi.."Abs:ChId") then
 local Check = https.request('https://api.telegram.org/bot'..TokenBot..'/getChat?chat_id='..DevAbs:get(raqi.."Abs:ChId"))
