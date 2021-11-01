@@ -8479,7 +8479,7 @@ end
 end
 end
 --     Source dev yousef     --
-if text and text:match("^قفل لتفليش$") or text and text:match("^تفعيل الحماية القصوى$") then
+if text and text:match("^قفل التفليش$") or text and text:match("^تفعيل الحماية القصوى$") then
 if not Constructor(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙للمنشئين فقط', 1, 'md')
 else
