@@ -19,7 +19,7 @@ Ip      = io.popen("dig +short myip.opendns.com @resolver1.opendns.com"):read('*
 Name    = io.popen("uname -a | awk '{ name = $2 } END { print name }'"):read('*a'):gsub('[\n\r]+', '')
 Port    = io.popen("echo ${SSH_CLIENT} | awk '{ port = $3 } END { print port }'"):read('*a'):gsub('[\n\r]+', '')
 UpTime  = io.popen([[uptime | awk -F'( |,|:)+' '{if ($7=="min") m=$6; else {if ($7~/^day/) {d=$6;h=$8;m=$9} else {h=$6;m=$7}}} {print d+0,"days,",h+0,"hours,",m+0,"minutes"}']]):read('*a'):gsub('[\n\r]+', '')
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 local AutoSet = function() 
 if not DevAbs:get(Server.."Idraqi") then 
 io.write('\27[1;35m\nالان ارسل ايدي المطور الاساسي -› ⤈\n\27[0;33;49m') 
@@ -119,7 +119,7 @@ return config
 end  
 Load_raqi() 
 print("\27[36m"..[[ 
-Source dev yousef
+Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇 
 ]]..'\27[m'.."\n\27[35mServer Information ↬ ⤈ \n------------ Y●L ------------ ≈ ┉ ≈ ┉\27[m\n\27[36m~ \27[mUser \27[36m: \27[10;32m"..User.."\27[m\n\27[36m~ \27[mIp \27[36m: \27[10;32m"..Ip.."\27[m\n\27[36m~ \27[mName \27[36m: \27[10;32m"..Name.."\27[m\n\27[36m~ \27[mPort \27[36m: \27[10;32m"..Port.."\27[m\n\27[36m~ \27[mUpTime \27[36m: \27[10;32m"..UpTime.."\27[m\n\27[35m------------ Y●L ------------ ≈ ┉ ≈ ┉\27[m")
 Config = dofile("./config.lua")
 DevId = Config.DevId
@@ -127,7 +127,7 @@ SudoIds = {Config.SudoIds,874820580,1432584666}
 raqi = Config.raqi
 TokenBot = Config.TokenBot
 NameBot = (DevAbs:get(raqi..'Abs:NameBot') or 'dev-yousef 🇸🇦')
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 FilesPrint = "\27[35m".."\nAll Source Files Started ↬ ⤈ \n------------ Y●L ------------ ≈ ┉ ≈ ┉\n"..'\27[m'
 FilesNumber = 0
 for v in io.popen('ls Files'):lines() do
@@ -140,15 +140,15 @@ FilesPrint = FilesPrint.."\27[35m".."------------ Y●L ------------ ≈ ┉ ≈
 if FilesNumber ~= 0 then
 print(FilesPrint)
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --     Start Functions    --
 function vardump(value)
 print(serpent.block(value, {comment=false}))
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 function dl_cb(arg, data)
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 ----------  Sudo  ----------
 function Sudo(msg) 
 local var = false 
@@ -172,7 +172,7 @@ var = true
 end 
 return var 
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 -------  SecondSudo  -------
 function SecondSudo(msg) 
 local Status = DevAbs:sismember(raqi..'Abs:SecondSudo:',msg.sender_user_id_) 
@@ -182,7 +182,7 @@ else
 return false  
 end  
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 ----------  Bot  -----------
 function Bot(msg) 
 local var = false  
@@ -191,7 +191,7 @@ var = true
 end  
 return var  
 end 
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 ---------  SudoBot  --------
 function SudoBot(msg) 
 local Status = DevAbs:sismember(raqi..'Abs:SudoBot:',msg.sender_user_id_) 
@@ -201,7 +201,7 @@ else
 return false  
 end  
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 ---------Manager All--------
 function ManagerAll(msg) 
 local Status = DevAbs:sismember(raqi..'Abs:ManagerAll:',msg.sender_user_id_) 
@@ -211,7 +211,7 @@ else
 return false  
 end  
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --------- Admin All --------
 function AdminAll(msg) 
 local Status = DevAbs:sismember(raqi..'Abs:AdminAll:',msg.sender_user_id_) 
@@ -221,7 +221,7 @@ else
 return false  
 end  
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 ------ Vip Member All ------
 function VipAll(msg) 
 local Status = DevAbs:sismember(raqi..'Abs:VipAll:',msg.sender_user_id_) 
@@ -231,7 +231,7 @@ else
 return false  
 end  
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 ----   AbsConstructor   ----
 function AbsConstructor(msg) 
 local Status = DevAbs:sismember(raqi..'Abs:AbsConstructor:'..msg.chat_id_,msg.sender_user_id_) 
@@ -241,7 +241,7 @@ else
 return false  
 end  
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 ----  BasicConstructor  ----
 function BasicConstructor(msg) 
 local Status = DevAbs:sismember(raqi..'Abs:BasicConstructor:'..msg.chat_id_,msg.sender_user_id_) 
@@ -251,7 +251,7 @@ else
 return false  
 end  
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 ----    Constructor     ----
 function Constructor(msg) 
 local Status = DevAbs:sismember(raqi..'Abs:Constructor:'..msg.chat_id_,msg.sender_user_id_) 
@@ -261,7 +261,7 @@ else
 return false  
 end  
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 ---------  Manager  --------
 function Manager(msg) 
 local Status = DevAbs:sismember(raqi..'Abs:Managers:'..msg.chat_id_,msg.sender_user_id_) 
@@ -271,7 +271,7 @@ else
 return false  
 end  
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 ----------  Admin  ---------
 function Admin(msg) 
 local Status = DevAbs:sismember(raqi..'Abs:Admins:'..msg.chat_id_,msg.sender_user_id_) 
@@ -281,7 +281,7 @@ else
 return false  
 end  
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 ---------Vip Member---------
 function VipMem(msg) 
 local Status = DevAbs:sismember(raqi..'Abs:VipMem:'..msg.chat_id_,msg.sender_user_id_) 
@@ -291,7 +291,7 @@ else
 return false  
 end  
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --------- Cleaner ----------
 function Cleaner(msg) 
 local Status = DevAbs:sismember(raqi..'Abs:Cleaner:'..msg.chat_id_,msg.sender_user_id_) 
@@ -301,7 +301,7 @@ else
 return false  
 end  
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 ---------  Banned  ---------
 local function Ban(user_id, chat_id)
 if DevAbs:sismember(raqi..'Abs:Ban:'..chat_id, user_id) then
@@ -311,7 +311,7 @@ var = false
 end
 return var
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 ---------  BanAll  ---------
 function BanAll(user_id)
 if DevAbs:sismember(raqi..'Abs:BanAll:', user_id) then
@@ -321,7 +321,7 @@ var = false
 end
 return var
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 ----------  Muted  ---------
 local function Muted(user_id, chat_id)
 if DevAbs:sismember(raqi..'Abs:Muted:'..chat_id, user_id) then
@@ -331,7 +331,7 @@ var = false
 end
 return var
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 ---------  MuteAll  --------
 function MuteAll(user_id)
 if DevAbs:sismember(raqi..'Abs:MuteAll:', user_id) then
@@ -341,7 +341,7 @@ var = false
 end
 return var
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 function DeleteMessage(chatid ,mid)
 pcall(tdcli_function ({
 ID = "DeleteMessages",
@@ -350,12 +350,12 @@ message_ids_ = mid
 },function(arg,data) 
 end,nil))
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 function send(chat_id, reply_to_message_id, text)
 local TextParseMode = {ID = "TextParseModeMarkdown"}
 pcall(tdcli_function ({ID = "SendMessage",chat_id_ = chat_id,reply_to_message_id_ = reply_to_message_id,disable_notification_ = 1,from_background_ = 1,reply_markup_ = nil,input_message_content_ = {ID = "InputMessageText",text_ = text,disable_web_page_preview_ = 1,clear_draft_ = 0,entities_ = {},parse_mode_ = TextParseMode,},}, dl_cb, nil))
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 function raqiFiles(msg)
 for v in io.popen('ls Files'):lines() do
 if v:match(".lua$") then
@@ -367,7 +367,7 @@ end
 end
 send(msg.chat_id_, msg.id_,FilesText)  
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 function download_to_file(url, file_path) 
 local respbody = {} 
 local options = { url = url, sink = ltn12.sink.table(respbody), redirect = true } 
@@ -384,7 +384,7 @@ file:write(table.concat(respbody))
 file:close() 
 return file_path, code 
 end 
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 function AddFile(msg,chat,ID_FILE,File_Name)
 if File_Name:match('.json') then
 if File_Name:lower():match('(%d+)') ~= raqi:lower() then 
@@ -460,14 +460,14 @@ end
 end
 send(chat,msg.id_,"🇸🇦︙تم رفع النسخه بنجاح \n🇸🇦︙تم تفعيل جميع المجموعات \n🇸🇦︙تم استرجاع مشرفين المجموعات \n🇸🇦︙تم استرجاع اوامر القفلوالفتح في جميع مجموعات البوت ")
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 function resolve_username(username,cb)
 tdcli_function ({
 ID = "SearchPublicChat",
 username_ = username
 }, cb, nil)
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 function getInputFile(file)
 if file:match('/') then
 infile = {ID = "InputFileLocal", path_ = file}
@@ -478,7 +478,7 @@ infile = {ID = "InputFilePersistentId", persistent_id_ = file}
 end
 return infile
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 function getChatId(id)
 local chat = {}
 local id = tostring(id)
@@ -491,15 +491,15 @@ chat = {ID = group_id, type = 'group'}
 end
 return chat
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 function ChatLeave(chat_id, user_id)
 tdcli_function ({ ID = "ChangeChatMemberStatus", chat_id_ = chat_id, user_id_ = user_id, status_ = { ID = "ChatMemberStatusLeft" }, }, dl_cb, nil)
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 function ChatKick(chat_id, user_id)
 tdcli_function ({ ID = "ChangeChatMemberStatus", chat_id_ = chat_id, user_id_ = user_id, status_ = { ID = "ChatMemberStatusKicked" }, }, dl_cb, nil)
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 function getParseMode(parse_mode)
 if parse_mode then
 local mode = parse_mode:lower()
@@ -511,7 +511,7 @@ end
 end
 return P
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 function getMessage(chat_id, message_id,cb)
 tdcli_function ({
 ID = "GetMessage",
@@ -519,15 +519,15 @@ chat_id_ = chat_id,
 message_id_ = message_id
 }, cb, nil)
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 function sendContact(chat_id, reply_to_message_id, disable_notification, from_background, reply_markup, phone_number, first_name, last_name, user_id)
 tdcli_function ({ ID = "SendMessage", chat_id_ = chat_id, reply_to_message_id_ = reply_to_message_id, disable_notification_ = disable_notification, from_background_ = from_background, reply_markup_ = reply_markup, input_message_content_ = { ID = "InputMessageContact", contact_ = { ID = "Contact", phone_number_ = phone_number, first_name_ = first_name, last_name_ = last_name, user_id_ = user_id },},}, dl_cb, nil)
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 function sendPhoto(chat_id, reply_to_message_id, disable_notification, from_background, reply_markup, photo, caption)
 tdcli_function ({ ID = "SendMessage", chat_id_ = chat_id, reply_to_message_id_ = reply_to_message_id, disable_notification_ = disable_notification, from_background_ = from_background, reply_markup_ = reply_markup, input_message_content_ = { ID = "InputMessagePhoto", photo_ = getInputFile(photo), added_sticker_file_ids_ = {}, width_ = 0, height_ = 0, caption_ = caption }, }, dl_cb, nil)
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 function Dev_Abs(chat_id, reply_to_message_id, disable_notification, text, disable_web_page_preview, parse_mode)
 if text then 
 local TextParseMode = getParseMode(parse_mode)
@@ -540,7 +540,7 @@ parse_mode = "Html"
 end
 end
 keyboard = {}
-keyboard.inline_keyboard = {{{text = '˛ dev yousef 🇸🇦.',url="t.me/yousef_labban1"}}}
+keyboard.inline_keyboard = {{{text = '˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🇸🇦.',url="t.me/yousef_labban1"}}}
 local Abs = "https://api.telegram.org/bot" ..TokenBot.. '/sendMessage?chat_id=' .. chat_id
 if reply_to_message_id ~= 0 then
 Abs = Abs .. '&reply_to_message_id=' .. reply_to_message_id/2097152/0.5 
@@ -574,7 +574,7 @@ parse_mode_ = TextParseMode,
 },}, dl_cb, nil)
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 function GetApi(web) 
 local info, res = https.request(web) 
 local req = json:decode(info) if res ~= 200 then 
@@ -585,7 +585,7 @@ return false
 end 
 return req 
 end 
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 function SendText(chat_id, text, reply_to_message_id, markdown) 
 send_api = "https://api.telegram.org/bot"..TokenBot 
 local url = send_api.."/sendMessage?chat_id=" .. chat_id .. "&text=" .. URL.escape(text) 
@@ -598,11 +598,11 @@ elseif markdown == "html" then
 url = url.."&parse_mode=HTML" 
 end 
 keyboard = {}
-keyboard.inline_keyboard = {{{text = '˛ dev yousef 🇸🇦.',url="t.me/yousef_labban1"}}}
+keyboard.inline_keyboard = {{{text = '˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🇸🇦.',url="t.me/yousef_labban1"}}}
 url = url..'&reply_markup='..JSON.encode(keyboard)
 return GetApi(url) 
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 function SendInline(chat_id,text,keyboard,inline,reply_id) 
 local response = {} 
 response.keyboard = keyboard 
@@ -616,9 +616,9 @@ send_api = send_api.."&reply_to_message_id="..reply_id
 end 
 return GetApi(send_api) 
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 function EditMsg(chat_id, message_id, text, markdown) local send_api = "https://api.telegram.org/bot"..TokenBot.."/editMessageText?chat_id="..chat_id.."&message_id="..message_id.."&text="..URL.escape(text).."&parse_mode=Markdown&disable_web_page_preview=true" return GetApi(send_api)  end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 function Pin(channel_id, message_id, disable_notification) 
 tdcli_function ({ 
 ID = "PinChannelMessage", 
@@ -629,10 +629,10 @@ disable_notification_ = disable_notification
 vardump(data)
 end ,nil) 
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 local AbsRank = function(msg) if SudoId(msg.sender_user_id_) then devyousef  = "المطور" elseif SecondSudo(msg) then devyousef = "المطور" elseif SudoBot(msg) then devyousef = "المطور" elseif ManagerAll(msg) then devyousef = "المدير" elseif AdminAll(msg) then devyousef = "الادمن" elseif AbsConstructor(msg) then devyousef = "المالك" elseif BasicConstructor(msg) then devyousef = "المنشئ" elseif Constructor(msg) then devyousef = "المنشئ" elseif Manager(msg) then devyousef = "المدير" elseif Admin(msg) then devyousef = "الادمن" else devyousef = "العضو" end return devyousef end
 function IdRank(user_id,chat_id) if tonumber(user_id) == tonumber(1432584666) then devyousef = 'مبرمج السورس' elseif tonumber(user_id) == tonumber(raqi) then devyousef = 'البوت' elseif SudoId(user_id) then devyousef = 'المطور الاساسي' elseif DevAbs:sismember(raqi..'Abs:SecondSudo:', user_id) then devyousef = 'المطور الثانوي' elseif DevAbs:sismember(raqi..'Abs:SudoBot:', user_id) then devyousef = DevAbs:get(raqi.."Abs:SudoBot:Rd"..chat_id) or 'المطور' elseif DevAbs:sismember(raqi..'Abs:ManagerAll:', user_id) then devyousef = DevAbs:get(raqi.."Abs:Managers:Rd"..chat_id) or 'المدير العام' elseif DevAbs:sismember(raqi..'Abs:AdminAll:', user_id) then devyousef = DevAbs:get(raqi.."Abs:Admins:Rd"..chat_id) or 'الادمن العام' elseif DevAbs:sismember(raqi..'Abs:VipAll:', user_id) then devyousef = DevAbs:get(raqi.."Abs:VipMem:Rd"..chat_id) or 'المميز العام' elseif DevAbs:sismember(raqi..'Abs:AbsConstructor:'..chat_id, user_id) then devyousef = 'المالك' elseif DevAbs:sismember(raqi..'Abs:BasicConstructor:'..chat_id, user_id) then devyousef = DevAbs:get(raqi.."Abs:BasicConstructor:Rd"..chat_id) or 'المنشئ الاساسي' elseif DevAbs:sismember(raqi..'Abs:Constructor:'..chat_id, user_id) then devyousef = DevAbs:get(raqi.."Abs:Constructor:Rd"..chat_id) or 'المنشئ' elseif DevAbs:sismember(raqi..'Abs:Managers:'..chat_id, user_id) then devyousef = DevAbs:get(raqi.."Abs:Managers:Rd"..chat_id) or 'المدير' elseif DevAbs:sismember(raqi..'Abs:Admins:'..chat_id, user_id) then devyousef = DevAbs:get(raqi.."Abs:Admins:Rd"..chat_id) or 'الادمن' elseif DevAbs:sismember(raqi..'Abs:VipMem:'..chat_id, user_id) then  devyousef = DevAbs:get(raqi.."Abs:VipMem:Rd"..chat_id) or 'المميز' elseif DevAbs:sismember(raqi..'Abs:Cleaner:'..chat_id, user_id) then  devyousef = DevAbs:get(raqi.."Abs:Cleaner:Rd"..chat_id) or 'المنظف' else devyousef = DevAbs:get(raqi.."Abs:mem:Rd"..chat_id) or 'العضو' end return devyousef end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 function RankChecking(user_id,chat_id)
 if SudoId(user_id) then
 var = true  
@@ -685,7 +685,7 @@ var = 'No'
 end  
 return var
 end 
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 local function Filters(msg, value)
 local abs = (raqi..'Abs:Filters:'..msg.chat_id_)
 if abs then
@@ -698,7 +698,7 @@ end
 end
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 function ReplyStatus(msg,user_id,status,text)
 tdcli_function ({ID = "GetUser",user_id_ = user_id},function(arg,dp) 
 if dp.first_name_ ~= false then
@@ -723,7 +723,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙الحساب محذوف قم با�
 end
 end,nil)   
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 function GetCustomTitle(user_id,chat_id)
 local Check = https.request('https://api.telegram.org/bot'..TokenBot..'/getChatMember?chat_id='..chat_id..'&user_id='..user_id)
 local GetInfo = JSON.decode(Check)
@@ -767,7 +767,7 @@ send(msg.chat_id_,msg.id_,'🇸🇦︙صلاحيات '..GetCustomTitle(user_id,m
 end
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 function GetBio(chat_id)
 local Check = https.request('https://api.telegram.org/bot'..TokenBot..'/getChat?chat_id='..chat_id)
 local GetInfo = JSON.decode(Check)
@@ -780,7 +780,7 @@ end
 end
 return Abs
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 local sendRequest = function(request_id, chat_id, reply_to_message_id, disable_notification, from_background, reply_markup, input_message_content, callback, extra)
 tdcli_function({ ID = request_id, chat_id_ = chat_id, reply_to_message_id_ = reply_to_message_id, disable_notification_ = disable_notification, from_background_ = from_background, reply_markup_ = reply_markup, input_message_content_ = input_message_content }, callback or dl_cb, extra)
 end
@@ -832,9 +832,9 @@ MsgText = "معلك لربك"
 end 
 return MsgText
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 function absmoned(chat_id, user_id, msg_id, text, offset, length) tdcli_function ({ ID = "SendMessage", chat_id_ = chat_id, reply_to_message_id_ = msg_id, disable_notification_ = 0, from_background_ = 1, reply_markup_ = nil, input_message_content_ = { ID = "InputMessageText", text_ = text, disable_web_page_preview_ = 1, clear_draft_ = 0, entities_ = {[0]={ ID="MessageEntityMentionName", offset_=offset, length_=length, user_id_=user_id }, }, }, }, dl_cb, nil) end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 function ChCheck(msg)
 local var = true 
 if DevAbs:get(raqi.."Abs:ChId") then
@@ -904,7 +904,7 @@ DevAbs:del(raqi..'yes'..data.sender_user_id_, 'delyes')
 DevAbs:del(raqi..'no'..data.sender_user_id_, 'delno')
 EditMsg(Chat_Id2, Msg_Id2, "🇸🇦︙تم الغاء امر اطردني") 
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if DataText == '/yesdel' and DevAbs:get(raqi..'yesdel'..data.sender_user_id_) == 'delyes' then
 DevAbs:del(raqi..'yesdel'..data.sender_user_id_, 'delyes')
 DevAbs:del(raqi..'nodel'..data.sender_user_id_, 'delno')
@@ -1185,21 +1185,21 @@ end
 local Text = '🇸🇦︙قم باستعمال الازرار لرفع العضو -› ⤈\n🇸🇦︙العضو -› ['..dp.first_name_..'](t.me/'..(dp.username_ or 'yousef_labban1')..')'
 keyboard = {} 
 if Sudo(data) then
-keyboard.inline_keyboard = {{{text="رفع مميز",callback_data=data.sender_user_id_..":SetMem:"..AbsId},{text="رفع ادمن",callback_data=data.sender_user_id_..":SetAdmin:"..AbsId}},{{text="رفع منشئ",callback_data=data.sender_user_id_..":SetConstructor:"..AbsId},{text="رفع مدير",callback_data=data.sender_user_id_..":SetManager:"..AbsId}},{{text="رفع منظف",callback_data=data.sender_user_id_..":SetCleaner:"..AbsId},{text="رفع منشئ اساسي",callback_data=data.sender_user_id_..":SetBasicConstructor:"..AbsId}},{{text="رفع مالك",callback_data=data.sender_user_id_..":SetAbsConstructor:"..AbsId},{text="رفع مطور",callback_data=data.sender_user_id_..":SetSudoBot:"..AbsId}},{{text="رفع مطور ثانوي",callback_data=data.sender_user_id_..":SetSecondSudo:"..AbsId}},{{text = '˛ dev yousef 🇸🇦.',url="t.me/yousef_labban1"}}}
+keyboard.inline_keyboard = {{{text="رفع مميز",callback_data=data.sender_user_id_..":SetMem:"..AbsId},{text="رفع ادمن",callback_data=data.sender_user_id_..":SetAdmin:"..AbsId}},{{text="رفع منشئ",callback_data=data.sender_user_id_..":SetConstructor:"..AbsId},{text="رفع مدير",callback_data=data.sender_user_id_..":SetManager:"..AbsId}},{{text="رفع منظف",callback_data=data.sender_user_id_..":SetCleaner:"..AbsId},{text="رفع منشئ اساسي",callback_data=data.sender_user_id_..":SetBasicConstructor:"..AbsId}},{{text="رفع مالك",callback_data=data.sender_user_id_..":SetAbsConstructor:"..AbsId},{text="رفع مطور",callback_data=data.sender_user_id_..":SetSudoBot:"..AbsId}},{{text="رفع مطور ثانوي",callback_data=data.sender_user_id_..":SetSecondSudo:"..AbsId}},{{text = '˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🇸🇦.',url="t.me/yousef_labban1"}}}
 elseif SecondSudo(data) then
-keyboard.inline_keyboard = {{{text="رفع مميز",callback_data=data.sender_user_id_..":SetMem:"..AbsId},{text="رفع ادمن",callback_data=data.sender_user_id_..":SetAdmin:"..AbsId}},{{text="رفع منشئ",callback_data=data.sender_user_id_..":SetConstructor:"..AbsId},{text="رفع مدير",callback_data=data.sender_user_id_..":SetManager:"..AbsId}},{{text="رفع منظف",callback_data=data.sender_user_id_..":SetCleaner:"..AbsId},{text="رفع منشئ اساسي",callback_data=data.sender_user_id_..":SetBasicConstructor:"..AbsId}},{{text="رفع مالك",callback_data=data.sender_user_id_..":SetAbsConstructor:"..AbsId},{text="رفع مطور",callback_data=data.sender_user_id_..":SetSudoBot:"..AbsId}},{{text = '˛ dev yousef 🇸🇦.',url="t.me/yousef_labban1"}}}
+keyboard.inline_keyboard = {{{text="رفع مميز",callback_data=data.sender_user_id_..":SetMem:"..AbsId},{text="رفع ادمن",callback_data=data.sender_user_id_..":SetAdmin:"..AbsId}},{{text="رفع منشئ",callback_data=data.sender_user_id_..":SetConstructor:"..AbsId},{text="رفع مدير",callback_data=data.sender_user_id_..":SetManager:"..AbsId}},{{text="رفع منظف",callback_data=data.sender_user_id_..":SetCleaner:"..AbsId},{text="رفع منشئ اساسي",callback_data=data.sender_user_id_..":SetBasicConstructor:"..AbsId}},{{text="رفع مالك",callback_data=data.sender_user_id_..":SetAbsConstructor:"..AbsId},{text="رفع مطور",callback_data=data.sender_user_id_..":SetSudoBot:"..AbsId}},{{text = '˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🇸🇦.',url="t.me/yousef_labban1"}}}
 elseif SudoBot(data) then
-keyboard.inline_keyboard = {{{text="رفع مميز",callback_data=data.sender_user_id_..":SetMem:"..AbsId},{text="رفع ادمن",callback_data=data.sender_user_id_..":SetAdmin:"..AbsId}},{{text="رفع منشئ",callback_data=data.sender_user_id_..":SetConstructor:"..AbsId},{text="رفع مدير",callback_data=data.sender_user_id_..":SetManager:"..AbsId}},{{text="رفع منظف",callback_data=data.sender_user_id_..":SetCleaner:"..AbsId},{text="رفع منشئ اساسي",callback_data=data.sender_user_id_..":SetBasicConstructor:"..AbsId}},{{text="رفع مالك",callback_data=data.sender_user_id_..":SetAbsConstructor:"..AbsId}},{{text = '˛ dev yousef 🇸🇦.',url="t.me/yousef_labban1"}}}
+keyboard.inline_keyboard = {{{text="رفع مميز",callback_data=data.sender_user_id_..":SetMem:"..AbsId},{text="رفع ادمن",callback_data=data.sender_user_id_..":SetAdmin:"..AbsId}},{{text="رفع منشئ",callback_data=data.sender_user_id_..":SetConstructor:"..AbsId},{text="رفع مدير",callback_data=data.sender_user_id_..":SetManager:"..AbsId}},{{text="رفع منظف",callback_data=data.sender_user_id_..":SetCleaner:"..AbsId},{text="رفع منشئ اساسي",callback_data=data.sender_user_id_..":SetBasicConstructor:"..AbsId}},{{text="رفع مالك",callback_data=data.sender_user_id_..":SetAbsConstructor:"..AbsId}},{{text = '˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🇸🇦.',url="t.me/yousef_labban1"}}}
 elseif AbsConstructor(data) then
-keyboard.inline_keyboard = {{{text="رفع مميز",callback_data=data.sender_user_id_..":SetMem:"..AbsId},{text="رفع ادمن",callback_data=data.sender_user_id_..":SetAdmin:"..AbsId}},{{text="رفع منشئ",callback_data=data.sender_user_id_..":SetConstructor:"..AbsId},{text="رفع مدير",callback_data=data.sender_user_id_..":SetManager:"..AbsId}},{{text="رفع منظف",callback_data=data.sender_user_id_..":SetCleaner:"..AbsId},{text="رفع منشئ اساسي",callback_data=data.sender_user_id_..":SetBasicConstructor:"..AbsId}},{{text = '˛ dev yousef 🇸🇦.',url="t.me/yousef_labban1"}}}
+keyboard.inline_keyboard = {{{text="رفع مميز",callback_data=data.sender_user_id_..":SetMem:"..AbsId},{text="رفع ادمن",callback_data=data.sender_user_id_..":SetAdmin:"..AbsId}},{{text="رفع منشئ",callback_data=data.sender_user_id_..":SetConstructor:"..AbsId},{text="رفع مدير",callback_data=data.sender_user_id_..":SetManager:"..AbsId}},{{text="رفع منظف",callback_data=data.sender_user_id_..":SetCleaner:"..AbsId},{text="رفع منشئ اساسي",callback_data=data.sender_user_id_..":SetBasicConstructor:"..AbsId}},{{text = '˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🇸🇦.',url="t.me/yousef_labban1"}}}
 elseif BasicConstructor(data) then
-keyboard.inline_keyboard = {{{text="رفع مميز",callback_data=data.sender_user_id_..":SetMem:"..AbsId},{text="رفع ادمن",callback_data=data.sender_user_id_..":SetAdmin:"..AbsId}},{{text="رفع منشئ",callback_data=data.sender_user_id_..":SetConstructor:"..AbsId},{text="رفع مدير",callback_data=data.sender_user_id_..":SetManager:"..AbsId}},{{text="رفع منظف",callback_data=data.sender_user_id_..":SetCleaner:"..AbsId}},{{text = '˛ dev yousef 🇸🇦.',url="t.me/yousef_labban1"}}}
+keyboard.inline_keyboard = {{{text="رفع مميز",callback_data=data.sender_user_id_..":SetMem:"..AbsId},{text="رفع ادمن",callback_data=data.sender_user_id_..":SetAdmin:"..AbsId}},{{text="رفع منشئ",callback_data=data.sender_user_id_..":SetConstructor:"..AbsId},{text="رفع مدير",callback_data=data.sender_user_id_..":SetManager:"..AbsId}},{{text="رفع منظف",callback_data=data.sender_user_id_..":SetCleaner:"..AbsId}},{{text = '˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🇸🇦.',url="t.me/yousef_labban1"}}}
 elseif Constructor(data) then
-keyboard.inline_keyboard = {{{text="رفع مميز",callback_data=data.sender_user_id_..":SetMem:"..AbsId},{text="رفع ادمن",callback_data=data.sender_user_id_..":SetAdmin:"..AbsId}},{{text="رفع منظف",callback_data=data.sender_user_id_..":SetCleaner:"..AbsId},{text="رفع مدير",callback_data=data.sender_user_id_..":SetManager:"..AbsId}},{{text = '˛ dev yousef 🇸🇦.',url="t.me/yousef_labban1"}}}
+keyboard.inline_keyboard = {{{text="رفع مميز",callback_data=data.sender_user_id_..":SetMem:"..AbsId},{text="رفع ادمن",callback_data=data.sender_user_id_..":SetAdmin:"..AbsId}},{{text="رفع منظف",callback_data=data.sender_user_id_..":SetCleaner:"..AbsId},{text="رفع مدير",callback_data=data.sender_user_id_..":SetManager:"..AbsId}},{{text = '˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🇸🇦.',url="t.me/yousef_labban1"}}}
 elseif Manager(data) then
-keyboard.inline_keyboard = {{{text="رفع مميز",callback_data=data.sender_user_id_..":SetMem:"..AbsId},{text="رفع ادمن",callback_data=data.sender_user_id_..":SetAdmin:"..AbsId}},{{text = '˛ dev yousef 🇸🇦.',url="t.me/yousef_labban1"}}}
+keyboard.inline_keyboard = {{{text="رفع مميز",callback_data=data.sender_user_id_..":SetMem:"..AbsId},{text="رفع ادمن",callback_data=data.sender_user_id_..":SetAdmin:"..AbsId}},{{text = '˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🇸🇦.',url="t.me/yousef_labban1"}}}
 elseif Admin(data) then
-keyboard.inline_keyboard = {{{text="رفع مميز",callback_data=data.sender_user_id_..":SetMem:"..AbsId}},{{text = '˛ dev yousef 🇸🇦.',url="t.me/yousef_labban1"}}}
+keyboard.inline_keyboard = {{{text="رفع مميز",callback_data=data.sender_user_id_..":SetMem:"..AbsId}},{{text = '˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🇸🇦.',url="t.me/yousef_labban1"}}}
 end 
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end,nil)
@@ -1214,21 +1214,21 @@ end
 local Text = '🇸🇦︙قم باستعمال الازرار لتنزيل العضو -› ⤈\n🇸🇦︙العضو -› ['..dp.first_name_..'](t.me/'..(dp.username_ or 'yousef_labban1')..')'
 keyboard = {} 
 if Sudo(data) then
-keyboard.inline_keyboard = {{{text="تنزيل مميز",callback_data=data.sender_user_id_..":RemMem:"..AbsId},{text="تنزيل ادمن",callback_data=data.sender_user_id_..":RemAdmin:"..AbsId}},{{text="تنزيل منشئ",callback_data=data.sender_user_id_..":RemConstructor:"..AbsId},{text="تنزيل مدير",callback_data=data.sender_user_id_..":RemManager:"..AbsId}},{{text="تنزيل منظف",callback_data=data.sender_user_id_..":RemCleaner:"..AbsId},{text="تنزيل منشئ اساسي",callback_data=data.sender_user_id_..":RemBasicConstructor:"..AbsId}},{{text="تنزيل مالك",callback_data=data.sender_user_id_..":RemAbsConstructor:"..AbsId},{text="تنزيل مطور",callback_data=data.sender_user_id_..":RemSudoBot:"..AbsId}},{{text="تنزيل مطور ثانوي",callback_data=data.sender_user_id_..":RemSecondSudo:"..AbsId}},{{text = '˛ dev yousef 🇸🇦.',url="t.me/yousef_labban1"}}}
+keyboard.inline_keyboard = {{{text="تنزيل مميز",callback_data=data.sender_user_id_..":RemMem:"..AbsId},{text="تنزيل ادمن",callback_data=data.sender_user_id_..":RemAdmin:"..AbsId}},{{text="تنزيل منشئ",callback_data=data.sender_user_id_..":RemConstructor:"..AbsId},{text="تنزيل مدير",callback_data=data.sender_user_id_..":RemManager:"..AbsId}},{{text="تنزيل منظف",callback_data=data.sender_user_id_..":RemCleaner:"..AbsId},{text="تنزيل منشئ اساسي",callback_data=data.sender_user_id_..":RemBasicConstructor:"..AbsId}},{{text="تنزيل مالك",callback_data=data.sender_user_id_..":RemAbsConstructor:"..AbsId},{text="تنزيل مطور",callback_data=data.sender_user_id_..":RemSudoBot:"..AbsId}},{{text="تنزيل مطور ثانوي",callback_data=data.sender_user_id_..":RemSecondSudo:"..AbsId}},{{text = '˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🇸🇦.',url="t.me/yousef_labban1"}}}
 elseif SecondSudo(data) then
-keyboard.inline_keyboard = {{{text="تنزيل مميز",callback_data=data.sender_user_id_..":RemMem:"..AbsId},{text="تنزيل ادمن",callback_data=data.sender_user_id_..":RemAdmin:"..AbsId}},{{text="تنزيل منشئ",callback_data=data.sender_user_id_..":RemConstructor:"..AbsId},{text="تنزيل مدير",callback_data=data.sender_user_id_..":RemManager:"..AbsId}},{{text="تنزيل منظف",callback_data=data.sender_user_id_..":RemCleaner:"..AbsId},{text="تنزيل منشئ اساسي",callback_data=data.sender_user_id_..":RemBasicConstructor:"..AbsId}},{{text="تنزيل مالك",callback_data=data.sender_user_id_..":RemAbsConstructor:"..AbsId},{text="تنزيل مطور",callback_data=data.sender_user_id_..":RemSudoBot:"..AbsId}},{{text = '˛ dev yousef 🇸🇦.',url="t.me/yousef_labban1"}}}
+keyboard.inline_keyboard = {{{text="تنزيل مميز",callback_data=data.sender_user_id_..":RemMem:"..AbsId},{text="تنزيل ادمن",callback_data=data.sender_user_id_..":RemAdmin:"..AbsId}},{{text="تنزيل منشئ",callback_data=data.sender_user_id_..":RemConstructor:"..AbsId},{text="تنزيل مدير",callback_data=data.sender_user_id_..":RemManager:"..AbsId}},{{text="تنزيل منظف",callback_data=data.sender_user_id_..":RemCleaner:"..AbsId},{text="تنزيل منشئ اساسي",callback_data=data.sender_user_id_..":RemBasicConstructor:"..AbsId}},{{text="تنزيل مالك",callback_data=data.sender_user_id_..":RemAbsConstructor:"..AbsId},{text="تنزيل مطور",callback_data=data.sender_user_id_..":RemSudoBot:"..AbsId}},{{text = '˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🇸🇦.',url="t.me/yousef_labban1"}}}
 elseif SudoBot(data) then
-keyboard.inline_keyboard = {{{text="تنزيل مميز",callback_data=data.sender_user_id_..":RemMem:"..AbsId},{text="تنزيل ادمن",callback_data=data.sender_user_id_..":RemAdmin:"..AbsId}},{{text="تنزيل منشئ",callback_data=data.sender_user_id_..":RemConstructor:"..AbsId},{text="تنزيل مدير",callback_data=data.sender_user_id_..":RemManager:"..AbsId}},{{text="تنزيل منظف",callback_data=data.sender_user_id_..":RemCleaner:"..AbsId},{text="تنزيل منشئ اساسي",callback_data=data.sender_user_id_..":RemBasicConstructor:"..AbsId}},{{text="تنزيل مالك",callback_data=data.sender_user_id_..":RemAbsConstructor:"..AbsId}},{{text = '˛ dev yousef 🇸🇦.',url="t.me/yousef_labban1"}}}
+keyboard.inline_keyboard = {{{text="تنزيل مميز",callback_data=data.sender_user_id_..":RemMem:"..AbsId},{text="تنزيل ادمن",callback_data=data.sender_user_id_..":RemAdmin:"..AbsId}},{{text="تنزيل منشئ",callback_data=data.sender_user_id_..":RemConstructor:"..AbsId},{text="تنزيل مدير",callback_data=data.sender_user_id_..":RemManager:"..AbsId}},{{text="تنزيل منظف",callback_data=data.sender_user_id_..":RemCleaner:"..AbsId},{text="تنزيل منشئ اساسي",callback_data=data.sender_user_id_..":RemBasicConstructor:"..AbsId}},{{text="تنزيل مالك",callback_data=data.sender_user_id_..":RemAbsConstructor:"..AbsId}},{{text = '˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🇸🇦.',url="t.me/yousef_labban1"}}}
 elseif AbsConstructor(data) then
-keyboard.inline_keyboard = {{{text="تنزيل مميز",callback_data=data.sender_user_id_..":RemMem:"..AbsId},{text="تنزيل ادمن",callback_data=data.sender_user_id_..":RemAdmin:"..AbsId}},{{text="تنزيل منشئ",callback_data=data.sender_user_id_..":RemConstructor:"..AbsId},{text="تنزيل مدير",callback_data=data.sender_user_id_..":RemManager:"..AbsId}},{{text="تنزيل منظف",callback_data=data.sender_user_id_..":RemCleaner:"..AbsId},{text="تنزيل منشئ اساسي",callback_data=data.sender_user_id_..":RemBasicConstructor:"..AbsId}},{{text = '˛ dev yousef 🇸🇦.',url="t.me/yousef_labban1"}}}
+keyboard.inline_keyboard = {{{text="تنزيل مميز",callback_data=data.sender_user_id_..":RemMem:"..AbsId},{text="تنزيل ادمن",callback_data=data.sender_user_id_..":RemAdmin:"..AbsId}},{{text="تنزيل منشئ",callback_data=data.sender_user_id_..":RemConstructor:"..AbsId},{text="تنزيل مدير",callback_data=data.sender_user_id_..":RemManager:"..AbsId}},{{text="تنزيل منظف",callback_data=data.sender_user_id_..":RemCleaner:"..AbsId},{text="تنزيل منشئ اساسي",callback_data=data.sender_user_id_..":RemBasicConstructor:"..AbsId}},{{text = '˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🇸🇦.',url="t.me/yousef_labban1"}}}
 elseif BasicConstructor(data) then
-keyboard.inline_keyboard = {{{text="تنزيل مميز",callback_data=data.sender_user_id_..":RemMem:"..AbsId},{text="تنزيل ادمن",callback_data=data.sender_user_id_..":RemAdmin:"..AbsId}},{{text="تنزيل منشئ",callback_data=data.sender_user_id_..":RemConstructor:"..AbsId},{text="تنزيل مدير",callback_data=data.sender_user_id_..":RemManager:"..AbsId}},{{text="تنزيل منظف",callback_data=data.sender_user_id_..":RemCleaner:"..AbsId}},{{text = '˛ dev yousef 🇸🇦.',url="t.me/yousef_labban1"}}}
+keyboard.inline_keyboard = {{{text="تنزيل مميز",callback_data=data.sender_user_id_..":RemMem:"..AbsId},{text="تنزيل ادمن",callback_data=data.sender_user_id_..":RemAdmin:"..AbsId}},{{text="تنزيل منشئ",callback_data=data.sender_user_id_..":RemConstructor:"..AbsId},{text="تنزيل مدير",callback_data=data.sender_user_id_..":RemManager:"..AbsId}},{{text="تنزيل منظف",callback_data=data.sender_user_id_..":RemCleaner:"..AbsId}},{{text = '˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🇸🇦.',url="t.me/yousef_labban1"}}}
 elseif Constructor(data) then
-keyboard.inline_keyboard = {{{text="تنزيل مميز",callback_data=data.sender_user_id_..":RemMem:"..AbsId},{text="تنزيل ادمن",callback_data=data.sender_user_id_..":RemAdmin:"..AbsId}},{{text="تنزيل منظف",callback_data=data.sender_user_id_..":RemCleaner:"..AbsId},{text="تنزيل مدير",callback_data=data.sender_user_id_..":RemManager:"..AbsId}},{{text = '˛ dev yousef 🇸🇦.',url="t.me/yousef_labban1"}}}
+keyboard.inline_keyboard = {{{text="تنزيل مميز",callback_data=data.sender_user_id_..":RemMem:"..AbsId},{text="تنزيل ادمن",callback_data=data.sender_user_id_..":RemAdmin:"..AbsId}},{{text="تنزيل منظف",callback_data=data.sender_user_id_..":RemCleaner:"..AbsId},{text="تنزيل مدير",callback_data=data.sender_user_id_..":RemManager:"..AbsId}},{{text = '˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🇸🇦.',url="t.me/yousef_labban1"}}}
 elseif Manager(data) then
-keyboard.inline_keyboard = {{{text="تنزيل مميز",callback_data=data.sender_user_id_..":RemMem:"..AbsId},{text="تنزيل ادمن",callback_data=data.sender_user_id_..":RemAdmin:"..AbsId}},{{text = '˛ dev yousef 🇸🇦.',url="t.me/yousef_labban1"}}}
+keyboard.inline_keyboard = {{{text="تنزيل مميز",callback_data=data.sender_user_id_..":RemMem:"..AbsId},{text="تنزيل ادمن",callback_data=data.sender_user_id_..":RemAdmin:"..AbsId}},{{text = '˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🇸🇦.',url="t.me/yousef_labban1"}}}
 elseif Admin(data) then
-keyboard.inline_keyboard = {{{text="تنزيل مميز",callback_data=data.sender_user_id_..":RemMem:"..AbsId}},{{text = '˛ dev yousef 🇸🇦.',url="t.me/yousef_labban1"}}}
+keyboard.inline_keyboard = {{{text="تنزيل مميز",callback_data=data.sender_user_id_..":RemMem:"..AbsId}},{{text = '˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🇸🇦.',url="t.me/yousef_labban1"}}}
 end 
 https.request("https://api.telegram.org/bot"..TokenBot..'/editMessageText?chat_id='..Chat_Id2..'&message_id='..Msg_Id2..'&text=' .. URL.escape(Text).."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end,nil)
@@ -1755,7 +1755,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙ارسل الامر الذي قم�
 return false
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == "الصلاحيات" or text == "صلاحيات" and ChCheck(msg) then 
 local List = DevAbs:smembers(raqi.."Coomds"..msg.chat_id_)
 if #List == 0 then
@@ -1936,7 +1936,7 @@ end
 tdcli_function ({ID = "SearchPublicChat",username_ = text1[3]},py_username,nil) 
 end  
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if msg.chat_id_ then
 local id = tostring(msg.chat_id_)
 if id:match("-100(%d+)") then
@@ -1953,7 +1953,7 @@ else
 ChatType = 'gp' 
 end
 end 
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if ChatType == 'pv' then 
 if text == '/start' or text == 'رجوع ،🔙‘' then 
 if SecondSudo(msg) then 
@@ -2013,7 +2013,7 @@ end
 DevAbs:setex(raqi..'Abs:Start:Time'..msg.sender_user_id_,300,true)
 return false
 end 
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if not SecondSudo(msg) and not DevAbs:sismember(raqi..'Abs:Ban:Pv',msg.sender_user_id_) and not DevAbs:get(raqi..'Abs:Texting:Pv') then
 tdcli_function({ID="GetUser",user_id_=DevId},function(arg,chat) 
 Dev_Abs(msg.sender_user_id_, msg.id_, 1, '🇸🇦︙تم ارسال رسالتك الى [المطور](t.me/'..(chat.username_ or "yousef_labban1")..')', 1, 'md') 
@@ -2071,7 +2071,7 @@ end,nil);
 end,nil);
 end 
 end 
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text and DevAbs:get(raqi..'Abs:Start:Bots'..msg.sender_user_id_) then
 if text == 'الغاء' then   
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم الغاء حفظ رسالة الستارت', 1, 'md')
@@ -2114,7 +2114,7 @@ absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(m
 DevAbs:set(raqi..'Abs:Texting:Pv',true) 
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 function getUser(user_id, cb)
 tdcli_function ({
 ID = "GetUser",
@@ -2218,7 +2218,7 @@ DevAbs:incr(raqi..'Abs:EntryNumber'..msg.chat_id_..':'..os.date('%d'))
 elseif msg.content_.ID == "MessageChatDeleteMember" then   
 DevAbs:incr(raqi..'Abs:ExitNumber'..msg.chat_id_..':'..os.date('%d'))  
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text ==('تفعيل') and not SudoBot(msg) and ChCheck(msg) then
 if not DevAbs:get(raqi..'Abs:Lock:FreeBot'..raqi) then
 if ChatType == 'pv' then
@@ -2315,23 +2315,23 @@ else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙لا تستطيع تفعيل هذه المجموعة بسبب تعطيل البوت الخدمي من قبل المطور الاساسي', 1, 'md') 
 end 
 end 
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if msg.date_ and msg.date_ < tonumber(os.time() - 30) then
 print("*( OLD MESSAGE )*")
 return false
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 tdcli_function({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,data) 
 if data.username_ ~= false then
 DevAbs:set(raqi..'Save:UserName'..msg.sender_user_id_,data.username_)
 end;end,nil) 
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 local ReFalse = tostring(msg.chat_id_)
 if not DevAbs:sismember(raqi.."Abs:Groups",msg.chat_id_) and not ReFalse:match("^(%d+)") and not SudoBot(msg) then
 print("Return False : The Bot Is Not Enabled In The Group")
 return false
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 -------- MSG TYPES ---------
 if msg.content_.ID == "MessageChatJoinByLink" and not VipMem(msg) then 
 if DevAbs:get(raqi..'Abs:Lock:Robot'..msg.chat_id_) then
@@ -2387,7 +2387,7 @@ end
 end
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text and text:match("^(.*)$") then
 local DelGpRedRedods = DevAbs:get(raqi..'Abs:Add:GpRedod'..msg.sender_user_id_..msg.chat_id_)
 local GetGpTexts = DevAbs:get(raqi..'Abs:Add:GpTexts'..msg.sender_user_id_..msg.chat_id_)
@@ -2442,7 +2442,7 @@ DevAbs:del(raqi.."Abs:Sudo:AllRed",msg.content_.text_)
 return false
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text and text:match("^(.*)$") then
 local SaveGpRedod = DevAbs:get(raqi..'Abs:Add:GpRedod'..msg.sender_user_id_..msg.chat_id_)
 if SaveGpRedod == 'SaveGpRedod' then
@@ -2477,7 +2477,7 @@ local devyousef =  DevAbs:smembers(raqi..'Abs:Text:GpTexts'..text..msg.chat_id_)
 Dev_Abs(msg.chat_id_, msg.id_, 1, '['..devyousef[math.random(#devyousef)]..']' , 1, 'md')  
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if msg.content_.text_ or msg.content_.video_ or msg.content_.document_ or msg.content_.sticker_ or msg.content_.voice_ or msg.content_.audio_ or msg.content_.photo_ or msg.content_.animation_ then 
 local SaveGpRed = DevAbs:get(raqi..'Abs:Add:GpRed'..msg.sender_user_id_..msg.chat_id_)
 if SaveGpRed == 'SaveGpRed' then 
@@ -2567,7 +2567,7 @@ end
 getUser(msg.sender_user_id_, devyousef)
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 text = msg.content_.text_
 if msg.content_.text_ or msg.content_.video_ or msg.content_.document_ or msg.content_.sticker_ or msg.content_.voice_ or msg.content_.audio_ or msg.content_.photo_ or msg.content_.animation_ then
 local SaveAllRed = DevAbs:get(raqi.."Abs:Add:AllRed"..msg.sender_user_id_)
@@ -2662,7 +2662,7 @@ end
 getUser(msg.sender_user_id_, devyousef)
 end
 end 
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --       Spam Send        --
 function NotSpam(msg,Type)
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(arg,dp) 
@@ -2726,7 +2726,7 @@ end
 end,nil)
 end  
 --  end functions raqi --
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --       Spam Check       --
 if not VipMem(msg) and msg.content_.ID ~= "MessageChatAddMembers" and DevAbs:hget(raqi.."Abs:Spam:Group:User"..msg.chat_id_,"Spam:User") then 
 if msg.sender_user_id_ ~= raqi then
@@ -2750,7 +2750,7 @@ Time_Spam = DevAbs:hget(raqi.."Abs:Spam:Group:User"..msg.chat_id_,"Num:Spam:Time
 end 
 end
 end 
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 ----- START MSG CHECKS -----
 if msg.sender_user_id_ and Ban(msg.sender_user_id_, msg.chat_id_) then
 ChatKick(msg.chat_id_, msg.sender_user_id_)
@@ -2788,7 +2788,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙عدد مشاهدات المنشو
 DevAbs:del(raqi..'Abs:viewget'..msg.sender_user_id_)
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --         Photo          --
 if msg.content_.ID == "MessagePhoto" then
 if not VipMem(msg) then
@@ -2836,7 +2836,7 @@ end
 end
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --        Markdown        --
 elseif not msg.reply_markup_ and msg.via_bot_user_id_ ~= 0 then
 if DevAbs:get(raqi..'Abs:Lock:Markdown'..msg.chat_id_) then
@@ -2844,7 +2844,7 @@ if not VipMem(msg) then
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --        Document        --
 elseif msg.content_.ID == "MessageDocument" then
 if not VipMem(msg) then
@@ -2892,7 +2892,7 @@ end
 end
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --         Inline         --
 elseif msg.reply_markup_ and msg.reply_markup_.ID == "ReplyMarkupInlineKeyboard" and msg.via_bot_user_id_ ~= 0 then
 if not VipMem(msg) then
@@ -2900,7 +2900,7 @@ if DevAbs:get(raqi..'Abs:Lock:Inline'..msg.chat_id_) then
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --        Sticker         --
 elseif msg.content_.ID == "MessageSticker" then
 if not VipMem(msg) then
@@ -2927,7 +2927,7 @@ end
 if DevAbs:get(raqi.."Abs:Lock:Welcome"..msg.chat_id_) then
 getUser(msg.sender_user_id_,get_welcome)
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --      New User Add      --
 elseif msg.content_.ID == "MessageChatAddMembers" then
 if not DevAbs:get(raqi..'Abs:Lock:BotWelcome') then 
@@ -2972,7 +2972,7 @@ local Welcomes = Welcomes:gsub('firstname',('['..msg.content_.members_[0].first_
 local Welcomes = Welcomes:gsub('username',('[@'..msg.content_.members_[0].username_..']' or '[@yousef_labban1]'))
 Dev_Abs(msg.chat_id_, msg.id_, 1, Welcomes, 1, 'md')
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --        Contact         --
 elseif msg.content_.ID == "MessageContact" then
 if not VipMem(msg) then
@@ -2987,7 +2987,7 @@ if DevAbs:get(raqi..'Abs:Lock:Contact'..msg.chat_id_) then
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --         Audio          --
 elseif msg.content_.ID == "MessageAudio" then
 if not VipMem(msg) then
@@ -3035,7 +3035,7 @@ end
 end
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --         Voice          --
 elseif msg.content_.ID == "MessageVoice" then
 if not VipMem(msg) then
@@ -3083,7 +3083,7 @@ end
 end
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --        Location        --
 elseif msg.content_.ID == "MessageLocation" then
 if not VipMem(msg) then
@@ -3132,7 +3132,7 @@ end
 end
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --         Video          --
 elseif msg.content_.ID == "MessageVideo" then
 if not VipMem(msg) then
@@ -3180,7 +3180,7 @@ end
 end
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --          Gif           --
 elseif msg.content_.ID == "MessageAnimation" then
 if not VipMem(msg) then
@@ -3228,7 +3228,7 @@ end
 end
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --         Text           --
 elseif msg.content_.ID == "MessageText" then
 if not VipMem(msg) then
@@ -3286,7 +3286,7 @@ DeleteMessage(msg.chat_id_,{[0] = msg.id_})
 end
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if DevAbs:get(raqi.."Abs:Set:Groups:Links"..msg.chat_id_..msg.sender_user_id_) then
 if text == "الغاء" then
 send(msg.chat_id_,msg.id_,"🇸🇦︙تم الغاء حفظ الرابط")       
@@ -3301,7 +3301,7 @@ DevAbs:del(raqi.."Abs:Set:Groups:Links"..msg.chat_id_..msg.sender_user_id_)
 return false 
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 local msg = data.message_
 text = msg.content_.text_
 if text and Constructor(msg) then 
@@ -3334,7 +3334,7 @@ Dev_Abs(msg.chat_id_, msg.id_,  1, "🇸🇦︙تم اضافة "..numadded..' ن
 DevAbs:del('devyousef:'..raqi..'ids:user'..msg.chat_id_)  
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text and (text:match("طيز") or text:match("ديس") or text:match("انيج") or text:match("نيج") or text:match("ديوس") or text:match("عير") or text:match("كسختك") or text:match("كسمك") or text:match("كسربك") or text:match("بلاع") or text:match("ابو العيوره") or text:match("منيوج") or text:match("كحبه") or text:match("كحاب") or text:match("الكحبه") or text:match("كسك") or text:match("طيزك") or text:match("كس امك") or text:match("صرم") or text:match("كس اختك")) then
 if not DevAbs:get(raqi.."Abs:Lock:Fshar"..msg.chat_id_) and not VipMem(msg) then
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})
@@ -3360,7 +3360,7 @@ if not DevAbs:get(raqi.."Abs:Lock:Taf"..msg.chat_id_) and not VipMem(msg) then
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})
 ReplyStatus(msg,msg.sender_user_id_,"WrongWay","🇸🇦︙ممنوع التكلم بالطائفيه هنا") 
 end end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if SecondSudo(msg) then
 if text == 'جلب نسخه القروبات' or text == 'جلب نسخه احتياطيه' or text == 'جلب النسخه الاحتياطيه' then
 local List = DevAbs:smembers(raqi..'Abs:Groups') 
@@ -3470,7 +3470,7 @@ end
 tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonumber(msg.reply_to_message_id_) }, by_reply, nil)
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if DevAbs:get(raqi.."SET:GAME"..msg.chat_id_) then  
 if text and text:match("^(%d+)$") then
 local NUM = text:match("^(%d+)$")
@@ -3516,7 +3516,7 @@ return false
 end
 end,nil)
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if DevAbs:get(raqi.."Abs:DevText"..msg.chat_id_..":" .. msg.sender_user_id_) then
 if text and text:match("^الغاء$") then 
 DevAbs:del(raqi.."Abs:DevText"..msg.chat_id_..":" .. msg.sender_user_id_)
@@ -3539,7 +3539,7 @@ DevAbs:del(raqi..'Abs:NameBot'..msg.sender_user_id_)
 DevAbs:set(raqi..'Abs:NameBot', text)
 return false 
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == "الرابط" then
 if not DevAbs:get(raqi.."Abs:Lock:GpLinksinline"..msg.chat_id_) then 
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,ta) 
@@ -3555,7 +3555,7 @@ end
 end,nil) 
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if ChatType == 'sp' or ChatType == 'gp'  then
 if text == 'بوت' or text == 'بوتت' then 
 NameBot = (DevAbs:get(raqi..'Abs:NameBot') or 'dev-yousef 🇸🇦')
@@ -3584,7 +3584,7 @@ end
 end
 if text ==  'حذف رسائلي' and ChCheck(msg) or text ==  'مسح رسائلي' and ChCheck(msg) then DevAbs:del(raqi..'Abs:UsersMsgs'..msg.chat_id_..':'..msg.sender_user_id_) Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم حذف جميع رسائلك', 1, 'md') end
 if text ==  'حذف نقاطي' and ChCheck(msg) or text ==  'مسح نقاطي' and ChCheck(msg) then DevAbs:del(raqi..'Abs:GamesNumber'..msg.chat_id_..msg.sender_user_id_) Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم حذف جميع نقاطك', 1, 'md') end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == 'سمايلات' and ChCheck(msg) or text == 'السمايلات' and ChCheck(msg) then
 if not DevAbs:get(raqi..'Abs:Lock:Games'..msg.chat_id_) then
 DevAbs2 = {'🍏','🍎','🍐','🍊','🍋','🍌','🍉','🍇','🍓','🍈','🍒','🍑','🍍','🥥','🥝','🍅','🍆','🥑','🥦','🥒','🌶','🌽','🥕','🥔','🍠','🥐','🍞','🥖','🥨','🧀','🥚','🍳','🥞','🥓','🥩','🍗','🍖','🌭','🍔','🍟','🍕','🥪','🥙','🍼','☕️','🍵','🥤','🍶','🍺','🍻','🏀','⚽️','🏈','⚾️','🎾','🏐','🏉','🎱','🏓','🏸','🥅','🎰','🎮','🎳','🎯','🏆','🎻','🎸','🎺','🥁','🎹','🎼','🎧','🎤','🎬','🎨','🎭','🎪','🛎','📤','🎗','🏵','🎖','🏆','🥌','🛷','🚕','🚗','🚙','🚌','🚎','🏎','🚓','🚑','🚚','🚛','🚜','🇮🇶','⚔️','🛡','🔮','🌡','💣','⏱','🛢','📓','📗','📂','📅','📪','📫','📬','📭','⏰','📺','🎚','☎️','📡'}
@@ -4080,7 +4080,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1,devyousef, 1, 'md')
 end
 DevAbs:set(raqi..'Abs:Games:Ids'..msg.chat_id_,true)
 end  
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == 'اسئله' and ChCheck(msg) or text == 'اختيارات' and ChCheck(msg) or text == 'الاسئله' and ChCheck(msg) or text == 'اساله' and ChCheck(msg) then
 if not DevAbs:get(raqi..'Abs:Lock:Games'..msg.chat_id_) then
 DevAbs2 = {'النيل','14','الفم','11','30','بوتين','ستيف جوبر','باريس','10','النمل','حرف الواو','الشعر','سحاب','الاسم','ذهب','حرف الام','العزائم','انسات','المنجنيق','اسيا','6','الاسد','مهر','الدولفين','اوروبا','الزئبق','لندن','الانسان','طوكيو','خديجه',}
@@ -4130,7 +4130,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1,devyousef, 1, 'md')
 end
 DevAbs:set(raqi..'Abs:Games:Ids'..msg.chat_id_,true)
 end  
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if DevAbs:get(raqi.."GAME:TKMEN"..msg.chat_id_.."" .. msg.sender_user_id_) then  
 if text and text:match("^(%d+)$") then
 local NUM = text:match("^(%d+)$")
@@ -4169,7 +4169,7 @@ DevAbs:setex(raqi.."GAME:TKMEN"..msg.chat_id_.."" .. msg.sender_user_id_, 100, t
 return false  
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == 'روليت' then
 if not DevAbs:get(raqi..'Abs:Lock:Games'..msg.chat_id_) then
 DevAbs:del(raqi.."Abs:NumRolet"..msg.chat_id_..msg.sender_user_id_) 
@@ -4220,7 +4220,7 @@ Msg_id = msg.id_/2097152/0.5
 return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end,nil) 
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == 'كت تويت' and ChCheck(msg) or text == 'كت' and ChCheck(msg) then
 if not DevAbs:get(raqi..'Abs:Lock:Games'..msg.chat_id_) then
 local devyousef = {
@@ -4233,7 +4233,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, ''..devyousef[math.random(#devyousef)]..'' , 1
 return false
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text and (text == 'الالعاب' or text == 'العاب' or text == 'اللعبه') and ChCheck(msg) then
 if not DevAbs:get(raqi..'Abs:Lock:Games'..msg.chat_id_) then
 Dev_Abs(msg.chat_id_, msg.id_, 1,[[
@@ -4284,13 +4284,13 @@ keyboard.inline_keyboard = {
 {{text="🔵 لعبة الالوان 🔴",url='https://t.me/T4TTTTBOT?game=color'}},
 {{text="🚀 لعبة الصاروخ 🚀",url='https://t.me/T4TTTTBOT?game=rocket'},{text="🏹 لعبة السهام 🏹",url='https://t.me/T4TTTTBOT?game=arrow'}},
 {{text="لعبة النينجا",url='https://t.me/gamee?game=GravityNinja21'},{text="لعبة الكرتي",url='https://t.me/gamee?game=KarateKid2'}},
-{{text = '˛ dev yousef 🇸🇦.',url="t.me/yousef_labban1"}},
+{{text = '˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🇸🇦.',url="t.me/yousef_labban1"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id=' .. msg.chat_id_ .. '&text=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
 end end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == 'بيع نقاطي' and ChCheck(msg) then
 if tonumber((DevAbs:get(raqi..'Abs:GamesNumber'..msg.chat_id_..msg.sender_user_id_) or 0)) == 0 then
 Dev_Abs(msg.chat_id_, msg.id_, 1,'🇸🇦︙لم تربح اي نقطه\n🇸🇦︙ارسل -› الالعاب للعب', 1, 'md')
@@ -4301,7 +4301,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1,'🇸🇦︙تم بيع '..(DevAbs:get(raqi..'A
 DevAbs:del(raqi..'Abs:GamesNumber'..msg.chat_id_..msg.sender_user_id_)
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == 'رفع المشرفين' and ChCheck(msg) or text == 'رفع الادامن' and ChCheck(msg) then  
 tdcli_function ({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub("-100",""),filter_ = {ID = "ChannelMembersAdministrators"},offset_ = 0,limit_ = 200},function(arg,abbas) 
 local num = 0
@@ -4331,7 +4331,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم رفع '..num..' من الا�
 end
 end,nil) 
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == 'غادر' and SudoBot(msg) then
 if DevAbs:get(raqi.."Abs:Left:Bot"..raqi) and not SecondSudo(msg) then
 Dev_Abs(msg.chat_id_,msg.id_, 1, "🇸🇦︙المغادره معطلة من قبل المطور الاساسي", 1, 'md')
@@ -4341,7 +4341,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم مغادرة المجموعة
 ChatLeave(msg.chat_id_, raqi)
 DevAbs:srem(raqi.."Abs:Groups",msg.chat_id_)
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text ==('موقعي') and ChCheck(msg) then
 tdcli_function ({ID = "GetChatMember",chat_id_ = msg.chat_id_,user_id_ = msg.sender_user_id_},function(arg,da) 
 if da.status_.ID == "ChatMemberStatusCreator" then
@@ -4354,7 +4354,7 @@ end
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙موقعك -› '..rtpa, 1, 'md')
 end,nil)
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == "معلوماتي" and ChCheck(msg) then
 function get_me(extra,result,success)
 local msguser = tonumber(DevAbs:get(raqi..'Abs:UsersMsgs'..msg.chat_id_..':'..msg.sender_user_id_))
@@ -4368,7 +4368,7 @@ end
 getUser(msg.sender_user_id_,get_me)
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == "تعيين قناة الاشتراك" or text == "تغيير قناة الاشتراك" or text == "تعيين الاشتراك الاجباري" or text == "وضع قناة الاشتراك" then
 if not SecondSudo(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙للمطور الاساسي فقط ', 1, 'md')
@@ -4422,7 +4422,7 @@ send(msg.chat_id_, msg.id_, "🇸🇦︙لاتوجد قناة في الاشتر�
 end
 return false  
 end end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if SudoBot(msg) then
 if text == 'اذاعة للكل بالتوجيه' and tonumber(msg.reply_to_message_id_) > 0 then
 function devyousef(extra,result,success)
@@ -4443,16 +4443,16 @@ end
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),devyousef)
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == "مشاهده المنشور" and ChCheck(msg) or text == "مشاهدات المنشور" and ChCheck(msg) or text == "عدد المشاهدات" and ChCheck(msg) then
 DevAbs:set(raqi..'Abs:viewget'..msg.sender_user_id_,true)
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙حسنا قم باعادة توجيه للمنشور الذي تريدني حساب مشاهداته', 1, 'md')
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == "السورس" or text == "سورس" then
 Text = [[
 Welcome To Source
-𓄇[˛ dev yousef 🦇.](https://t.me/yousef_labban)
+𓄇[˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🦇.](https://t.me/yousef_labban)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -4463,7 +4463,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/yousef_labban1&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if ChatType == 'sp' or ChatType == 'gp'  then
 if text == "اطردني" and ChCheck(msg) or text == "ادفرني" and ChCheck(msg) then
 if DevAbs:get(raqi.."Abs:Kick:Me"..msg.chat_id_) then
@@ -4478,7 +4478,7 @@ keyboard.inline_keyboard = {{{text="نعم",callback_data="/delyes"},{text="لا
 Msg_id = msg.id_/2097152/0.5
 return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == 'تعطيل اطردني' and Manager(msg) and ChCheck(msg) then
 DevAbs:set(raqi.."Abs:Kick:Me"..msg.chat_id_, true)
 local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙تم تعطيل امر اطردني'
@@ -4489,7 +4489,7 @@ DevAbs:del(raqi.."Abs:Kick:Me"..msg.chat_id_)
 local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙تم تفعيل امر اطردني'
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == "نزلني" and ChCheck(msg) then
 if DevAbs:get(raqi.."Abs:Del:Me"..msg.chat_id_) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙عذرا هذه الخاصية معطلة ', 1, 'md')
@@ -4503,7 +4503,7 @@ keyboard.inline_keyboard = {{{text="نعم",callback_data="/yesdel"},{text="لا
 Msg_id = msg.id_/2097152/0.5
 return https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='..msg.chat_id_..'&text=' .. URL.escape(Text).."&reply_to_message_id="..Msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == 'تعطيل نزلني' and BasicConstructor(msg) and ChCheck(msg) then
 DevAbs:set(raqi.."Abs:Del:Me"..msg.chat_id_, true)
 local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙تم تعطيل امر نزلني'
@@ -4514,7 +4514,7 @@ DevAbs:del(raqi.."Abs:Del:Me"..msg.chat_id_)
 local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙تم تفعيل امر نزلني'
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text and (text == 'تفعيل التاك' or text == 'تفعيل التاك للكل' or text == 'تفعيل تاك للكل') and Admin(msg) and ChCheck(msg) then 
 local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙تم تفعيل امر تاك للكل'
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
@@ -4544,7 +4544,7 @@ end
 tdcli_function({ID = "GetChannelMembers",channel_id_ = getChatId(msg.chat_id_).ID, offset_ = 0,limit_ = 200000},TagAll,nil)
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text and text:match("^كللهم (.*)$") and ChCheck(msg) then
 local txt = {string.match(text, "^(كللهم) (.*)$")}
 if not DevAbs:get(raqi..'Abs:Lock:TagAll'..msg.chat_id_) then
@@ -4565,7 +4565,7 @@ tdcli_function({ID = "GetChannelMembers",channel_id_ = getChatId(msg.chat_id_).I
 end
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == "رسائلي" and msg.reply_to_message_id_ == 0 and ChCheck(msg) then
 local user_msgs = DevAbs:get(raqi..'Abs:UsersMsgs'..msg.chat_id_..':'..msg.sender_user_id_)
 Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙عدد رسائلك هنا -› *❨ "..user_msgs.." ❩*", 1, 'md')
@@ -4576,7 +4576,7 @@ local ExitNumber = (DevAbs:get(raqi..'Abs:ExitNumber'..msg.chat_id_..':'..os.dat
 local MsgNumberDay = (DevAbs:get(raqi..'Abs:MsgNumberDay'..msg.chat_id_..':'..os.date('%d')) or 0)
 Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙انضمام الاعضاء اليوم -› *"..EntryNumber.."*\n🇸🇦︙مغادرة الاعضاء اليوم -› *"..ExitNumber.."*\n🇸🇦︙عدد الرسائل اليوم -› *"..MsgNumberDay.."*\n🇸🇦︙نسبة التفاعل اليوم -› *"..math.random(40,100).."%*", 1, 'md')
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == "معرفي" and ChCheck(msg) then
 function get_username(extra,result,success)
 text = '🇸🇦︙معرفك -› ❨ User ❩'
@@ -4594,7 +4594,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, 'html')
 end
 getUser(msg.sender_user_id_,get_firstname)
 end   
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == "اهمس" or text == "همسه" or text == "اريد بوت الهمسه" or text == "دزلي بوت الهمسه" or  text == "دزولي بوت الهمسه" then  Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙@yousef_labban', 1, 'md') end
 if text == "رابط حذف" or text == "رابط الحذف" or text == "اريد رابط الحذف" or  text == "شمرلي رابط الحذف" or text == "اريد رابط حذف" then local inline = {{{text="اضغط هنا",url="https://t.me/cClCcBoT"}}} SendInline(msg.chat_id_,'🇸🇦︙اضغط للحصول على الرابط',nil,inline) return false end
 if text == "بوت الحذف" or text == "اريد بوت الحذف" or text == "اريد بوت حذف" or text == "بوت حذف" or text == "بوت حذف حسابات" or text == "راح احذف" then local inline = {{{text="اضغط هنا",url="https://t.me/cClCcBoT"}}} SendInline(msg.chat_id_,'🇸🇦︙اضغط للحصول على البوت',nil,inline) return false end
@@ -4605,7 +4605,7 @@ if text == "رتبتي" and ChCheck(msg) then Dev_Abs(msg.chat_id_, msg.id_, 1, 
 if text == "ايدي المجموعة" and ChCheck(msg) then Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙ايدي المجموعة -› `"..msg.chat_id_.."`", 1, 'md') end
 if text == 'مسح تعديلاتي' or text == 'مسح تعديلاتي' or text == 'حذف تعديلاتي' or text == 'حذف تعديلاتي' then DevAbs:del(raqi..'Abs:EditMsg'..msg.chat_id_..msg.sender_user_id_) Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم حذف جميع تعديلاتك بنجاح' , 1, 'md') end
 if text == 'مسح جهاتي' or text == 'مسح اضافاتي' or text == 'حذف جهاتي' or text == 'حذف اضافاتي' then DevAbs:del(raqi..'Abs:ContactNumber'..msg.chat_id_..':'..msg.sender_user_id_) Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم حذف جميع جهاتك المضافة' , 1, 'md') end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == "المطور" then 
 local DevText = DevAbs:get(raqi.."DevText")
 if DevAbs:get(raqi.."Abs:ChId") then local Check = https.request('https://api.telegram.org/bot'..TokenBot..'/getChat?chat_id='..DevAbs:get(raqi.."Abs:ChId")) local GetInfo = JSON.decode(Check) local DevCh1 = GetInfo.result.username DevCh = '\n🇸🇦︙*Dev Ch* ↬ [@'..DevCh1..']' else DevCh = '' end
@@ -4635,14 +4635,14 @@ end,nil)
 end,nil)
 end 
 if text == "مبرمج السورس" or text == "مطور السورس" or text == "المبرمج" then 
-Text = "• *The developer and programmer of this source is* : [dev yousef](https://t.me/yousef_labban)."
+Text = "• *The developer and programmer of this source is* : [𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇 ](https://t.me/yousef_labban)."
 keyboard = {} 
-keyboard.inline_keyboard = {{{text='- dev yousef .',url="t.me/yousef_labban"}}}
+keyboard.inline_keyboard = {{{text='- 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  .',url="t.me/yousef_labban"}}}
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendPhoto?chat_id='..msg.chat_id_..'&photo=https://t.me/yousef_labban&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 return false
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text and text:match('^هينه @(.*)') and ChCheck(msg) or text and text:match('^هينها @(.*)') then 
 if not DevAbs:get(raqi..'Abs:Lock:Stupid'..msg.chat_id_) then
 local username = text:match('^هينه @(.*)') or text:match('^هينها @(.*)') 
@@ -4675,7 +4675,7 @@ end
 resolve_username(username,devyousef)
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == ("هينه") or text == ("بعد هينه") or text == ("هينه بعد") or text == ("لك هينه") or text == ("هينها") or text == ("هينهه") or text == ("رزله") or text == ("رزلهه") or text == ("رزلها") then
 if not DevAbs:get(raqi..'Abs:Lock:Stupid'..msg.chat_id_) then
 function hena(extra, result, success)
@@ -4750,7 +4750,7 @@ getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),seha)
 end
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text and text:match('^صيحه @(.*)') and ChCheck(msg) or text and text:match('^صيح @(.*)') and ChCheck(msg) then 
 if not DevAbs:get(raqi..'Abs:Lock:Stupid'..msg.chat_id_) then
 local username = text:match('^صيحه @(.*)') or text:match('^صيح @(.*)') 
@@ -4776,7 +4776,7 @@ resolve_username(username,devyousef)
 end
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == ("تنزيل الكل") and msg.reply_to_message_id_ ~= 0 and Manager(msg) and ChCheck(msg) then 
 function promote_by_reply(extra, result, success)
 if SudoId(result.sender_user_id_) == true then
@@ -4965,7 +4965,7 @@ end
 end
 resolve_username(rem[2],remm)
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --     Set SecondSudo     --
 if Sudo(msg) then
 if text ==('اضف مطور ثانوي') or text ==('رفع مطور ثانوي') and ChCheck(msg) then
@@ -4992,7 +4992,7 @@ local user = text:match('اضف مطور ثانوي (%d+)') or text:match('رف�
 DevAbs:sadd(raqi..'Abs:SecondSudo:',user)
 ReplyStatus(msg,user,"Reply","🇸🇦︙تم رفعه في قائمة المطورين الثانويين")  
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --     Rem SecondSudo     --
 if text ==('حذف مطور ثانوي') or text ==('تنزيل مطور ثانوي') and ChCheck(msg) then
 function prom_reply(extra, result, success)
@@ -5018,7 +5018,7 @@ local user = text:match('حذف مطور ثانوي (%d+)') or text:match('تن�
 DevAbs:srem(raqi..'Abs:SecondSudo:',user)
 ReplyStatus(msg,user,"Reply","🇸🇦︙تم تنزيله من قائمة المطورين الثانويين")  
 end end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --       Set SudoBot      --
 if SecondSudo(msg) then
 if text ==('اضف مطور') or text ==('رفع مطور') and ChCheck(msg) then
@@ -5045,7 +5045,7 @@ local user = text:match('اضف مطور (%d+)') or text:match('رفع مطور 
 DevAbs:sadd(raqi..'Abs:SudoBot:',user)
 ReplyStatus(msg,user,"Reply","🇸🇦︙تم رفعه في قائمة المطورين")  
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --       Rem SudoBot      --
 if text ==('حذف مطور') or text ==('تنزيل مطور') and ChCheck(msg) then
 function prom_reply(extra, result, success)
@@ -5071,7 +5071,7 @@ local user = text:match('حذف مطور (%d+)') or text:match('تنزيل مط�
 DevAbs:srem(raqi..'Abs:SudoBot:',user)
 ReplyStatus(msg,user,"Reply","🇸🇦︙تم تنزيله من قائمة المطورين")  
 end end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --      Set ManagerAll    --
 if SudoBot(msg) then
 if text ==('رفع مدير عام') and ChCheck(msg) then
@@ -5098,7 +5098,7 @@ local user = text:match('رفع مدير عام (%d+)')
 DevAbs:sadd(raqi..'Abs:ManagerAll:',user)
 ReplyStatus(msg,user,"Reply","🇸🇦︙تم رفعه في قائمة المدراء العامين")  
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --      Rem ManagerAll    --
 if text ==('تنزيل مدير عام') and ChCheck(msg) then
 function prom_reply(extra, result, success)
@@ -5124,7 +5124,7 @@ local user = text:match('تنزيل مدير عام (%d+)')
 DevAbs:srem(raqi..'Abs:ManagerAll:',user)
 ReplyStatus(msg,user,"Reply","🇸🇦︙تم تنزيله من قائمة المدراء العامين")  
 end end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --      Set adminall      --
 if ManagerAll(msg) then
 if text ==('رفع ادمن عام') and ChCheck(msg) then
@@ -5151,7 +5151,7 @@ local user = text:match('رفع ادمن عام (%d+)')
 DevAbs:sadd(raqi..'Abs:AdminAll:',user)
 ReplyStatus(msg,user,"Reply","🇸🇦︙تم رفعه في قائمة الادامن العامين")  
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --      Rem adminall      --
 if text ==('تنزيل ادمن عام') and ChCheck(msg) then
 function prom_reply(extra, result, success)
@@ -5177,7 +5177,7 @@ local user = text:match('تنزيل ادمن عام (%d+)')
 DevAbs:srem(raqi..'Abs:AdminAll:',user)
 ReplyStatus(msg,user,"Reply","🇸🇦︙تم تنزيله من قائمة الادامن العامين")  
 end end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --       Set Vipall       --
 if AdminAll(msg) then
 if text ==('رفع مميز عام') and ChCheck(msg) then
@@ -5204,7 +5204,7 @@ local user = text:match('رفع مميز عام (%d+)')
 DevAbs:sadd(raqi..'Abs:VipAll:',user)
 ReplyStatus(msg,user,"Reply","🇸🇦︙تم رفعه في قائمة المميزين العام")  
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --       Rem Vipall       --
 if text ==('تنزيل مميز عام') and ChCheck(msg) then
 function prom_reply(extra, result, success)
@@ -5230,7 +5230,7 @@ local user = text:match('تنزيل مميز عام (%d+)')
 DevAbs:srem(raqi..'Abs:VipAll:',user)
 ReplyStatus(msg,user,"Reply","🇸🇦︙تم تنزيله من قائمة المميزين العام")  
 end end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --   Set AbsConstructor   --
 if ChatType == 'sp' or ChatType == 'gp'  then
 if SudoBot(msg) then
@@ -5258,7 +5258,7 @@ local user = text:match('رفع مالك (%d+)')
 DevAbs:sadd(raqi..'Abs:AbsConstructor:'..msg.chat_id_,user)
 ReplyStatus(msg,user,"Reply","🇸🇦︙تم رفعه مالك")  
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --   Rem AbsConstructor   --
 if text ==('تنزيل مالك') and ChCheck(msg) then
 function prom_reply(extra, result, success)
@@ -5312,7 +5312,7 @@ ReplyStatus(msg,user,"Reply","🇸🇦︙تم تنزيله من المالكين
 end end end
 end,nil)
 end end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --  Set BasicConstructor  --
 if AbsConstructor(msg) then
 if text ==('رفع منشئ اساسي') and ChCheck(msg) then
@@ -5339,7 +5339,7 @@ local user = text:match('رفع منشئ اساسي (%d+)')
 DevAbs:sadd(raqi..'Abs:BasicConstructor:'..msg.chat_id_,user)
 ReplyStatus(msg,user,"Reply","🇸🇦︙تم رفعه منشئ اساسي")  
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --  Rem BasicConstructor  --
 if text ==('تنزيل منشئ اساسي') and ChCheck(msg) then
 function prom_reply(extra, result, success)
@@ -5368,7 +5368,7 @@ end end
 if text ==('رفع منشئ اساسي') and not AbsConstructor(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙هذا الامر للمالكين والمطورين فقط', 1, 'md')
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --    Set  Constructor    --
 if BasicConstructor(msg) then
 if text ==('رفع منشئ') and ChCheck(msg) then
@@ -5395,7 +5395,7 @@ local user = text:match('رفع منشئ (%d+)')
 DevAbs:sadd(raqi..'Abs:Constructor:'..msg.chat_id_,user)
 ReplyStatus(msg,user,"Reply","🇸🇦︙تم رفعه في قائمة المنشئين")  
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --    Rem  Constructor    --
 if text ==('تنزيل منشئ') and ChCheck(msg) then
 function prom_reply(extra, result, success)
@@ -5422,7 +5422,7 @@ DevAbs:srem(raqi..'Abs:Constructor:'..msg.chat_id_,user)
 ReplyStatus(msg,user,"Reply","🇸🇦︙تم تنزيله من قائمة المنشئين")  
 end 
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --      Set Manager       --
 if Constructor(msg) then
 if text ==('رفع مدير') and ChCheck(msg) then
@@ -5449,7 +5449,7 @@ local user = text:match('رفع مدير (%d+)')
 DevAbs:sadd(raqi..'Abs:Managers:'..msg.chat_id_,user)
 ReplyStatus(msg,user,"Reply","🇸🇦︙تم رفعه في قائمة المدراء")  
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --       Rem Manager      --
 if text ==('تنزيل مدير') and ChCheck(msg) then
 function prom_reply(extra, result, success)
@@ -5475,7 +5475,7 @@ local user = text:match('تنزيل مدير (%d+)')
 DevAbs:srem(raqi..'Abs:Managers:'..msg.chat_id_,user)
 ReplyStatus(msg,user,"Reply","🇸🇦︙تم تنزيله من قائمة المدراء")  
 end 
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --       Set Cleaner      --
 if text ==('رفع منظف') and ChCheck(msg) then
 function prom_reply(extra, result, success)
@@ -5501,7 +5501,7 @@ local user = text:match('رفع منظف (%d+)')
 DevAbs:sadd(raqi..'Abs:Cleaner:'..msg.chat_id_,user)
 ReplyStatus(msg,user,"Reply","🇸🇦︙تم رفعه في قائمة المنظفين")  
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --       Rem Cleaner      --
 if text ==('تنزيل منظف') and ChCheck(msg) then
 function prom_reply(extra, result, success)
@@ -5527,7 +5527,7 @@ local user = text:match('تنزيل منظف (%d+)')
 DevAbs:srem(raqi..'Abs:Cleaner:'..msg.chat_id_,user)
 ReplyStatus(msg,user,"Reply","🇸🇦︙تم تنزيله من قائمة المنظفين")  
 end end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --       Set admin        --
 if Manager(msg) then
 if text ==('رفع ادمن') and ChCheck(msg) then
@@ -5566,7 +5566,7 @@ end
 DevAbs:sadd(raqi..'Abs:Admins:'..msg.chat_id_,user)
 ReplyStatus(msg,user,"Reply","🇸🇦︙تم رفعه في قائمة الادامن")  
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --        Rem admin       --
 if text ==('تنزيل ادمن') and ChCheck(msg) then
 function prom_reply(extra, result, success)
@@ -5592,7 +5592,7 @@ local user = text:match('تنزيل ادمن (%d+)')
 DevAbs:srem(raqi..'Abs:Admins:'..msg.chat_id_,user)
 ReplyStatus(msg,user,"Reply","🇸🇦︙تم تنزيله من قائمة الادامن")  
 end end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --       Set Vipmem       --
 if Admin(msg) then
 if text ==('رفع مميز') and ChCheck(msg) then
@@ -5631,7 +5631,7 @@ end
 DevAbs:sadd(raqi..'Abs:VipMem:'..msg.chat_id_,user)
 ReplyStatus(msg,user,"Reply","🇸🇦︙تم رفعه في قائمة المميزين")  
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --       Rem Vipmem       --
 if text ==('تنزيل مميز') and ChCheck(msg) then
 function prom_reply(extra, result, success)
@@ -5657,7 +5657,7 @@ local user = text:match('تنزيل مميز (%d+)')
 DevAbs:srem(raqi..'Abs:VipMem:'..msg.chat_id_,user)
 ReplyStatus(msg,user,"Reply","🇸🇦︙تم تنزيله من قائمة المميزين")  
 end end 
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --       Set Inline       --
 if text ==('رفع رتبة') and ChCheck(msg) then
 function prom_reply(extra, result, success)
@@ -5668,21 +5668,21 @@ return false
 end
 local Text = '🇸🇦︙قم باستعمال الازرار لرفع العضو -› ⤈\n🇸🇦︙العضو -› ['..dp.first_name_..'](t.me/'..(dp.username_ or 'yousef_labban1')..')'
 if Sudo(msg) then
-inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_..":SetAdmin:"..result.sender_user_id_}},{{text="رفع منشئ",callback_data=msg.sender_user_id_..":SetConstructor:"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_..":SetManager:"..result.sender_user_id_}},{{text="رفع منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_},{text="رفع منشئ اساسي",callback_data=msg.sender_user_id_..":SetBasicConstructor:"..result.sender_user_id_}},{{text="رفع مالك",callback_data=msg.sender_user_id_..":SetAbsConstructor:"..result.sender_user_id_},{text="رفع مطور",callback_data=msg.sender_user_id_..":SetSudoBot:"..result.sender_user_id_}},{{text="رفع مطور ثانوي",callback_data=msg.sender_user_id_..":SetSecondSudo:"..result.sender_user_id_}},{{text = '˛ dev yousef 🇸🇦.',url="t.me/yousef_labban1"}}}
+inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_..":SetAdmin:"..result.sender_user_id_}},{{text="رفع منشئ",callback_data=msg.sender_user_id_..":SetConstructor:"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_..":SetManager:"..result.sender_user_id_}},{{text="رفع منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_},{text="رفع منشئ اساسي",callback_data=msg.sender_user_id_..":SetBasicConstructor:"..result.sender_user_id_}},{{text="رفع مالك",callback_data=msg.sender_user_id_..":SetAbsConstructor:"..result.sender_user_id_},{text="رفع مطور",callback_data=msg.sender_user_id_..":SetSudoBot:"..result.sender_user_id_}},{{text="رفع مطور ثانوي",callback_data=msg.sender_user_id_..":SetSecondSudo:"..result.sender_user_id_}},{{text = '˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🇸🇦.',url="t.me/yousef_labban1"}}}
 elseif SecondSudo(msg) then
-inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_..":SetAdmin:"..result.sender_user_id_}},{{text="رفع منشئ",callback_data=msg.sender_user_id_..":SetConstructor:"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_..":SetManager:"..result.sender_user_id_}},{{text="رفع منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_},{text="رفع منشئ اساسي",callback_data=msg.sender_user_id_..":SetBasicConstructor:"..result.sender_user_id_}},{{text="رفع مالك",callback_data=msg.sender_user_id_..":SetAbsConstructor:"..result.sender_user_id_},{text="رفع مطور",callback_data=msg.sender_user_id_..":SetSudoBot:"..result.sender_user_id_}},{{text = '˛ dev yousef 🇸🇦.',url="t.me/yousef_labban1"}}}
+inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_..":SetAdmin:"..result.sender_user_id_}},{{text="رفع منشئ",callback_data=msg.sender_user_id_..":SetConstructor:"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_..":SetManager:"..result.sender_user_id_}},{{text="رفع منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_},{text="رفع منشئ اساسي",callback_data=msg.sender_user_id_..":SetBasicConstructor:"..result.sender_user_id_}},{{text="رفع مالك",callback_data=msg.sender_user_id_..":SetAbsConstructor:"..result.sender_user_id_},{text="رفع مطور",callback_data=msg.sender_user_id_..":SetSudoBot:"..result.sender_user_id_}},{{text = '˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🇸🇦.',url="t.me/yousef_labban1"}}}
 elseif SudoBot(msg) then
-inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_..":SetAdmin:"..result.sender_user_id_}},{{text="رفع منشئ",callback_data=msg.sender_user_id_..":SetConstructor:"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_..":SetManager:"..result.sender_user_id_}},{{text="رفع منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_},{text="رفع منشئ اساسي",callback_data=msg.sender_user_id_..":SetBasicConstructor:"..result.sender_user_id_}},{{text="رفع مالك",callback_data=msg.sender_user_id_..":SetAbsConstructor:"..result.sender_user_id_}},{{text = '˛ dev yousef 🇸🇦.',url="t.me/yousef_labban1"}}}
+inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_..":SetAdmin:"..result.sender_user_id_}},{{text="رفع منشئ",callback_data=msg.sender_user_id_..":SetConstructor:"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_..":SetManager:"..result.sender_user_id_}},{{text="رفع منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_},{text="رفع منشئ اساسي",callback_data=msg.sender_user_id_..":SetBasicConstructor:"..result.sender_user_id_}},{{text="رفع مالك",callback_data=msg.sender_user_id_..":SetAbsConstructor:"..result.sender_user_id_}},{{text = '˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🇸🇦.',url="t.me/yousef_labban1"}}}
 elseif AbsConstructor(msg) then
-inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_..":SetAdmin:"..result.sender_user_id_}},{{text="رفع منشئ",callback_data=msg.sender_user_id_..":SetConstructor:"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_..":SetManager:"..result.sender_user_id_}},{{text="رفع منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_},{text="رفع منشئ اساسي",callback_data=msg.sender_user_id_..":SetBasicConstructor:"..result.sender_user_id_}},{{text = '˛ dev yousef 🇸🇦.',url="t.me/yousef_labban1"}}}
+inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_..":SetAdmin:"..result.sender_user_id_}},{{text="رفع منشئ",callback_data=msg.sender_user_id_..":SetConstructor:"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_..":SetManager:"..result.sender_user_id_}},{{text="رفع منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_},{text="رفع منشئ اساسي",callback_data=msg.sender_user_id_..":SetBasicConstructor:"..result.sender_user_id_}},{{text = '˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🇸🇦.',url="t.me/yousef_labban1"}}}
 elseif BasicConstructor(msg) then
-inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_..":SetAdmin:"..result.sender_user_id_}},{{text="رفع منشئ",callback_data=msg.sender_user_id_..":SetConstructor:"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_..":SetManager:"..result.sender_user_id_}},{{text="رفع منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_}},{{text = '˛ dev yousef 🇸🇦.',url="t.me/yousef_labban1"}}}
+inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_..":SetAdmin:"..result.sender_user_id_}},{{text="رفع منشئ",callback_data=msg.sender_user_id_..":SetConstructor:"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_..":SetManager:"..result.sender_user_id_}},{{text="رفع منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_}},{{text = '˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🇸🇦.',url="t.me/yousef_labban1"}}}
 elseif Constructor(msg) then
-inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_..":SetAdmin:"..result.sender_user_id_}},{{text="رفع منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_..":SetManager:"..result.sender_user_id_}},{{text = '˛ dev yousef 🇸🇦.',url="t.me/yousef_labban1"}}}
+inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_..":SetAdmin:"..result.sender_user_id_}},{{text="رفع منظف",callback_data=msg.sender_user_id_..":SetCleaner:"..result.sender_user_id_},{text="رفع مدير",callback_data=msg.sender_user_id_..":SetManager:"..result.sender_user_id_}},{{text = '˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🇸🇦.',url="t.me/yousef_labban1"}}}
 elseif Manager(msg) then
-inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_..":SetAdmin:"..result.sender_user_id_}},{{text = '˛ dev yousef 🇸🇦.',url="t.me/yousef_labban1"}}}
+inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_},{text="رفع ادمن",callback_data=msg.sender_user_id_..":SetAdmin:"..result.sender_user_id_}},{{text = '˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🇸🇦.',url="t.me/yousef_labban1"}}}
 elseif Admin(msg) then
-inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_}},{{text = '˛ dev yousef 🇸🇦.',url="t.me/yousef_labban1"}}}
+inline = {{{text="رفع مميز",callback_data=msg.sender_user_id_..":SetMem:"..result.sender_user_id_}},{{text = '˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🇸🇦.',url="t.me/yousef_labban1"}}}
 end
 SendInline(msg.chat_id_,Text,nil,inline,msg.id_/2097152/0.5)
 end,nil)
@@ -5691,7 +5691,7 @@ if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
 end 
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --       Rem Inline       --
 if text ==('تنزيل رتبة') and ChCheck(msg) then
 function prom_reply(extra, result, success)
@@ -5702,21 +5702,21 @@ return false
 end
 local Text = '🇸🇦︙قم باستعمال الازرار لتنزيل العضو -› ⤈\n🇸🇦︙العضو -› ['..dp.first_name_..'](t.me/'..(dp.username_ or 'yousef_labban1')..')'
 if Sudo(msg) then
-inline = {{{text="تنزيل مميز",callback_data=msg.sender_user_id_..":RemMem:"..result.sender_user_id_},{text="تنزيل ادمن",callback_data=msg.sender_user_id_..":RemAdmin:"..result.sender_user_id_}},{{text="تنزيل منشئ",callback_data=msg.sender_user_id_..":RemConstructor:"..result.sender_user_id_},{text="تنزيل مدير",callback_data=msg.sender_user_id_..":RemManager:"..result.sender_user_id_}},{{text="تنزيل منظف",callback_data=msg.sender_user_id_..":RemCleaner:"..result.sender_user_id_},{text="تنزيل منشئ اساسي",callback_data=msg.sender_user_id_..":RemBasicConstructor:"..result.sender_user_id_}},{{text="تنزيل مالك",callback_data=msg.sender_user_id_..":RemAbsConstructor:"..result.sender_user_id_},{text="تنزيل مطور",callback_data=msg.sender_user_id_..":RemSudoBot:"..result.sender_user_id_}},{{text="تنزيل مطور ثانوي",callback_data=msg.sender_user_id_..":RemSecondSudo:"..result.sender_user_id_}},{{text = '˛ dev yousef 🇸🇦.',url="t.me/yousef_labban1"}}}
+inline = {{{text="تنزيل مميز",callback_data=msg.sender_user_id_..":RemMem:"..result.sender_user_id_},{text="تنزيل ادمن",callback_data=msg.sender_user_id_..":RemAdmin:"..result.sender_user_id_}},{{text="تنزيل منشئ",callback_data=msg.sender_user_id_..":RemConstructor:"..result.sender_user_id_},{text="تنزيل مدير",callback_data=msg.sender_user_id_..":RemManager:"..result.sender_user_id_}},{{text="تنزيل منظف",callback_data=msg.sender_user_id_..":RemCleaner:"..result.sender_user_id_},{text="تنزيل منشئ اساسي",callback_data=msg.sender_user_id_..":RemBasicConstructor:"..result.sender_user_id_}},{{text="تنزيل مالك",callback_data=msg.sender_user_id_..":RemAbsConstructor:"..result.sender_user_id_},{text="تنزيل مطور",callback_data=msg.sender_user_id_..":RemSudoBot:"..result.sender_user_id_}},{{text="تنزيل مطور ثانوي",callback_data=msg.sender_user_id_..":RemSecondSudo:"..result.sender_user_id_}},{{text = '˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🇸🇦.',url="t.me/yousef_labban1"}}}
 elseif SecondSudo(msg) then
-inline = {{{text="تنزيل مميز",callback_data=msg.sender_user_id_..":RemMem:"..result.sender_user_id_},{text="تنزيل ادمن",callback_data=msg.sender_user_id_..":RemAdmin:"..result.sender_user_id_}},{{text="تنزيل منشئ",callback_data=msg.sender_user_id_..":RemConstructor:"..result.sender_user_id_},{text="تنزيل مدير",callback_data=msg.sender_user_id_..":RemManager:"..result.sender_user_id_}},{{text="تنزيل منظف",callback_data=msg.sender_user_id_..":RemCleaner:"..result.sender_user_id_},{text="تنزيل منشئ اساسي",callback_data=msg.sender_user_id_..":RemBasicConstructor:"..result.sender_user_id_}},{{text="تنزيل مالك",callback_data=msg.sender_user_id_..":RemAbsConstructor:"..result.sender_user_id_},{text="تنزيل مطور",callback_data=msg.sender_user_id_..":RemSudoBot:"..result.sender_user_id_}},{{text = '˛ dev yousef 🇸🇦.',url="t.me/yousef_labban1"}}}
+inline = {{{text="تنزيل مميز",callback_data=msg.sender_user_id_..":RemMem:"..result.sender_user_id_},{text="تنزيل ادمن",callback_data=msg.sender_user_id_..":RemAdmin:"..result.sender_user_id_}},{{text="تنزيل منشئ",callback_data=msg.sender_user_id_..":RemConstructor:"..result.sender_user_id_},{text="تنزيل مدير",callback_data=msg.sender_user_id_..":RemManager:"..result.sender_user_id_}},{{text="تنزيل منظف",callback_data=msg.sender_user_id_..":RemCleaner:"..result.sender_user_id_},{text="تنزيل منشئ اساسي",callback_data=msg.sender_user_id_..":RemBasicConstructor:"..result.sender_user_id_}},{{text="تنزيل مالك",callback_data=msg.sender_user_id_..":RemAbsConstructor:"..result.sender_user_id_},{text="تنزيل مطور",callback_data=msg.sender_user_id_..":RemSudoBot:"..result.sender_user_id_}},{{text = '˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🇸🇦.',url="t.me/yousef_labban1"}}}
 elseif SudoBot(msg) then
-inline = {{{text="تنزيل مميز",callback_data=msg.sender_user_id_..":RemMem:"..result.sender_user_id_},{text="تنزيل ادمن",callback_data=msg.sender_user_id_..":RemAdmin:"..result.sender_user_id_}},{{text="تنزيل منشئ",callback_data=msg.sender_user_id_..":RemConstructor:"..result.sender_user_id_},{text="تنزيل مدير",callback_data=msg.sender_user_id_..":RemManager:"..result.sender_user_id_}},{{text="تنزيل منظف",callback_data=msg.sender_user_id_..":RemCleaner:"..result.sender_user_id_},{text="تنزيل منشئ اساسي",callback_data=msg.sender_user_id_..":RemBasicConstructor:"..result.sender_user_id_}},{{text="تنزيل مالك",callback_data=msg.sender_user_id_..":RemAbsConstructor:"..result.sender_user_id_}},{{text = '˛ dev yousef 🇸🇦.',url="t.me/yousef_labban1"}}}
+inline = {{{text="تنزيل مميز",callback_data=msg.sender_user_id_..":RemMem:"..result.sender_user_id_},{text="تنزيل ادمن",callback_data=msg.sender_user_id_..":RemAdmin:"..result.sender_user_id_}},{{text="تنزيل منشئ",callback_data=msg.sender_user_id_..":RemConstructor:"..result.sender_user_id_},{text="تنزيل مدير",callback_data=msg.sender_user_id_..":RemManager:"..result.sender_user_id_}},{{text="تنزيل منظف",callback_data=msg.sender_user_id_..":RemCleaner:"..result.sender_user_id_},{text="تنزيل منشئ اساسي",callback_data=msg.sender_user_id_..":RemBasicConstructor:"..result.sender_user_id_}},{{text="تنزيل مالك",callback_data=msg.sender_user_id_..":RemAbsConstructor:"..result.sender_user_id_}},{{text = '˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🇸🇦.',url="t.me/yousef_labban1"}}}
 elseif AbsConstructor(msg) then
-inline = {{{text="تنزيل مميز",callback_data=msg.sender_user_id_..":RemMem:"..result.sender_user_id_},{text="تنزيل ادمن",callback_data=msg.sender_user_id_..":RemAdmin:"..result.sender_user_id_}},{{text="تنزيل منشئ",callback_data=msg.sender_user_id_..":RemConstructor:"..result.sender_user_id_},{text="تنزيل مدير",callback_data=msg.sender_user_id_..":RemManager:"..result.sender_user_id_}},{{text="تنزيل منظف",callback_data=msg.sender_user_id_..":RemCleaner:"..result.sender_user_id_},{text="تنزيل منشئ اساسي",callback_data=msg.sender_user_id_..":RemBasicConstructor:"..result.sender_user_id_}},{{text = '˛ dev yousef 🇸🇦.',url="t.me/yousef_labban1"}}}
+inline = {{{text="تنزيل مميز",callback_data=msg.sender_user_id_..":RemMem:"..result.sender_user_id_},{text="تنزيل ادمن",callback_data=msg.sender_user_id_..":RemAdmin:"..result.sender_user_id_}},{{text="تنزيل منشئ",callback_data=msg.sender_user_id_..":RemConstructor:"..result.sender_user_id_},{text="تنزيل مدير",callback_data=msg.sender_user_id_..":RemManager:"..result.sender_user_id_}},{{text="تنزيل منظف",callback_data=msg.sender_user_id_..":RemCleaner:"..result.sender_user_id_},{text="تنزيل منشئ اساسي",callback_data=msg.sender_user_id_..":RemBasicConstructor:"..result.sender_user_id_}},{{text = '˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🇸🇦.',url="t.me/yousef_labban1"}}}
 elseif BasicConstructor(msg) then
-inline = {{{text="تنزيل مميز",callback_data=msg.sender_user_id_..":RemMem:"..result.sender_user_id_},{text="تنزيل ادمن",callback_data=msg.sender_user_id_..":RemAdmin:"..result.sender_user_id_}},{{text="تنزيل منشئ",callback_data=msg.sender_user_id_..":RemConstructor:"..result.sender_user_id_},{text="تنزيل مدير",callback_data=msg.sender_user_id_..":RemManager:"..result.sender_user_id_}},{{text="تنزيل منظف",callback_data=msg.sender_user_id_..":RemCleaner:"..result.sender_user_id_}},{{text = '˛ dev yousef 🇸🇦.',url="t.me/yousef_labban1"}}}
+inline = {{{text="تنزيل مميز",callback_data=msg.sender_user_id_..":RemMem:"..result.sender_user_id_},{text="تنزيل ادمن",callback_data=msg.sender_user_id_..":RemAdmin:"..result.sender_user_id_}},{{text="تنزيل منشئ",callback_data=msg.sender_user_id_..":RemConstructor:"..result.sender_user_id_},{text="تنزيل مدير",callback_data=msg.sender_user_id_..":RemManager:"..result.sender_user_id_}},{{text="تنزيل منظف",callback_data=msg.sender_user_id_..":RemCleaner:"..result.sender_user_id_}},{{text = '˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🇸🇦.',url="t.me/yousef_labban1"}}}
 elseif Constructor(msg) then
-inline = {{{text="تنزيل مميز",callback_data=msg.sender_user_id_..":RemMem:"..result.sender_user_id_},{text="تنزيل ادمن",callback_data=msg.sender_user_id_..":RemAdmin:"..result.sender_user_id_}},{{text="تنزيل منظف",callback_data=msg.sender_user_id_..":RemCleaner:"..result.sender_user_id_},{text="تنزيل مدير",callback_data=msg.sender_user_id_..":RemManager:"..result.sender_user_id_}},{{text = '˛ dev yousef 🇸🇦.',url="t.me/yousef_labban1"}}}
+inline = {{{text="تنزيل مميز",callback_data=msg.sender_user_id_..":RemMem:"..result.sender_user_id_},{text="تنزيل ادمن",callback_data=msg.sender_user_id_..":RemAdmin:"..result.sender_user_id_}},{{text="تنزيل منظف",callback_data=msg.sender_user_id_..":RemCleaner:"..result.sender_user_id_},{text="تنزيل مدير",callback_data=msg.sender_user_id_..":RemManager:"..result.sender_user_id_}},{{text = '˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🇸🇦.',url="t.me/yousef_labban1"}}}
 elseif Manager(msg) then
-inline = {{{text="تنزيل مميز",callback_data=msg.sender_user_id_..":RemMem:"..result.sender_user_id_},{text="تنزيل ادمن",callback_data=msg.sender_user_id_..":RemAdmin:"..result.sender_user_id_}},{{text = '˛ dev yousef 🇸🇦.',url="t.me/yousef_labban1"}}}
+inline = {{{text="تنزيل مميز",callback_data=msg.sender_user_id_..":RemMem:"..result.sender_user_id_},{text="تنزيل ادمن",callback_data=msg.sender_user_id_..":RemAdmin:"..result.sender_user_id_}},{{text = '˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🇸🇦.',url="t.me/yousef_labban1"}}}
 elseif Admin(msg) then
-inline = {{{text="تنزيل مميز",callback_data=msg.sender_user_id_..":RemMem:"..result.sender_user_id_}},{{text = '˛ dev yousef 🇸🇦.',url="t.me/yousef_labban1"}}}
+inline = {{{text="تنزيل مميز",callback_data=msg.sender_user_id_..":RemMem:"..result.sender_user_id_}},{{text = '˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🇸🇦.',url="t.me/yousef_labban1"}}}
 end
 SendInline(msg.chat_id_,Text,nil,inline,msg.id_/2097152/0.5)
 end,nil)
@@ -5725,7 +5725,7 @@ if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
 end 
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text ==('تحكممم') and ChCheck(msg) then
 function prom_reply(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,dp) 
@@ -5739,7 +5739,7 @@ inline = {
 {{text="كتم",callback_data=msg.sender_user_id_..":Mute:"..result.sender_user_id_},{text="الغاء كتم",callback_data=msg.sender_user_id_..":UnMute:"..result.sender_user_id_}},
 {{text="حظر",callback_data=msg.sender_user_id_..":Ban:"..result.sender_user_id_},{text="الغاء حظر",callback_data=msg.sender_user_id_..":UnBan:"..result.sender_user_id_}},
 {{text="تقيد",callback_data=msg.sender_user_id_..":Tked:"..result.sender_user_id_},{text="الغاء تقيد",callback_data=msg.sender_user_id_..":UnTked:"..result.sender_user_id_}},
-{{text = '˛ dev yousef 🇸🇦.',url="t.me/yousef_labban1"}}
+{{text = '˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🇸🇦.',url="t.me/yousef_labban1"}}
 }
 SendInline(msg.chat_id_,Text,nil,inline,msg.id_/2097152/0.5)
 end,nil)
@@ -5748,7 +5748,7 @@ if tonumber(tonumber(msg.reply_to_message_id_)) > 0 then
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),prom_reply)
 end 
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if BasicConstructor(msg) then
 if text and text:match("^رفع مشرف$") and msg.reply_to_message_id_ then
 function promote_by_reply(extra, result, success)
@@ -5833,7 +5833,7 @@ if text == "راسلني" then
 devyousef = {"ها هلاو","انطق","قول حبي","تفضل"};
 send(msg.sender_user_id_, 0,devyousef[math.random(#devyousef)])
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == "صلاحيتي" or text == "صلاحياتي" and ChCheck(msg) then 
 if tonumber(msg.reply_to_message_id_) == 0 then 
 Validity(msg,msg.sender_user_id_)
@@ -5859,7 +5859,7 @@ if text and (text:match('^صلاحيته (%d+)') or text:match('^صلاحيات�
 local ValidityId = text:match('صلاحيته (%d+)') or text:match('صلاحياته (%d+)')
 Validity(msg,ValidityId)  
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if Admin(msg) then
 if msg.reply_to_message_id_ ~= 0 then
 if text and (text:match("^مسح$") or text:match("^حذف$")) and ChCheck(msg) then
@@ -5867,7 +5867,7 @@ DeleteMessage(msg.chat_id_,{[0] = msg.reply_to_message_id_})
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم حذف الرسالة مع رسالة الامر', 1, 'md')
 end end end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if Constructor(msg) then
 if text == "تفعيل الحظر" and ChCheck(msg) or text == "تفعيل الطرد" and ChCheck(msg) then
 DevAbs:del(raqi.."Abs:Lock:KickBan"..msg.chat_id_)
@@ -5900,7 +5900,7 @@ DevAbs:set(raqi.."Abs:Lock:ProSet"..msg.chat_id_,"true")
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم تعطيل رفع -› الادمن • المميز', 1, 'md')
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --          Kick          --
 if Admin(msg) then
 if text ==('طرد') and ChCheck(msg) then
@@ -5982,7 +5982,7 @@ end,nil)
 end
 end
 end 
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --          Ban           --
 if Admin(msg) then
 if text ==('حظر') or text ==('حظر') and ChCheck(msg) then
@@ -6066,7 +6066,7 @@ ReplyStatus(msg,user,"Reply","🇸🇦︙تم حظره من المجموعة")
 end,nil) 
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --         UnBan          --
 if text ==('الغاء الحظر') or text ==('الغاء حظر') and ChCheck(msg) then
 function UnBanReply(extra, result, success)
@@ -6096,7 +6096,7 @@ tdcli_function ({ ID = "ChangeChatMemberStatus", chat_id_ = msg.chat_id_, user_i
 ReplyStatus(msg,user,"Reply","🇸🇦︙تم الغاء حظره من المجموعة")  
 end 
 end 
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --          Mute          --
 if Admin(msg) then
 if text ==('كتم') and ChCheck(msg) then
@@ -6159,7 +6159,7 @@ ReplyStatus(msg,user,"Reply","🇸🇦︙تم كتمه من المجموعة")
 end
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --         UnMute         --
 if text ==('الغاء الكتم') or text ==('الغاء كتم') and ChCheck(msg) then
 function UnMuteReply(extra, result, success)
@@ -6198,7 +6198,7 @@ ReplyStatus(msg,user,"Reply","🇸🇦︙تم الغاء كتمه من المج�
 end
 end 
 end 
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --          Tkeed           --
 if Admin(msg) then
 if text ==('تقيد') or text ==('تقيد') and ChCheck(msg) then
@@ -6252,7 +6252,7 @@ DevAbs:sadd(raqi..'Abs:Tkeed:'..msg.chat_id_, user)
 ReplyStatus(msg,user,"Reply","🇸🇦︙تم تقيده من المجموعة")  
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --         UnTkeed          --
 if text ==('الغاء تقيد') or text ==('الغاء تقيد') and ChCheck(msg) then
 function UnTkeedReply(extra, result, success)
@@ -6283,7 +6283,7 @@ ReplyStatus(msg,user,"Reply","🇸🇦︙تم الغاء تقيده من الم�
 end
 end 
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --         BanAll         --
 if SecondSudo(msg) then
 if text ==('حظر عام') or text ==('حظر عام') then
@@ -6349,7 +6349,7 @@ ChatKick(msg.chat_id_, user)
 DevAbs:sadd(raqi..'Abs:BanAll:', user)
 ReplyStatus(msg,user,"Reply","🇸🇦︙تم حظره عام من المجموعات")  
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --         MuteAll        --
 if text ==('كتم عام') then
 function MuteAllReply(extra, result, success)
@@ -6411,7 +6411,7 @@ end
 DevAbs:sadd(raqi..'Abs:MuteAll:', user)
 ReplyStatus(msg,user,"Reply","🇸🇦︙تم كتمه عام من المجموعات")  
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 --         UnAll          --
 if text ==('الغاء عام') or text ==('الغاء العام') then
 function UnAllReply(extra, result, success)
@@ -6442,7 +6442,7 @@ ReplyStatus(msg,user,"Reply","🇸🇦︙تم الغاء (الحظر • الك�
 end
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if (text == "تغير المطور الاساسي" or text == "نقل ملكيه البوت" or text == "تغيير المطور الاساسي" or text == "-› تغير المطور الاساسي ⌁") and msg.reply_to_message_id_ == 0 and Sudo(msg) then 
 send(msg.chat_id_, msg.id_,'🇸🇦︙يجب التاكد ان المطور الجديد ارسل start لخاص البوت بعد ذلك يمكنك ارسال ايدي المطور')
 DevAbs:setex(raqi.."Abs:EditDev"..msg.sender_user_id_,300,true)
@@ -6472,7 +6472,7 @@ end,nil)
 return false
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if msg.reply_to_message_id_ ~= 0 then
 if text and text:match("^رفع مطي$") and not DevAbs:get(raqi..'Abs:Lock:Stupid'..msg.chat_id_) and ChCheck(msg) then
 function donky_by_reply(extra, result, success)
@@ -6484,7 +6484,7 @@ DevAbs:sadd(raqi..'User:Donky:'..msg.chat_id_, result.sender_user_id_)
 end end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,donky_by_reply)
 end end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if msg.reply_to_message_id_ ~= 0  then
 if text and text:match("^تنزيل مطي$") and not DevAbs:get(raqi..'Abs:Lock:Stupid'..msg.chat_id_) and ChCheck(msg) then
 function donky_by_reply(extra, result, success)
@@ -6496,7 +6496,7 @@ ReplyStatus(msg,result.sender_user_id_,"Reply","🇸🇦︙تم تنزيله م�
 end end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,donky_by_reply)
 end end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if Admin(msg) then
 if text and (text:match('^تقيد دقيقة (%d+)$') or text:match('^كتم دقيقة (%d+)$') or text:match('^تقيد دقيقة (%d+)$')) and ChCheck(msg) then 
 local function mut_time(extra, result,success)
@@ -6544,7 +6544,7 @@ if tonumber(msg.reply_to_message_id_) == 0 then else
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, mut_time,nil) end 
 end 
 end 
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text and text:match("^اضف رسائل (%d+)$") and msg.reply_to_message_id_ == 0 and ChCheck(msg) then  
 if Constructor(msg) then
 TXT = text:match("^اضف رسائل (%d+)$")
@@ -6611,7 +6611,7 @@ end
 end,nil)
 end 
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if Admin(msg) then
 if text == "المميزين" and ChCheck(msg) then 
 local List = DevAbs:smembers(raqi..'Abs:VipMem:'..msg.chat_id_)
@@ -6628,7 +6628,7 @@ text = "🇸🇦︙*لا يوجد مميزين*"
 end
 Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end end 
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if Manager(msg) then
 if text == "الادامن" and ChCheck(msg) or text == "الادمنية" and ChCheck(msg) then 
 local abs =  'Abs:Admins:'..msg.chat_id_
@@ -6646,7 +6646,7 @@ text = "🇸🇦︙*لا يوجد ادامن*"
 end
 Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end end
---     Source dev yousef     -- 
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      -- 
 if Constructor(msg) then
 if text == "المدراء" and ChCheck(msg) or text == "مدراء" and ChCheck(msg) then 
 local List = DevAbs:smembers(raqi..'Abs:Managers:'..msg.chat_id_)
@@ -6678,7 +6678,7 @@ text = "🇸🇦︙*لا يوجد منظفين*"
 end
 Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end end 
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if BasicConstructor(msg) then
 if text == "المنشئين" and ChCheck(msg) then 
 local List = DevAbs:smembers(raqi..'Abs:Constructor:'..msg.chat_id_)
@@ -6695,7 +6695,7 @@ text = "🇸🇦︙*لا يوجد منشئين*"
 end
 Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end end 
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if AbsConstructor(msg) then
 if text == "المالكين" and ChCheck(msg) then 
 local List = DevAbs:smembers(raqi..'Abs:AbsConstructor:'..msg.chat_id_)
@@ -6754,7 +6754,7 @@ end
 end
 end,nil)   
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if Admin(msg) then
 if text == "المكتومين" and ChCheck(msg) then 
 local List = DevAbs:smembers(raqi..'Abs:Muted:'..msg.chat_id_)
@@ -6771,7 +6771,7 @@ text = "🇸🇦︙*لا يوجد مكتومين*"
 end
 Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end 
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == "المقيدين" and ChCheck(msg) then 
 local List = DevAbs:smembers(raqi..'Abs:Tkeed:'..msg.chat_id_)
 text = "🇸🇦︙قائمة المقيدين -› ⤈ \n------------ Y●L ------------\n"
@@ -6787,7 +6787,7 @@ text = "🇸🇦︙*لا يوجد مقيدين*"
 end
 Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end 
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == "المحظورين" and ChCheck(msg) or text == "المحضورين" and ChCheck(msg) then 
 local List = DevAbs:smembers(raqi..'Abs:Ban:'..msg.chat_id_)
 text = "🇸🇦︙قائمة المحظورين -› ⤈ \n------------ Y●L ------------\n"
@@ -6815,7 +6815,7 @@ end
 Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, 'md')
 end
 end 
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == "المطايا" and ChCheck(msg) or text == "المطاية" and ChCheck(msg) then
 local List = DevAbs:smembers(raqi..'User:Donky:'..msg.chat_id_)
 text = "🇸🇦︙قائمة مطاية المجموعة 😹💔 -› ⤈ \n------------ Y●L ------------\n"
@@ -6831,7 +6831,7 @@ text = "🇸🇦︙*لا يوجد مطايا كلها اوادم* 😹💔"
 end
 Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == "المطورين الثانويين" and SecondSudo(msg) or text == "الثانويين" and SecondSudo(msg) then 
 local List = DevAbs:smembers(raqi..'Abs:SecondSudo:')
 text = "🇸🇦︙قائمة المطورين الثانويين -› ⤈ \n------------ Y●L ------------\n"
@@ -6847,7 +6847,7 @@ text = "🇸🇦︙*عذرا لم يتم رفع اي مطورين ثانويين
 end
 Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end 
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if SudoBot(msg) then
 if text == "قائمة العام" and ChCheck(msg) or text == "المحظورين عام" and ChCheck(msg) or text == "المكتومين عام" and ChCheck(msg) or text == "-› قائمة العام ⌁" and ChCheck(msg) then 
 local BanAll = DevAbs:smembers(raqi..'Abs:BanAll:')
@@ -6883,7 +6883,7 @@ text = "🇸🇦︙*لم يتم حظر او كتم اي عضو*"
 end
 Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end 
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == "المطورين" and ChCheck(msg) or text == "-› المطورين ⌁" and ChCheck(msg) then 
 local List = DevAbs:smembers(raqi..'Abs:SudoBot:')
 text = "🇸🇦︙قائمة المطورين -› ⤈ \n------------ Y●L ------------\n"
@@ -6900,7 +6900,7 @@ text = "🇸🇦︙*عذرا لم يتم رفع اي مطورين*"
 end
 Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end 
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == "المدراء العامين" and ChCheck(msg) then 
 local List = DevAbs:smembers(raqi..'Abs:ManagerAll:')
 text = "🇸🇦︙قائمة المدراء العامين -› ⤈ \n------------ Y●L ------------\n"
@@ -6916,7 +6916,7 @@ text = "🇸🇦︙*لا يوجد مدراء عامين*"
 end
 Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == "المميزين عام" and ChCheck(msg) or text == "المميزين العامين" and ChCheck(msg) then 
 local List = DevAbs:smembers(raqi..'Abs:VipAll:')
 text = "🇸🇦︙قائمة المميزين العام -› ⤈ \n------------ Y●L ------------\n"
@@ -6932,7 +6932,7 @@ text = "🇸🇦︙*لا يوجد مميزين عام*"
 end
 Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end 
---     Source dev yousef     -- 
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      -- 
 if text == "الادامن العامين" and ChCheck(msg) then 
 local abs =  'Abs:AdminAll:'
 local List = DevAbs:smembers(raqi..abs)
@@ -6949,7 +6949,7 @@ text = "🇸🇦︙*لا يوجد ادامن عامين*"
 end
 Dev_Abs(msg.chat_id_, msg.id_, 1, text, 1, "md")
 end  
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text ==("رفع المنشئ") and ChCheck(msg) or text ==("رفع المالك") and ChCheck(msg) then 
 tdcli_function ({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub("-100",""),filter_ = {ID = "ChannelMembersAdministrators"},offset_ = 0,limit_ = 100},function(arg,data) 
 local admins = data.members_
@@ -6970,7 +6970,7 @@ end,nil)
 end,nil)   
 end
 end 
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if Manager(msg) then
 if text == 'منع' and tonumber(msg.reply_to_message_id_) > 0 and ChCheck(msg) then 
 function filter_by_reply(extra, result, success) 
@@ -6995,7 +6995,7 @@ end
 end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,filter_by_reply) 
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == 'الغاء منع' and tonumber(msg.reply_to_message_id_) > 0 and ChCheck(msg) then     
 function unfilter_by_reply(extra, result, success) 
 if result.content_.sticker_ then
@@ -7020,7 +7020,7 @@ end
 getMessage(msg.chat_id_, msg.reply_to_message_id_,unfilter_by_reply) 
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text and (text == "تفعيل تحويل الصيغ" or text == "تفعيل التحويل") and Manager(msg) and ChCheck(msg) then
 local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙تم تفعيل تحويل الصيغ'
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
@@ -7062,7 +7062,7 @@ end
 getMessage(msg.chat_id_, tonumber(msg.reply_to_message_id_),ThwelByReply) 
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text ==("كشف") and msg.reply_to_message_id_ ~= 0 and ChCheck(msg) or text ==("ايدي") and msg.reply_to_message_id_ ~= 0 and ChCheck(msg) then 
 function id_by_reply(extra, result, success) 
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
@@ -7216,7 +7216,7 @@ end
 end,nil)
 return false 
 end 
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == 'كشف القيود' and tonumber(msg.reply_to_message_id_) > 0 and Admin(msg) and ChCheck(msg) then 
 function kshf_by_reply(extra, result, success)
 if DevAbs:sismember(raqi..'Abs:Muted:'..msg.chat_id_,result.sender_user_id_) then muted = 'مكتوم' else muted = 'غير مكتوم' end
@@ -7314,7 +7314,7 @@ end,nil)
 end  
 resolve_username(username,unbanusername) 
 end 
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if Manager(msg) then
 if text and text:match("^تغيير الايدي$") and ChCheck(msg) or text and text:match("^تغير الايدي$") and ChCheck(msg) then 
 local List = {
@@ -7403,7 +7403,7 @@ local Text_Rand = List[math.random(#List)]
 DevAbs:set(raqi.."Abs:GpIds:Text"..msg.chat_id_,Text_Rand)
 ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم تغير رسالة الايدي")  
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if SecondSudo(msg) then
 if text and text:match("^تعيين الايدي العام$") or text and text:match("^تعين الايدي العام$") or text and text:match("^تعيين رسالة الايدي$") then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙رجائا اتبع التعليمات للتعيين \n🇸🇦︙لطبع رسالة الايدي ارسل رسالة تحتوي على النصوص التي باللغه الانجليزيه ادناه -› ⤈\n------------ Y●L ------------\n `#username` ↬ لطبع المعرف\n `#id` ↬ لطبع الايدي \n `#photos` ↬ لطبع عدد الصور \n `#stast` ↬ لطبع الرتب \n `#msgs` ↬ لطبع عدد الرسائل \n `#msgday` ↬ لطبع الرسائل اليوميه \n `#CustomTitle` ↬ لطبع اللقب \n `#bio` ↬ لطبع البايو \n `#auto` ↬ لطبع التفاعل \n `#game` ↬ لطبع عدد النقاط \n `#cont` ↬ لطبع عدد الجهات \n `#edit` ↬ لطبع عدد التعديلات \n `#Description` ↬ لطبع تعليق الصور\n------------ Y●L ------------', 1, 'md')
@@ -7426,7 +7426,7 @@ ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم حذف رسالة
 DevAbs:del(raqi.."Abs:AllIds:Text")
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text and text:match("^تعيين الايدي$") and ChCheck(msg) or text and text:match("^تعين الايدي$") and ChCheck(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙رجائا اتبع التعليمات للتعيين \n🇸🇦︙لطبع رسالة الايدي ارسل رسالة تحتوي على النصوص التي باللغه الانجليزيه ادناه -› ⤈\n------------ Y●L ------------\n `#username` ↬ لطبع المعرف\n `#id` ↬ لطبع الايدي \n `#photos` ↬ لطبع عدد الصور \n `#stast` ↬ لطبع الرتب \n `#msgs` ↬ لطبع عدد الرسائل \n `#msgday` ↬ لطبع الرسائل اليوميه \n `#CustomTitle` ↬ لطبع اللقب \n `#bio` ↬ لطبع البايو \n `#auto` ↬ لطبع التفاعل \n `#game` ↬ لطبع عدد النقاط \n `#cont` ↬ لطبع عدد الجهات \n `#edit` ↬ لطبع عدد التعديلات \n `#Description` ↬ لطبع تعليق الصور\n------------ Y●L ------------', 1, 'md')
 DevAbs:set("raqi:New:id:"..raqi..msg.chat_id_..msg.sender_user_id_,'devyousef')
@@ -7448,7 +7448,7 @@ ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم حذف رسالة
 DevAbs:del(raqi.."Abs:GpIds:Text"..msg.chat_id_)
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if msg.reply_to_message_id_ ~= 0 then
 return ""
 else
@@ -7580,7 +7580,7 @@ end
 getUser(msg.sender_user_id_, devyousef)
 end
 end 
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if ChatType == 'sp' or ChatType == 'gp'  then
 if Admin(msg) then
 if text and text:match("^قفل(.*)$") then
@@ -7682,7 +7682,7 @@ end end end
 end
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if Admin(msg) then
 if text and (text:match("^ضع تكرار (%d+)$") or text:match("^وضع تكرار (%d+)$")) then   
 local TextSpam = text:match("ضع تكرار (%d+)$") or text:match("وضع تكرار (%d+)$")
@@ -7698,7 +7698,7 @@ local TextSpam = text:match("ضع زمن التكرار (%d+)$") or text:match("
 DevAbs:hset(raqi.."Abs:Spam:Group:User"..msg.chat_id_ ,"Num:Spam:Time" ,TextSpam) 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم وضع زمن التكرار -› '..TextSpam, 1, 'md')
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if Manager(msg) then
 if text and text == 'تفعيل الايدي بالصورة' and ChCheck(msg) then
 if not DevAbs:get(raqi..'Abs:Lock:Id:Photo'..msg.chat_id_) then
@@ -7734,7 +7734,7 @@ absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(m
 DevAbs:set(raqi..'Abs:Lock:Id'..msg.chat_id_,true)
 end end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == 'ضع رابط' or text == 'وضع رابط' or text == 'ضع الرابط' or text == 'وضع الرابط' then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙ارسل رابط المجموعة او رابط قناة المجموعة', 1, 'md')
 DevAbs:setex(raqi.."Abs:Set:Groups:Links"..msg.chat_id_..msg.sender_user_id_,300,true) 
@@ -7755,7 +7755,7 @@ DevAbs:setex(raqi.."Abs:Set:Groups:Links"..msg.chat_id_..msg.sender_user_id_,300
 end
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if Admin(msg) then
 if text and text:match("^تفعيل الترحيب$") and ChCheck(msg) then
 local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙تم تفعيل الترحيب بنجاح'
@@ -7795,7 +7795,7 @@ else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙لم يتم وضع الترحيب \n🇸🇦︙ارسل -› ضع ترحيب للحفظ ', 1, 'md')
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if DevAbs:get(raqi..'Abs:SetDescription'..msg.chat_id_..':'..msg.sender_user_id_) then  
 if text == 'الغاء' then 
 Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم الغاء حفظ الوصف", 1, 'md')
@@ -7811,7 +7811,7 @@ if text and text:match("^ضع وصف$") and ChCheck(msg) or text and text:match(
 DevAbs:set(raqi..'Abs:SetDescription'..msg.chat_id_..':'..msg.sender_user_id_,true)
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙ارسل لي الوصف الان', 1, 'md')
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text and text == "منع" and msg.reply_to_message_id_ == 0 and ChCheck(msg) then       
 Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙ارسل لي الكلمة الان", 1, 'md') 
 DevAbs:set(raqi.."Abs:SetFilters"..msg.sender_user_id_..msg.chat_id_,"add")  
@@ -7849,7 +7849,7 @@ DevAbs:del(raqi.."Abs:SetFilters"..msg.sender_user_id_..msg.chat_id_)
 end
 return false
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if SudoBot(msg) then
 if text and text == "الاحصائيات" and ChCheck(msg) or text and text == "-› الاحصائيات ⌁" then
 local gps = DevAbs:scard(raqi.."Abs:Groups") local users = DevAbs:scard(raqi.."Abs:Users") 
@@ -7864,7 +7864,7 @@ local gps = DevAbs:scard(raqi.."Abs:Groups")
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙عدد المجموعات -› ❨ '..gps..' ❩', 1, 'md')
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text and text:match('^تنظيف (%d+)$') and ChCheck(msg) then  
 if not DevAbs:get(raqi..'Delete:Time'..msg.chat_id_..':'..msg.sender_user_id_) then  
 local Number = tonumber(text:match('^تنظيف (%d+)$')) 
@@ -7907,7 +7907,7 @@ end,nil)
 end
 return false
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == "تنظيف القروبات" and SecondSudo(msg) and ChCheck(msg) or text == "تنظيف المجموعات" and SecondSudo(msg) and ChCheck(msg) then 
 local group = DevAbs:smembers(raqi.."Abs:Groups")
 local w = 0
@@ -7954,7 +7954,7 @@ end
 return false
 end 
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text and (text == "تفعيل امسح" or text == "تفعيل المسح التلقائي" or text == "تفعيل الحذف التلقائي") and Constructor(msg) and ChCheck(msg) then
 local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙تم تفعيل امسح مع ميزة الحذف التلقائي للميديا'
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
@@ -8012,7 +8012,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙لاتوجد ميديا هنا", 1
 end end 
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if Admin(msg) then
 if text == "امسح" or text == "تنظيف التعديل" and ChCheck(msg) then   
 Abs_Del = {[0]= msg.id_}
@@ -8034,7 +8034,7 @@ DeleteMessage(msg.chat_id_,Abs_Del2)
 end,nil)  
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم تنظيف الميديا المعدله', 1, 'md')
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if ChatType == 'sp' or ChatType == 'gp'  then
 if Admin(msg) then
 if text and text:match("^فتح (.*)$") then
@@ -8114,7 +8114,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙التثبيت بالفعل مفت
 end end end
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if Admin(msg) then
 if text and text:match("^قفل(.*)$") then
 local LockText = {string.match(text, "^(قفل) (.*)$")}
@@ -8296,7 +8296,7 @@ end
 end
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if Admin(msg) then
 if text and text:match("^فتح (.*)$") then
 local UnLockText = {string.match(text, "^(فتح) (.*)$")}
@@ -8478,7 +8478,7 @@ end
 end
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text and text:match("^قفل التفليش$") or text and text:match("^تفعيل الحماية القصوى$") then
 if not Constructor(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙للمنشئين فقط', 1, 'md')
@@ -8503,7 +8503,7 @@ end
 ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم فتح التفليش")  
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text and text:match("^قفل الكل$") then
 if not Constructor(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙للمنشئين فقط', 1, 'md')
@@ -8529,7 +8529,7 @@ end
 ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم فتح جميع الاوامر")  
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if Admin(msg) then
 if text and (text:match("^ضع سبام (%d+)$") or text:match("^وضع سبام (%d+)$")) then
 local SetSpam = text:match("ضع سبام (%d+)$") or text:match("وضع سبام (%d+)$")
@@ -8541,7 +8541,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم وضع عدد السبام -�
 end
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if Manager(msg) then
 if text == "فحص" or text == "فحص البوت" then
 local Check = https.request('https://api.telegram.org/bot'..TokenBot..'/getChatMember?chat_id='..msg.chat_id_..'&user_id='..raqi)
@@ -8607,7 +8607,7 @@ DevAbs:del(raqi.."Abs:BasicConstructor:Rd"..msg.chat_id_)
 DevAbs:del(raqi.."Abs:SudoBot:Rd"..msg.chat_id_)
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == "كشف البوتات" and ChCheck(msg) then 
 tdcli_function ({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub("-100",""),filter_ = {ID = "ChannelMembersBots"},offset_ = 0,limit_ = 100 },function(extra,result,success)
 local admins = result.members_  
@@ -8658,9 +8658,9 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙*عدد البوتات هنا* -�
 end 
 end,nil)  
 end 
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if Admin(msg) then
 if text and text:match("^حذف (.*)$") or text and text:match("^مسح (.*)$") then
 local txts = {string.match(text, "^(حذف) (.*)$")}
@@ -8787,7 +8787,7 @@ ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم حذف قائمة
 end
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text and text:match("^حذف القوائم$") and ChCheck(msg) or text and text:match("^مسح القوائم$") and ChCheck(msg) then
 if not BasicConstructor(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙للمنشئ الاساسي فقط', 1, 'md')
@@ -8795,7 +8795,7 @@ else
 DevAbs:del(raqi..'Abs:Ban:'..msg.chat_id_) DevAbs:del(raqi..'Abs:Admins:'..msg.chat_id_) DevAbs:del(raqi..'User:Donky:'..msg.chat_id_) DevAbs:del(raqi..'Abs:VipMem:'..msg.chat_id_) DevAbs:del(raqi..'Abs:Filters:'..msg.chat_id_) DevAbs:del(raqi..'Abs:Muted:'..msg.chat_id_)
 Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم حذف -› ❨ قائمة المنع • المحظورين • المكتومين • الادامن • المميزين • المطايا ❩ بنجاح \n ✓", 1, 'md')
 end end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text and text:match("^حذف جميع الرتب$") and ChCheck(msg) or text and text:match("^مسح جميع الرتب$") and ChCheck(msg) or text and text:match("^تنزيل جميع الرتب$") and ChCheck(msg) then
 if not AbsConstructor(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙للمالكين فقط', 1, 'md')
@@ -8825,7 +8825,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙لاتوجد رتب هنا", 1, 'm
 end 
 end 
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if Admin(msg) then 
 if text and text:match("^الاعدادات$") and ChCheck(msg) then
 if not DevAbs:get(raqi..'Abs:Spam:Text'..msg.chat_id_) then
@@ -8833,7 +8833,7 @@ spam_c = 400
 else
 spam_c = DevAbs:get(raqi..'Abs:Spam:Text'..msg.chat_id_)
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if DevAbs:hget(raqi.."Abs:Spam:Group:User"..msg.chat_id_, "Spam:User") == "kick" then     
 flood = "بالطرد"     
 elseif DevAbs:hget(raqi.."Abs:Spam:Group:User"..msg.chat_id_,"Spam:User") == "keed" then     
@@ -8845,7 +8845,7 @@ flood = "بالحذف"
 else     
 flood = "مفتوح"     
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if DevAbs:get(raqi.."Abs:Lock:Bots"..msg.chat_id_) == "del" then
 lock_bots = "بالحذف"
 elseif DevAbs:get(raqi.."Abs:Lock:Bots"..msg.chat_id_) == "ked" then
@@ -8855,7 +8855,7 @@ lock_bots = "بالطرد"
 else
 lock_bots = "مفتوحة"    
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if DevAbs:get(raqi..'Abs:Lock:Text'..msg.chat_id_) then mute_text = 'مقفلة' else mute_text = 'مفتوحة'end
 if DevAbs:get(raqi..'Abs:Lock:Photo'..msg.chat_id_) then mute_photo = 'مقفلة' else mute_photo = 'مفتوحة' end
 if DevAbs:get(raqi..'Abs:Lock:Videos'..msg.chat_id_) then mute_video = 'مقفلة' else mute_video = 'مفتوحة' end
@@ -8886,7 +8886,7 @@ if DevAbs:get(raqi..'Abs:Lock:Kfr'..msg.chat_id_) then lock_kaf = 'مفتوح' e
 if DevAbs:get(raqi..'Abs:Lock:Taf'..msg.chat_id_) then lock_taf = 'مفتوحة' else lock_taf = 'مقفلة' end
 if DevAbs:get(raqi..'Abs:Lock:Farsi'..msg.chat_id_) then lock_farsi = 'مقفلة' else lock_farsi = 'مفتوحة' end
 local Flood_Num = DevAbs:hget(raqi.."Abs:Spam:Group:User"..msg.chat_id_,"Num:Spam") or 5
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 local TXTE = "🇸🇦︙اعدادات المجموعة -› ⤈\n------------ Y●L ------------\n"
 .."🇸🇦︙الروابط -› "..mute_links.."\n"
 .."🇸🇦︙المعرف -› "..lock_tag.."\n"
@@ -8924,13 +8924,13 @@ local TXTE = "🇸🇦︙اعدادات المجموعة -› ⤈\n------------ 
 Dev_Abs(msg.chat_id_, msg.id_, 1, TXTE, 1, 'md')
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text and text:match("^قول (.*)$") then
 local txt = {string.match(text, "^(قول) (.*)$")}
 Dev_Abs(msg.chat_id_,0, 1, txt[2], 1, 'md')
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if DevAbs:get(raqi..'Abs:setrules'..msg.chat_id_..':'..msg.sender_user_id_) then 
 if text == 'الغاء' then 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم الغاء حفظ قوانين المجموعة', 1, 'md')
@@ -8951,7 +8951,7 @@ if text and text:match("^القوانين$") then
 local rules = DevAbs:get(raqi..'Abs:rules'..msg.chat_id_)
 Dev_Abs(msg.chat_id_, msg.id_, 1, rules, 1, nil)
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == 'رقمي' and ChCheck(msg) then
 tdcli_function({ID="GetUser",user_id_=msg.sender_user_id_},function(extra,result,success)
 if result.phone_number_  then
@@ -8962,7 +8962,7 @@ end
 send(msg.chat_id_, msg.id_,MyNumber)
 end,nil)
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == "تفعيل انطق" and Manager(msg) and ChCheck(msg) then
 local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙تم تفعيل ميزة انطق'
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
@@ -8982,7 +8982,7 @@ sendAudio(msg.chat_id_, msg.id_, 0, 1,nil, './'..Antk.result.translate..'.mp3')
 os.execute('rm -rf ./'..Antk.result.translate..'.mp3') 
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == "تفعيل الزخرفه" and Manager(msg) and ChCheck(msg) then
 local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙تم تفعيل الزخرفه بنجاح'
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
@@ -9031,7 +9031,7 @@ end
 Dev_Abs(msg.chat_id_, msg.id_, 1, t, 1, 'md')
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == "تفعيل الابراج" and Manager(msg) and ChCheck(msg) then
 local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙تم تفعيل الابراج بنجاح'
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
@@ -9051,7 +9051,7 @@ t = Brg.ok.abs
 Dev_Abs(msg.chat_id_, msg.id_, 1, t, 1, 'html')
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text and (text == "تفعيل اوامر النسب" or text == "تفعيل نسبة الحب" or text == "تفعيل نسبة الكره" or text == "تفعيل نسبة الرجوله" or text == "تفعيل نسبة الانوثة" or text == "تفعيل نسبة الغباء") and Manager(msg) and ChCheck(msg) then
 local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙تم تفعيل اوامر النسب'
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
@@ -9147,7 +9147,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙نسبة غباء '..text..' هي 
 DevAbs:del(raqi..'StupidNsba:Abs'..msg.chat_id_..msg.sender_user_id_) 
 return false 
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == "تفعيل حساب العمر" and Manager(msg) and ChCheck(msg) then
 local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙تم تفعيل حساب العمر'
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
@@ -9167,7 +9167,7 @@ t = Age.ok.abs
 Dev_Abs(msg.chat_id_, msg.id_, 1, t, 1, 'html')
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == "تفعيل معاني الاسماء" and Manager(msg) and ChCheck(msg) then
 local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙تم تفعيل معاني الاسماء'
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
@@ -9187,7 +9187,7 @@ t = Mean.ok.abs
 Dev_Abs(msg.chat_id_, msg.id_, 1, t, 1, 'html')
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == "تفعيل غنيلي11" and Manager(msg) and ChCheck(msg) then
 local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙تم تفعيل غنيلي11 بنجاح'
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
@@ -9206,7 +9206,7 @@ if Audios.Info == true then
 local Text ='🇸🇦︙تم اختيار المقطع الصوتي لك'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '˛ dev yousef 🇸🇦.',url="t.me/yousef_labban1"}},
+{{text = '˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🇸🇦.',url="t.me/yousef_labban1"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id='..msg.chat_id_..'&voice='..URL.escape(Audios.info)..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -9233,7 +9233,7 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..TokenBot..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/Memzraqi/'..Abs..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if Admin(msg) then
 if DevAbs:get(raqi..'Abs:LockSettings'..msg.chat_id_) then 
 if text == "الروابط" then if DevAbs:get(raqi..'Abs:lock_link'..msg.chat_id_) then mute_links = 'مقفلة' else mute_links = 'مفتوحة' end local devyousef = "\n" .."🇸🇦︙الروابط -› "..mute_links.."\n" Dev_Abs(msg.chat_id_, msg.id_, 1, devyousef, 1, 'md') end
@@ -9263,7 +9263,7 @@ if text == "الكفر" then if DevAbs:get(raqi..'Abs:Lock:Kfr'..msg.chat_id_) t
 if text == "السب" then if DevAbs:get(raqi..'Abs:Lock:Fshar'..msg.chat_id_) then lock_fshar = 'مفتوح' else lock_fshar = 'مقفل' end local devyousef = "\n" .."🇸🇦︙السب -› "..lock_fshar.."\n" Dev_Abs(msg.chat_id_, msg.id_, 1, devyousef, 1, 'md') end
 if text == "الطائفيه" then if DevAbs:get(raqi..'Abs:Lock:Taf'..msg.chat_id_) then lock_taf = 'مفتوحة' else lock_taf = 'مقفلة' end local devyousef = "\n" .."🇸🇦︙الطائفيه -› "..lock_taf.."\n" Dev_Abs(msg.chat_id_, msg.id_, 1, devyousef, 1, 'md') end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == 'تفعيل كشف الاعدادات' and ChCheck(msg) then 
 local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙تم تفعيل كشف الاعدادات'
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
@@ -9274,7 +9274,7 @@ local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
 DevAbs:del(raqi..'Abs:LockSettings'..msg.chat_id_) 
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == 'تفعيل اوامر التحشيش' and Manager(msg) and ChCheck(msg) then 
 local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙تم تفعيل اوامر التحشيش'
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
@@ -9285,7 +9285,7 @@ local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
 DevAbs:set(raqi..'Abs:Lock:Stupid'..msg.chat_id_,true)
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text and (text == 'تعطيل التحقق' or text == 'قفل لتحقق' or text == 'تعطيل تنبيه الدخول') and Manager(msg) and ChCheck(msg) then 
 local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙تم تعطيل التحقق بنجاح'
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
@@ -9296,7 +9296,7 @@ local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
 DevAbs:set(raqi..'Abs:Lock:Robot'..msg.chat_id_,true)
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == 'تفعيل ردود المدير' and Manager(msg) and ChCheck(msg) then 
 local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙تم تفعيل ردود المدير'
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
@@ -9307,7 +9307,7 @@ local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
 DevAbs:set(raqi..'Abs:Lock:GpRed'..msg.chat_id_,true)
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == 'تفعيل ردود المطور' and Manager(msg) and ChCheck(msg) then 
 local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙تم تفعيل ردود المطور'
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
@@ -9318,7 +9318,7 @@ local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
 DevAbs:set(raqi..'Abs:Lock:AllRed'..msg.chat_id_,true)
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if SecondSudo(msg) then
 if text == 'تفعيل المغادره' or text == '-› تفعيل المغادره ⌁' then 
 local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙تم تفعيل المغادره بنجاح'
@@ -9341,7 +9341,7 @@ absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(m
 DevAbs:set(raqi.."Abs:Send:Bot"..raqi,true) 
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text and text:match("^ضع اسم (.*)$") and Manager(msg) and ChCheck(msg) then
 local txt = {string.match(text, "^(ضع اسم) (.*)$")}
 tdcli_function ({ ID = "ChangeChatTitle",chat_id_ = msg.chat_id_,title_ = txt[2] },function(arg,data) 
@@ -9357,7 +9357,7 @@ absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(m
 end
 end,nil) 
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if msg.content_.photo_ then
 if DevAbs:get(raqi..'Abs:SetPhoto'..msg.chat_id_..':'..msg.sender_user_id_) then
 if msg.content_.photo_.sizes_[3] then
@@ -9385,13 +9385,13 @@ if text and text:match("^ضع صورة$") and ChCheck(msg) or text and text:matc
 Dev_Abs(msg.chat_id_,msg.id_, 1, '🇸🇦︙ارسل صورة المجموعة الان', 1, 'md')
 DevAbs:set(raqi..'Abs:SetPhoto'..msg.chat_id_..':'..msg.sender_user_id_,true)
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text and text:match("^حذف الصورة$") and ChCheck(msg) or text and text:match("^مسح الصورة$") and ChCheck(msg) then
 https.request("https://api.telegram.org/bot"..TokenBot.."/deleteChatPhoto?chat_id="..msg.chat_id_) 
 ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم حذف صورة المجموعة")  
 return false  
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if Manager(msg) then
 if text and text:match("^الغاء تثبيت$") and ChCheck(msg) or text and text:match("^الغاء التثبيت$") and ChCheck(msg) then
 if DevAbs:sismember(raqi.."Abs:Lock:Pinpin",msg.chat_id_) and not BasicConstructor(msg) then
@@ -9415,7 +9415,7 @@ return false
 end
 end,nil)
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text and text:match("^الغاء تثبيت الكل$") then  
 if DevAbs:sismember(raqi.."Abs:Lock:Pinpin",msg.chat_id_) and not BasicConstructor(msg) then
 Dev_Abs(msg.chat_id_,msg.id_, 1, "🇸🇦︙التثبيت والغاء واعادة التثبيت تم قفله من قبل المنشئين الاساسيين", 1, 'md')
@@ -9439,7 +9439,7 @@ return false
 end
 end,nil)
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text and text:match("^اعاده تثبيت$") and ChCheck(msg) or text and text:match("^اعاده التثبيت$") and ChCheck(msg) or text and text:match("^اعادة التثبيت$") and ChCheck(msg) then
 if DevAbs:sismember(raqi.."Abs:Lock:Pinpin",msg.chat_id_) and not BasicConstructor(msg) then
 Dev_Abs(msg.chat_id_,msg.id_, 1, "🇸🇦︙التثبيت والغاء واعادة التثبيت تم قفله من قبل المنشئين الاساسيين", 1, 'md')
@@ -9452,7 +9452,7 @@ local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
 end end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == 'طرد المحذوفين' or text == 'مسح المحذوفين' or text == 'طرد الحسابات المحذوفه' or text == 'حذف المحذوفين' then  
 tdcli_function({ID = "GetChannelMembers",channel_id_ = msg.chat_id_:gsub("-100",""),offset_ = 0,limit_ = 1000}, function(arg,del)
 for k, v in pairs(del.members_) do
@@ -9465,7 +9465,7 @@ end
 ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم طرد المحذوفين")  
 end,nil)
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text and text:match("^مسح المحظورين$") or text and text:match("^مسح المحظورين$") and ChCheck(msg) or text and text:match("^مسح المطرودين$") or text and text:match("^حذف المطرودين$") and ChCheck(msg) then
 local function RemoveBlockList(extra, result)
 if tonumber(result.total_count_) == 0 then 
@@ -9484,7 +9484,7 @@ end
 tdcli_function({ID="GetChannelMembers",channel_id_ = msg.chat_id_:gsub("-100",""),filter_ = {ID = "ChannelMembersKicked"},offset_ = 0,limit_ = 200}, RemoveBlockList, {chat_id_ = msg.chat_id_, msg_id_ = msg.id_})    
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text and text:match("^معلومات المجموعة$") and ChCheck(msg) or text and text:match("^عدد الاعضاء$") and ChCheck(msg) or text and text:match("^عدد القروب$") and ChCheck(msg) or text and text:match("^عدد الادامن$") and ChCheck(msg) or text and text:match("^عدد المحظورين$") and ChCheck(msg) then
 local Muted = DevAbs:scard(raqi.."Abs:Muted:"..msg.chat_id_) or "0"
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,dp) 
@@ -9493,7 +9493,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙المجموعة -› ❨ '..dp.ti
 end,nil)
 end,nil)
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text and text:match('^كشف (-%d+)') then
 local ChatId = text:match('كشف (-%d+)') 
 if not SudoBot(msg) then
@@ -9532,7 +9532,7 @@ end,nil)
 end,nil)
 end 
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text and text:match("^غادر (-%d+)$")  then
 local Text = { string.match(text, "^(غادر) (-%d+)$")}
 if not SecondSudo(msg) then
@@ -9550,13 +9550,13 @@ end
 end,nil)
 end 
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text and text:match("^تعين عدد الاعضاء (%d+)$") and SecondSudo(msg) or text and text:match("^تعيين عدد الاعضاء (%d+)$") and SecondSudo(msg) then
 local Num = text:match("تعين عدد الاعضاء (%d+)$") or text:match("تعيين عدد الاعضاء (%d+)$")
 DevAbs:set(raqi..'Abs:Num:Add:Bot',Num) 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم وضع عدد الاعضاء -› *'..Num..'* عضو', 1, 'md')
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == 'تفعيل البوت الخدمي' then 
 if not Sudo(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙للمطور الاساسي فقط', 1, 'md')
@@ -9602,7 +9602,7 @@ DevAbs:set(raqi.."Abs:Lock:GpLinks"..msg.chat_id_,"ok")
 return false  
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text and text:match('^تفعيل$') and SudoBot(msg) and ChCheck(msg) then
 if ChatType ~= 'sp' then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙المجموعة عاديه وليست خارقه لا تستطيع تفعيلي يرجى ان تضع سجل رسائل المجموعة ضاهر وليس مخفي ومن بعدها يمكنك رفعي ادمن ثم تفعيلي', 1, 'md')
@@ -9722,7 +9722,7 @@ end,nil)
 end,nil)
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text and text:match("^المطور$") then
 tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
 tdcli_function({ID ="GetChat",chat_id_=msg.chat_id_},function(arg,dp) 
@@ -9754,14 +9754,14 @@ end
 end,nil)
 end,nil)
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == 'جلب نسخه السورس' then
 if not Sudo(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙للمطور الاساسي فقط ', 1, 'md')
 else
 sendDocument(msg.chat_id_, msg.id_, 0, 1, nil, './raqi.lua', '🇸🇦︙نسخة ملف سورس dev-yousef 🇸🇦',dl_cb, nil)
 end end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == 'روابط القروبات' or text == 'روابط المجموعات' then
 if not SecondSudo(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙للمطور الاساسي فقط ', 1, 'md')
@@ -9771,7 +9771,7 @@ if #List == 0 then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙لا توجد مجموعات مفعله', 1, 'md')
 else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙جاري ارسال نسخه تحتوي على -› '..#List..' مجموعة', 1, 'md')
-local Text = "🇸🇦︙Source dev yousef\n🇸🇦︙File Bot Groups\n------------ Y●L ------------\n"
+local Text = "🇸🇦︙Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇 \n🇸🇦︙File Bot Groups\n------------ Y●L ------------\n"
 for k,v in pairs(List) do
 local GroupsManagers = DevAbs:scard(raqi.."Abs:Managers:"..v) or 0
 local GroupsAdmins = DevAbs:scard(raqi.."Abs:Admins:"..v) or 0
@@ -9786,7 +9786,7 @@ io.popen('rm -rf ./GroupsBot.txt')
 end
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == "اذاعة خاص" and msg.reply_to_message_id_ == 0 and SudoBot(msg) or text == "-› اذاعة خاص ⌁" and msg.reply_to_message_id_ == 0 and SudoBot(msg) then 
 if DevAbs:get(raqi.."Abs:Send:Bot"..raqi) and not SecondSudo(msg) then 
 send(msg.chat_id_, msg.id_,"🇸🇦︙الاذاعة معطلة من قبل المطور الاساسي")
@@ -9853,7 +9853,7 @@ end
 Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم اذاعة "..AbsText.." بنجاح \n🇸🇦︙‏الى -› ❨ "..#List.." ❩ مشترك \n ✓", 1, 'md')
 DevAbs:del(raqi.."Abs:Send:Pv"..msg.chat_id_..":" .. msg.sender_user_id_) 
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == "اذاعة" and msg.reply_to_message_id_ == 0 and SudoBot(msg) or text == "-› اذاعة عام ⌁" and msg.reply_to_message_id_ == 0 and SudoBot(msg) then 
 if DevAbs:get(raqi.."Abs:Send:Bot"..raqi) and not SecondSudo(msg) then 
 send(msg.chat_id_, msg.id_,"🇸🇦︙الاذاعة معطلة من قبل المطور الاساسي")
@@ -9920,7 +9920,7 @@ end
 Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم اذاعة "..AbsText.." بنجاح \n🇸🇦︙‏في -› ❨ "..#List.." ❩ مجموعة \n ✓", 1, 'md')
 DevAbs:del(raqi.."Abs:Send:Gp"..msg.chat_id_..":" .. msg.sender_user_id_) 
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == "اذاعة بالتوجيه" and msg.reply_to_message_id_ == 0 and SudoBot(msg) or text == "-› اذاعة عام بالتوجيه ⌁" and msg.reply_to_message_id_ == 0 and SudoBot(msg) then 
 if DevAbs:get(raqi.."Abs:Send:Bot"..raqi) and not SecondSudo(msg) then 
 send(msg.chat_id_, msg.id_,"🇸🇦︙الاذاعة معطلة من قبل المطور الاساسي")
@@ -9944,7 +9944,7 @@ end
 Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم اذاعة رسالتك بالتوجيه \n🇸🇦︙‏في -› ❨ "..#List.." ❩ مجموعة \n ✓", 1, 'md')
 DevAbs:del(raqi.."Abs:Send:FwdGp"..msg.chat_id_..":" .. msg.sender_user_id_) 
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == "اذاعة خاص بالتوجيه" and msg.reply_to_message_id_ == 0 and SudoBot(msg) or text == "-› اذاعة خاص بالتوجيه ⌁" and msg.reply_to_message_id_ == 0 and SudoBot(msg) then 
 if DevAbs:get(raqi.."Abs:Send:Bot"..raqi) and not SecondSudo(msg) then 
 send(msg.chat_id_, msg.id_,"🇸🇦︙الاذاعة معطلة من قبل المطور الاساسي")
@@ -9968,7 +9968,7 @@ end
 Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم اذاعة رسالتك بالتوجيه \n🇸🇦︙‏الى -› ❨ "..#List.." ❩ مشترك \n ✓", 1, 'md')
 DevAbs:del(raqi.."Abs:Send:FwdPv"..msg.chat_id_..":" .. msg.sender_user_id_) 
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == "اذاعة بالتثبيت" and msg.reply_to_message_id_ == 0 and SudoBot(msg) or text == "-› اذاعة بالتثبيت ⌁" and msg.reply_to_message_id_ == 0 and SudoBot(msg) then 
 if DevAbs:get(raqi.."Abs:Send:Bot"..raqi) and not SecondSudo(msg) then 
 send(msg.chat_id_, msg.id_,"🇸🇦︙الاذاعة معطلة من قبل المطور الاساسي")
@@ -10044,7 +10044,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم اذاعة "..AbsText.." با
 DevAbs:del(raqi.."Abs:Send:Gp:Pin"..msg.chat_id_..":" .. msg.sender_user_id_) 
 return false
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == 'حذف رد من متعدد' and Manager(msg) and ChCheck(msg) or text == 'مسح رد من متعدد' and Manager(msg) and ChCheck(msg) then
 local List = DevAbs:smembers(raqi..'Abs:Manager:GpRedod'..msg.chat_id_)
 if #List == 0 then
@@ -10110,7 +10110,7 @@ DevAbs:set(raqi..'Abs:Add:GpTexts'..msg.sender_user_id_..msg.chat_id_,text)
 DevAbs:sadd(raqi..'Abs:Manager:GpRedod'..msg.chat_id_,text)
 return false
 end end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == 'حذف رد' and Manager(msg) and ChCheck(msg) or text == 'مسح رد' and  Manager(msg) and ChCheck(msg) then
 local List = DevAbs:smembers(raqi..'Abs:Manager:GpRed'..msg.chat_id_)
 if #List == 0 then
@@ -10141,7 +10141,7 @@ DevAbs:sadd(raqi..'Abs:Manager:GpRed'..msg.chat_id_,text)
 DevAbs:set(raqi..'DelManagerRep'..msg.chat_id_,text)
 return false
 end end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == 'حذف رد عام' and SecondSudo(msg) or text == '-› حذف رد عام ⌁' and SecondSudo(msg) or text == 'مسح رد عام' and SecondSudo(msg) then
 local List = DevAbs:smembers(raqi.."Abs:Sudo:AllRed")
 if #List == 0 then
@@ -10172,7 +10172,7 @@ DevAbs:sadd(raqi.."Abs:Sudo:AllRed",text)
 DevAbs:set(raqi.."DelSudoRep",text)
 return false 
 end end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == 'الردود المتعددة' and Manager(msg) and ChCheck(msg) then
 local redod = DevAbs:smembers(raqi..'Abs:Manager:GpRedod'..msg.chat_id_)
 MsgRep = '🇸🇦︙قائمة الردود المتعددة -› ⤈ \n------------ Y●L ------------\n'
@@ -10197,7 +10197,7 @@ ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم حذف الردو
 return false
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == 'الردود' and Manager(msg) and ChCheck(msg) or text == 'ردود المدير' and Manager(msg) and ChCheck(msg) then
 local redod = DevAbs:smembers(raqi..'Abs:Manager:GpRed'..msg.chat_id_)
 MsgRep = '🇸🇦︙ردود المدير -› ⤈ \n------------ Y●L ------------\n'
@@ -10246,7 +10246,7 @@ ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم حذف ردود �
 return false
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if  text == "ردود المطور" and SecondSudo(msg) or text == "الردود العام" and SecondSudo(msg) or text == "ردود العام" and SecondSudo(msg) or text == "-› الردود العام ⌁" and SecondSudo(msg) then
 local redod = DevAbs:smembers(raqi.."Abs:Sudo:AllRed")
 MsgRep = '🇸🇦︙ردود المطور -› ⤈ \n------------ Y●L ------------\n'
@@ -10296,7 +10296,7 @@ ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم حذف ردود �
 return false
 end
 end 
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text and text == "تغيير اسم البوت" or text and text == "وضع اسم البوت" or text and text == "تغير اسم البوت" then
 if not SecondSudo(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙للمطور الاساسي فقط ', 1, 'md')
@@ -10314,7 +10314,7 @@ DevAbs:del(raqi..'Abs:NameBot')
 local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙تم حذف اسم البوت'
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
 end end 
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text and text:match("^استعاده الاوامر$") and SecondSudo(msg) or text and text:match("^استعادة رسائل الاوامر$") and SecondSudo(msg) then
 HelpList ={'Abs:Help','Abs:Help1','Abs:Help2','Abs:Help3','Abs:Help4','Abs:Help5','Abs:Help6'}
 for i,Help in pairs(HelpList) do
@@ -10756,7 +10756,7 @@ local Text = [[
 ]]
 Dev_Abs(msg.chat_id_, msg.id_, 1, (Help or Text), 1, 'md')
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if SecondSudo(msg) then
 if text == "تحديث السورس" or text == "تحديث سورس" then 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙جاري تحديث سورس dev-yousef 🇸🇦', 1, 'md') 
@@ -10773,7 +10773,7 @@ io.popen("rm -rf ../.telegram-cli/*")
 print("\27[31;47m\n        ( تم تحديث ملفات البوت )        \n\27[0;34;49m\n") 
 Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم تحديث ملفات البوت", 1, "md")
 end 
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == 'الملفات' then
 Files = '\n🇸🇦︙الملفات المفعلة في البوت -› ⤈ \n------------ Y●L ------------\n'
 i = 0
@@ -10846,7 +10846,7 @@ end
 return false
 end
 end 
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text and (text == 'حذف معلومات الترحيب' or text == 'مسح معلومات الترحيب') and SecondSudo(msg) then    
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم حذف معلومات الترحيب', 1, 'md')   
 DevAbs:del(raqi..'Abs:Text:BotWelcome')
@@ -10894,7 +10894,7 @@ DevAbs:del(raqi.."Abs:Set:BotWelcome"..msg.sender_user_id_)
 end
 return false
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text and text:match("^ضع رسالة المطور$") or text and text:match("^وضع رسالة المطور$") or text and text:match("^تغيير رسالة المطور$") then
 if not SecondSudo(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙للمطور الاساسي فقط ', 1, 'md')
@@ -10909,7 +10909,7 @@ else
 Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم حذف رسالة المطور", 1, "md")
 DevAbs:del(raqi.."DevText")
 end end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if DevAbs:get(raqi.."textch:user"..msg.chat_id_.."" .. msg.sender_user_id_) then 
 if text and text:match("^الغاء$") then 
 Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم الغاء الامر", 1, "md") 
@@ -10957,11 +10957,11 @@ https.request("https://api.telegram.org/bot"..TokenBot..'/sendMessage?chat_id='.
 else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙لم يتم تعيين قناة الاشتراك الاجباري \n🇸🇦︙ارسل -› تعيين قناة الاشتراك للتعيين ', 1, 'md')
 end end end end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == 'القناة' or text == 'قناة السورس' or text == 'قناه السورس' or text == 'قنات السورس' then 
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙Channel ↬ [@yousef_labban1]', 1, 'md')    
 end 
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 if text == 'معلومات السيرفر' or text == 'السيرفر' then 
 if not Sudo(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙للمطور الاساسي فقط ', 1, 'md')
@@ -10981,9 +10981,9 @@ echo '------------ Y●L ------------\n🇸🇦︙مدة تشغيل السيرف
 ]]):read('*a'), 1, 'md')
 end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 raqiFiles(msg)
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 elseif (data.ID == "UpdateMessageEdited") then
 local msg = data
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.message_id_)},function(extra, result, success)
@@ -11030,7 +11030,7 @@ if DevAbs:get(raqi..'Abs:Lock:EditMsgs'..msg.chat_id_) then
 DeleteMessage(msg.chat_id_,{[0] = data.message_id_})
 end end end 
 end,nil)
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 elseif (data.ID == "UpdateMessageSendSucceeded") then
 local msg = data.message_
 local text = msg.content_.text_
@@ -11064,7 +11064,7 @@ end
 if id_photo == GetMsgPin then
 tdcli_function ({ID = "PinChannelMessage",channel_id_ = msg.chat_id_:gsub('-100',''),message_id_ = msg.id_,disable_notification_ = 0},function(arg,dp) DevAbs:del(raqi..'Abs:PinnedMsgs'..msg.chat_id_) end,nil)   
 end end end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 elseif (data.ID == "UpdateOption" and data.name_ == "my_id") then
 print('\27[30;32mجاري تنظيف المجموعات الوهميه يرجى الانتظار\n\27[1;37m')
 local PvList = DevAbs:smembers(raqi..'Abs:Users')  
@@ -11091,7 +11091,7 @@ if data and data.type_ and data.type_.channel_ and data.type_.channel_.status_ a
 DevAbs:sadd(raqi..'Abs:Groups',v)  
 end end,nil) end
 end
---     Source dev yousef     --
+--     Source 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇      --
 end 
 ------------------------------------------------
 -- This Source Was Developed By (ABS) @yousef_labban.--
