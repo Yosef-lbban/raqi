@@ -8504,7 +8504,7 @@ ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم فتح التفل
 end
 end
 --     Source dev yousef     --
-if text and text:match("^قفلالكل$") then
+if text and text:match("^قفل الكل$") then
 if not Constructor(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙للمنشئين فقط', 1, 'md')
 else
