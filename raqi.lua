@@ -2304,7 +2304,7 @@ else
 LinkGroup = 'لا يوجد'
 end
 DevAbs:set(raqi.."Abs:Groups:Links"..msg.chat_id_,LinkGroup) 
-SendText(DevId,"🇸🇦︙تم تفعيل مجموعة جديده -› ⤈ \n------------ Y●L ------------\n🇸🇦︙بواسطة -› "..Name.."\n🇸🇦︙موقعه في المجموعة -› "..status.."\n🇸🇦︙اسم المجموعة -› ["..NameChat.."]\n🇸🇦︙عدد اعضاء المجموعة -› ❨ *"..NumMem.."* ❩\n🇸🇦︙ايدي المجموعة -› ⤈ \n❨ `"..msg.chat_id_.."` ❩\n🇸🇦︙رابط المجموعة -› ⤈\n❨ ["..LinkGroup.."] ❩\n------------ Y●L ------------\n🇸🇦︙الوقت -› "..os.date("%I:%M%p").."\n🇸🇦︙التاريخ -› "..os.date("%Y/%m/%d").."",0,'md')
+SendText(DevId,"🇸🇦︙تم تفعيل مجموعة جديدة -› ⤈ \n------------ Y●L ------------\n🇸🇦︙بواسطة -› "..Name.."\n🇸🇦︙موقعه في المجموعة -› "..status.."\n🇸🇦︙اسم المجموعة -› ["..NameChat.."]\n🇸🇦︙عدد اعضاء المجموعة -› ❨ *"..NumMem.."* ❩\n🇸🇦︙ايدي المجموعة -› ⤈ \n❨ `"..msg.chat_id_.."` ❩\n🇸🇦︙رابط المجموعة -› ⤈\n❨ ["..LinkGroup.."] ❩\n------------ Y●L ------------\n🇸🇦︙الوقت -› "..os.date("%I:%M%p").."\n🇸🇦︙التاريخ -› "..os.date("%Y/%m/%d").."",0,'md')
 end
 end end
 end,nil)
@@ -7439,7 +7439,7 @@ DevAbs:del("raqi:New:id:"..raqi..msg.chat_id_..msg.sender_user_id_)
 return false
 end
 DevAbs:del("raqi:New:id:"..raqi..msg.chat_id_..msg.sender_user_id_)
-Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم حفظ الرسالة الجديده', 1, 'md')
+Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم حفظ الرسالة الجديدة', 1, 'md')
 DevAbs:set(raqi.."Abs:GpIds:Text"..msg.chat_id_,text)
 return false
 end
@@ -9677,7 +9677,7 @@ LinkGroup = 'لا يوجد'
 end
 DevAbs:set(raqi.."Abs:Groups:Links"..msg.chat_id_,LinkGroup) 
 if not Sudo(msg) then
-SendText(DevId,"🇸🇦︙تم تفعيل مجموعة جديده -› ⤈ \n------------ Y●L ------------\n🇸🇦︙بواسطة -› "..Name.."\n🇸🇦︙اسم المجموعة -› ["..NameChat.."]\n🇸🇦︙عدد اعضاء المجموعة -› ❨ *"..NumMem.."* ❩\n🇸🇦︙ايدي المجموعة -› ⤈ \n❨ `"..msg.chat_id_.."` ❩\n🇸🇦︙رابط المجموعة -› ⤈\n❨ ["..LinkGroup.."] ❩\n------------ Y●L ------------\n🇸🇦︙الوقت -› "..os.date("%I:%M%p").."\n🇸🇦︙التاريخ -› "..os.date("%Y/%m/%d").."",0,'md')
+SendText(DevId,"🇸🇦︙تم تفعيل مجموعة جديدة -› ⤈ \n------------ Y●L ------------\n🇸🇦︙بواسطة -› "..Name.."\n🇸🇦︙اسم المجموعة -› ["..NameChat.."]\n🇸🇦︙عدد اعضاء المجموعة -› ❨ *"..NumMem.."* ❩\n🇸🇦︙ايدي المجموعة -› ⤈ \n❨ `"..msg.chat_id_.."` ❩\n🇸🇦︙رابط المجموعة -› ⤈\n❨ ["..LinkGroup.."] ❩\n------------ Y●L ------------\n🇸🇦︙الوقت -› "..os.date("%I:%M%p").."\n🇸🇦︙التاريخ -› "..os.date("%Y/%m/%d").."",0,'md')
 end
 end
 end,nil)
@@ -9715,7 +9715,7 @@ LinkGroup = 'لا يوجد'
 end
 DevAbs:set(raqi.."Abs:Groups:Links"..msg.chat_id_,LinkGroup) 
 if not Sudo(msg) then
-SendText(DevId,"🇸🇦︙تم تعطيل مجموعة جديده -› ⤈ \n------------ Y●L ------------\n🇸🇦︙بواسطة -› "..Name.."\n🇸🇦︙اسم المجموعة -› ["..NameChat.."]\n🇸🇦︙ايدي المجموعة -› ⤈ \n❨ `"..msg.chat_id_.."` ❩\n🇸🇦︙رابط المجموعة -› ⤈\n❨ ["..LinkGroup.."] ❩\n------------ Y●L ------------\n🇸🇦︙الوقت -› "..os.date("%I:%M%p").."\n🇸🇦︙التاريخ -› "..os.date("%Y/%m/%d").."",0,'md')
+SendText(DevId,"🇸🇦︙تم تعطيل مجموعة جديدة -› ⤈ \n------------ Y●L ------------\n🇸🇦︙بواسطة -› "..Name.."\n🇸🇦︙اسم المجموعة -› ["..NameChat.."]\n🇸🇦︙ايدي المجموعة -› ⤈ \n❨ `"..msg.chat_id_.."` ❩\n🇸🇦︙رابط المجموعة -› ⤈\n❨ ["..LinkGroup.."] ❩\n------------ Y●L ------------\n🇸🇦︙الوقت -› "..os.date("%I:%M%p").."\n🇸🇦︙التاريخ -› "..os.date("%Y/%m/%d").."",0,'md')
 end
 end
 end,nil)
@@ -10332,7 +10332,7 @@ if devyousef == 'msg' then
 Dev_Abs(msg.chat_id_, msg.id_, 1, text , 1, 'md')
 DevAbs:del(raqi..'Abs:Help0'..msg.sender_user_id_)
 DevAbs:set(raqi..'Abs:Help', text)
-Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم حفظ الرسالة الجديده " ,  1, "md")
+Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم حفظ الرسالة الجديدة " ,  1, "md")
 return false end
 end
 if text == "الاوامر" or text == "اوامر" or text == "مساعده" then
@@ -10364,7 +10364,7 @@ if devyousef == 'msg' then
 Dev_Abs(msg.chat_id_, msg.id_, 1, text , 1, 'md')
 DevAbs:del(raqi..'Abs:Help01'..msg.sender_user_id_)
 DevAbs:set(raqi..'Abs:Help1', text)
-Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم حفظ الرسالة الجديده " ,  1, "md")
+Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم حفظ الرسالة الجديدة " ,  1, "md")
 return false end
 end
 if text == "م1" or text == "م١" or text == "اوامر1" or text == "اوامر١" then
@@ -10435,7 +10435,7 @@ if devyousef == 'msg' then
 Dev_Abs(msg.chat_id_, msg.id_, 1, text , 1, 'md')
 DevAbs:del(raqi..'Abs:Help21'..msg.sender_user_id_)
 DevAbs:set(raqi..'Abs:Help2', text)
-Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم حفظ الرسالة الجديده " ,  1, "md")
+Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم حفظ الرسالة الجديدة " ,  1, "md")
 return false end
 end
 if text == "م2" or text == "م٢" or text == "اوامر2" or text == "اوامر٢" then
@@ -10513,7 +10513,7 @@ if devyousef == 'msg' then
 Dev_Abs(msg.chat_id_, msg.id_, 1, text , 1, 'md')
 DevAbs:del(raqi..'Abs:Help31'..msg.sender_user_id_)
 DevAbs:set(raqi..'Abs:Help3', text)
-Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم حفظ الرسالة الجديده " ,  1, "md")
+Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم حفظ الرسالة الجديدة " ,  1, "md")
 return false end
 end
 if text == "م3" or text == "م٣" or text == "اوامر3" or text == "اوامر٣" then
@@ -10578,7 +10578,7 @@ if devyousef == 'msg' then
 Dev_Abs(msg.chat_id_, msg.id_, 1, text , 1, 'md')
 DevAbs:del(raqi..'Abs:Help41'..msg.sender_user_id_)
 DevAbs:set(raqi..'Abs:Help4', text)
-Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم حفظ الرسالة الجديده" ,  1, "md")
+Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم حفظ الرسالة الجديدة" ,  1, "md")
 return false end
 end
 if text == "م٤" or text == "م4" or text == "اوامر4" or text == "اوامر٤" then
@@ -10637,7 +10637,7 @@ if devyousef == 'msg' then
 Dev_Abs(msg.chat_id_, msg.id_, 1, text , 1, 'md')
 DevAbs:del(raqi..'Abs:Help51'..msg.sender_user_id_)
 DevAbs:set(raqi..'Abs:Help5', text)
-Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم حفظ الرسالة الجديده " ,  1, "md")
+Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم حفظ الرسالة الجديدة " ,  1, "md")
 return false end
 end
 if text == "م٥" or text == "م5" or text == "اوامر5" or text == "اوامر٥" then
@@ -10723,7 +10723,7 @@ if devyousef == 'msg' then
 Dev_Abs(msg.chat_id_, msg.id_, 1, text , 1, 'md')
 DevAbs:del(raqi..'Abs:Help61'..msg.sender_user_id_)
 DevAbs:set(raqi..'Abs:Help6', text)
-Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم حفظ الرسالة الجديده" ,  1, "md")
+Dev_Abs(msg.chat_id_, msg.id_, 1, "🇸🇦︙تم حفظ الرسالة الجديدة" ,  1, "md")
 return false end
 end
 if text == "م٦" or text == "م6" or text == "اوامر6" or text == "اوامر٦" then
@@ -10922,7 +10922,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙تم تغيير رسالة الا�
 end
 if text and text:match("^تغير رسالة الاشتراك$") and SecondSudo(msg) or text and text:match("^تغيير رسالة الاشتراك$") and SecondSudo(msg) then  
 DevAbs:setex(raqi.."textch:user"..msg.chat_id_.."" .. msg.sender_user_id_, 300, true)  
-local text = '🇸🇦︙حسنا ارسل رسالة الاشتراك الجديده'  
+local text = '🇸🇦︙حسنا ارسل رسالة الاشتراك الجديدة'  
 Dev_Abs(msg.chat_id_, msg.id_, 1,text, 1, 'md') 
 end
 if text == "حذف رسالة الاشتراك الاجباري" or text == "حذف رسالة الاشتراك" then  
