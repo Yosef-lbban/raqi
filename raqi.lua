@@ -404,7 +404,7 @@ DevAbs:set(raqi.."Abs:NameBot",JsonInfo.BotName)
 for IdGps,v in pairs(JsonInfo.GroupsList) do
 DevAbs:sadd(raqi.."Abs:Groups",IdGps) 
 DevAbs:set(raqi.."Abs:Lock:Bots"..IdGps,"del") DevAbs:hset(raqi.."Abs:Spam:Group:User"..IdGps ,"Spam:User","keed") 
-LockList ={'Abs:Lock:Links','Abs:Lock:Contact','Abs:Lock:Forwards','Abs:Lock:Videos','Abs:Lock:Gifs','Abs:Lock:EditMsgs','Abs:Lock:Stickers','Abs:Lock:Farsi','Abs:Lock:Spam','Abs:Lock:WebLinks','Abs:Lock:Photo'}
+LockList ={'Abs:lock_link','Abs:Lock:Contact','Abs:Lock:Forwards','Abs:Lock:Videos','Abs:Lock:Gifs','Abs:Lock:EditMsgs','Abs:Lock:Stickers','Abs:Lock:Farsi','Abs:Lock:Spam','Abs:Lock:WebLinks','Abs:Lock:Photo'}
 for i,Lock in pairs(LockList) do
 DevAbs:set(raqi..Lock..IdGps,true)
 end
@@ -2804,7 +2804,7 @@ DeleteMessage(msg.chat_id_,{[0] = msg.id_})
 end
 if msg.content_.caption_ then
 Filters(msg, msg.content_.caption_)
-if DevAbs:get(raqi..'Abs:Lock:Links'..msg.chat_id_) then
+if DevAbs:get(raqi..'Abs:lock_link'..msg.chat_id_) then
 if msg.content_.caption_:match("[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Mm][Ee]") or msg.content_.caption_:match("[Tt][Ll][Gg][Rr][Mm].[Mm][Ee]") or msg.content_.caption_:match("[Tt].[Mm][Ee]") or msg.content_.caption_:match("[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Dd][Oo][Gg]") then
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})
 end
@@ -2860,7 +2860,7 @@ DeleteMessage(msg.chat_id_,{[0] = msg.id_})
 end
 if msg.content_.caption_ then
 Filters(msg, msg.content_.caption_)
-if DevAbs:get(raqi..'Abs:Lock:Links'..msg.chat_id_) then
+if DevAbs:get(raqi..'Abs:lock_link'..msg.chat_id_) then
 if msg.content_.caption_:match("[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Mm][Ee]") or msg.content_.caption_:match("[Tt][Ll][Gg][Rr][Mm].[Mm][Ee]") or msg.content_.caption_:match("[Tt].[Mm][Ee]") or msg.content_.caption_:match("[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Dd][Oo][Gg]") then
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})
 end
@@ -3003,7 +3003,7 @@ DeleteMessage(msg.chat_id_,{[0] = msg.id_})
 end
 if msg.content_.caption_ then
 Filters(msg, msg.content_.caption_)
-if DevAbs:get(raqi..'Abs:Lock:Links'..msg.chat_id_) then
+if DevAbs:get(raqi..'Abs:lock_link'..msg.chat_id_) then
 if msg.content_.caption_:match("[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Mm][Ee]") or msg.content_.caption_:match("[Tt][Ll][Gg][Rr][Mm].[Mm][Ee]") or msg.content_.caption_:match("[Tt].[Mm][Ee]") or msg.content_.caption_:match("[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Dd][Oo][Gg]") then
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})
 end
@@ -3051,7 +3051,7 @@ DeleteMessage(msg.chat_id_,{[0] = msg.id_})
 end
 if msg.content_.caption_ then
 Filters(msg, msg.content_.caption_)
-if DevAbs:get(raqi..'Abs:Lock:Links'..msg.chat_id_) then
+if DevAbs:get(raqi..'Abs:lock_link'..msg.chat_id_) then
 if msg.content_.caption_:match("[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Mm][Ee]") or msg.content_.caption_:match("[Tt][Ll][Gg][Rr][Mm].[Mm][Ee]") or msg.content_.caption_:match("[Tt].[Mm][Ee]") or msg.content_.caption_:match("[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Dd][Oo][Gg]") then
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})
 end
@@ -3100,7 +3100,7 @@ return
 end
 if msg.content_.caption_ then
 Filters(msg, msg.content_.caption_)
-if DevAbs:get(raqi..'Abs:Lock:Links'..msg.chat_id_) then
+if DevAbs:get(raqi..'Abs:lock_link'..msg.chat_id_) then
 if msg.content_.caption_:match("[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Mm][Ee]") or msg.content_.caption_:match("[Tt][Ll][Gg][Rr][Mm].[Mm][Ee]") or msg.content_.caption_:match("[Tt].[Mm][Ee]") or msg.content_.caption_:match("[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Dd][Oo][Gg]") then
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})
 end
@@ -3148,7 +3148,7 @@ DeleteMessage(msg.chat_id_,{[0] = msg.id_})
 end
 if msg.content_.caption_ then
 Filters(msg, msg.content_.caption_)
-if DevAbs:get(raqi..'Abs:Lock:Links'..msg.chat_id_) then
+if DevAbs:get(raqi..'Abs:lock_link'..msg.chat_id_) then
 if msg.content_.caption_:match("[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Mm][Ee]") or msg.content_.caption_:match("[Tt][Ll][Gg][Rr][Mm].[Mm][Ee]") or msg.content_.caption_:match("[Tt].[Mm][Ee]") or msg.content_.caption_:match("[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Dd][Oo][Gg]") then
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})
 end
@@ -3196,7 +3196,7 @@ DeleteMessage(msg.chat_id_,{[0] = msg.id_})
 end
 if msg.content_.caption_ then
 Filters(msg, msg.content_.caption_)
-if DevAbs:get(raqi..'Abs:Lock:Links'..msg.chat_id_) then
+if DevAbs:get(raqi..'Abs:lock_link'..msg.chat_id_) then
 if msg.content_.caption_:match("[Hh][Tt][Tt][Pp][Ss]://") or msg.content_.caption_:match("[Hh][Tt][Tt][Pp]://") then
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})
 end
@@ -3241,7 +3241,7 @@ end
 end
 end
 if text:match("[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Mm][Ee]") or text:match("[Tt][Ll][Gg][Rr][Mm].[Mm][Ee]") or text:match("[Tt].[Mm][Ee]") or text:match("[Tt][Ee][Ll][Ee][Gg][Rr][Aa][Mm].[Dd][Oo][Gg]") then
-if DevAbs:get(raqi..'Abs:Lock:Links'..msg.chat_id_) then
+if DevAbs:get(raqi..'Abs:lock_link'..msg.chat_id_) then
 DeleteMessage(msg.chat_id_,{[0] = msg.id_})
 end
 end
@@ -8191,9 +8191,9 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙الصوت بالفعل مقفل �
 end
 end
 if LockText[2] == "الروابط" then
-if not DevAbs:get(raqi..'Abs:Lock:Links'..msg.chat_id_) then
+if not DevAbs:get(raqi..'Abs:lock_link'..msg.chat_id_) then
 ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم قفل الروابط")  
-DevAbs:set(raqi..'Abs:Lock:Links'..msg.chat_id_,true)
+DevAbs:set(raqi..'Abs:lock_link'..msg.chat_id_,true)
 else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙الروابط بالفعل مقفلة في المجموعة', 1, 'md')
 end
@@ -8389,9 +8389,9 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙الصوت بالفعل مفتوح
 end
 end
 if UnLockText[2] == "الروابط" then
-if DevAbs:get(raqi..'Abs:Lock:Links'..msg.chat_id_) then
+if DevAbs:get(raqi..'Abs:lock_link'..msg.chat_id_) then
 ReplyStatus(msg,msg.sender_user_id_,"ReplyBy","🇸🇦︙تم فتح الروابط")  
-DevAbs:del(raqi..'Abs:Lock:Links'..msg.chat_id_)
+DevAbs:del(raqi..'Abs:lock_link'..msg.chat_id_)
 else
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙الروابط بالفعل مفتوحة في المجموعة', 1, 'md')
 end
@@ -8484,7 +8484,7 @@ if not Constructor(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙للمنشئين فقط', 1, 'md')
 else
 DevAbs:set(raqi.."Abs:Lock:Bots"..msg.chat_id_,"del") DevAbs:hset(raqi.."Abs:Spam:Group:User"..msg.chat_id_ ,"Spam:User","keed") 
-LockList ={'Abs:Lock:Links','Abs:Lock:Contact','Abs:Lock:Forwards','Abs:Lock:Videos','Abs:Lock:Gifs','Abs:Lock:EditMsgs','Abs:Lock:Stickers','Abs:Lock:Farsi','Abs:Lock:Spam','Abs:Lock:WebLinks','Abs:Lock:Photo'}
+LockList ={'Abs:lock_link','Abs:Lock:Contact','Abs:Lock:Forwards','Abs:Lock:Videos','Abs:Lock:Gifs','Abs:Lock:EditMsgs','Abs:Lock:Stickers','Abs:Lock:Farsi','Abs:Lock:Spam','Abs:Lock:WebLinks','Abs:Lock:Photo'}
 for i,Lock in pairs(LockList) do
 DevAbs:set(raqi..Lock..msg.chat_id_,true)
 end
@@ -8496,7 +8496,7 @@ if not Constructor(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙للمنشئين فقط', 1, 'md')
 else
 DevAbs:hdel(raqi.."Abs:Spam:Group:User"..msg.chat_id_ ,"Spam:User") 
-UnLockList ={'Abs:Lock:Links','Abs:Lock:Contact','Abs:Lock:Forwards','Abs:Lock:Videos','Abs:Lock:Gifs','Abs:Lock:EditMsgs','Abs:Lock:Stickers','Abs:Lock:Farsi','Abs:Lock:Spam','Abs:Lock:WebLinks','Abs:Lock:Photo'}
+UnLockList ={'Abs:lock_link','Abs:Lock:Contact','Abs:Lock:Forwards','Abs:Lock:Videos','Abs:Lock:Gifs','Abs:Lock:EditMsgs','Abs:Lock:Stickers','Abs:Lock:Farsi','Abs:Lock:Spam','Abs:Lock:WebLinks','Abs:Lock:Photo'}
 for i,UnLock in pairs(UnLockList) do
 DevAbs:del(raqi..UnLock..msg.chat_id_)
 end
@@ -8510,7 +8510,7 @@ Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙للمنشئين فقط', 1, 'md')
 else
 DevAbs:del(raqi..'Abs:Lock:Fshar'..msg.chat_id_) DevAbs:del(raqi..'Abs:Lock:Taf'..msg.chat_id_) DevAbs:del(raqi..'Abs:Lock:Kfr'..msg.chat_id_) 
 DevAbs:set(raqi.."Abs:Lock:Bots"..msg.chat_id_,"del") DevAbs:hset(raqi.."Abs:Spam:Group:User"..msg.chat_id_ ,"Spam:User","keed") 
-LockList ={'Abs:Lock:EditMsgs','Abs:Lock:Farsi','Abs:Lock:TagServr','Abs:Lock:Inline','Abs:Lock:Photo','Abs:Lock:Spam','Abs:Lock:Videos','Abs:Lock:Gifs','Abs:Lock:Music','Abs:Lock:Voice','Abs:Lock:Links','Abs:Lock:Location','Abs:Lock:Tags','Abs:Lock:Stickers','Abs:Lock:Markdown','Abs:Lock:Forwards','Abs:Lock:Document','Abs:Lock:Contact','Abs:Lock:Hashtak','Abs:Lock:WebLinks'}
+LockList ={'Abs:Lock:EditMsgs','Abs:Lock:Farsi','Abs:Lock:TagServr','Abs:Lock:Inline','Abs:Lock:Photo','Abs:Lock:Spam','Abs:Lock:Videos','Abs:Lock:Gifs','Abs:Lock:Music','Abs:Lock:Voice','Abs:lock_link','Abs:Lock:Location','Abs:Lock:Tags','Abs:Lock:Stickers','Abs:Lock:Markdown','Abs:Lock:Forwards','Abs:Lock:Document','Abs:Lock:Contact','Abs:Lock:Hashtak','Abs:Lock:WebLinks'}
 for i,Lock in pairs(LockList) do
 DevAbs:set(raqi..Lock..msg.chat_id_,true)
 end
@@ -8522,7 +8522,7 @@ if not Constructor(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙للمنشئين فقط', 1, 'md')
 else
 DevAbs:set(raqi..'Abs:Lock:Fshar'..msg.chat_id_,true) DevAbs:set(raqi..'Abs:Lock:Taf'..msg.chat_id_,true) DevAbs:set(raqi..'Abs:Lock:Kfr'..msg.chat_id_,true) DevAbs:hdel(raqi.."Abs:Spam:Group:User"..msg.chat_id_ ,"Spam:User") 
-UnLockList ={'Abs:Lock:EditMsgs','Abs:Lock:Text','Abs:Lock:Arabic','Abs:Lock:English','Abs:Lock:Join','Abs:Lock:Bots','Abs:Lock:Farsi','Abs:Lock:FarsiBan','Abs:Lock:TagServr','Abs:Lock:Inline','Abs:Lock:Photo','Abs:Lock:Spam','Abs:Lock:Videos','Abs:Lock:Gifs','Abs:Lock:Music','Abs:Lock:Voice','Abs:Lock:Links','Abs:Lock:Location','Abs:Lock:Tags','Abs:Lock:Stickers','Abs:Lock:Markdown','Abs:Lock:Forwards','Abs:Lock:Document','Abs:Lock:Contact','Abs:Lock:Hashtak','Abs:Lock:WebLinks'}
+UnLockList ={'Abs:Lock:EditMsgs','Abs:Lock:Text','Abs:Lock:Arabic','Abs:Lock:English','Abs:Lock:Join','Abs:Lock:Bots','Abs:Lock:Farsi','Abs:Lock:FarsiBan','Abs:Lock:TagServr','Abs:Lock:Inline','Abs:Lock:Photo','Abs:Lock:Spam','Abs:Lock:Videos','Abs:Lock:Gifs','Abs:Lock:Music','Abs:Lock:Voice','Abs:lock_link','Abs:Lock:Location','Abs:Lock:Tags','Abs:Lock:Stickers','Abs:Lock:Markdown','Abs:Lock:Forwards','Abs:Lock:Document','Abs:Lock:Contact','Abs:Lock:Hashtak','Abs:Lock:WebLinks'}
 for i,UnLock in pairs(UnLockList) do
 DevAbs:del(raqi..UnLock..msg.chat_id_)
 end
@@ -8864,7 +8864,7 @@ if DevAbs:get(raqi..'Abs:Lock:Music'..msg.chat_id_) then mute_music = 'مقفل�
 if DevAbs:get(raqi..'Abs:Lock:Inline'..msg.chat_id_) then mute_in = 'مقفلة' else mute_in = 'مفتوحة' end
 if DevAbs:get(raqi..'Abs:Lock:Voice'..msg.chat_id_) then mute_voice = 'مقفلة' else mute_voice = 'مفتوحة' end
 if DevAbs:get(raqi..'Abs:Lock:EditMsgs'..msg.chat_id_) then mute_edit = 'مقفلة' else mute_edit = 'مفتوحة' end
-if DevAbs:get(raqi..'Abs:Lock:Links'..msg.chat_id_) then mute_links = 'مقفلة' else mute_links = 'مفتوحة' end
+if DevAbs:get(raqi..'Abs:lock_link'..msg.chat_id_) then mute_links = 'مقفلة' else mute_links = 'مفتوحة' end
 if DevAbs:get(raqi..'Abs:Lock:Pin'..msg.chat_id_) then lock_pin = 'مقفلة' else lock_pin = 'مفتوحة' end
 if DevAbs:get(raqi..'Abs:Lock:Stickers'..msg.chat_id_) then lock_sticker = 'مقفلة' else lock_sticker = 'مفتوحة' end
 if DevAbs:get(raqi..'Abs:Lock:TagServr'..msg.chat_id_) then lock_tgservice = 'مقفلة' else lock_tgservice = 'مفتوحة' end
@@ -9236,7 +9236,7 @@ end
 --     Source dev yousef     --
 if Admin(msg) then
 if DevAbs:get(raqi..'Abs:LockSettings'..msg.chat_id_) then 
-if text == "الروابط" then if DevAbs:get(raqi..'Abs:Lock:Links'..msg.chat_id_) then mute_links = 'مقفلة' else mute_links = 'مفتوحة' end local devyousef = "\n" .."🇸🇦︙الروابط -› "..mute_links.."\n" Dev_Abs(msg.chat_id_, msg.id_, 1, devyousef, 1, 'md') end
+if text == "الروابط" then if DevAbs:get(raqi..'Abs:lock_link'..msg.chat_id_) then mute_links = 'مقفلة' else mute_links = 'مفتوحة' end local devyousef = "\n" .."🇸🇦︙الروابط -› "..mute_links.."\n" Dev_Abs(msg.chat_id_, msg.id_, 1, devyousef, 1, 'md') end
 if text == "المعرف" or text == "المعرفات" then if DevAbs:get(raqi..'Abs:Lock:Tags'..msg.chat_id_) then lock_tag = 'مقفوله' else lock_tag = 'مفتوحة' end local devyousef = "\n" .."🇸🇦︙المعرف -› "..lock_tag.."\n" Dev_Abs(msg.chat_id_, msg.id_, 1, devyousef, 1, 'md') end
 if text == "المتحركة" or text == "الملصقات المتحركة" then if DevAbs:get(raqi..'Abs:Lock:Gifs'..msg.chat_id_) then mute_gifs = 'مقفوله' else mute_gifs = 'مفتوحة' end local devyousef = "\n" .."🇸🇦︙المتحركة -› "..mute_gifs.."\n" Dev_Abs(msg.chat_id_, msg.id_, 1, devyousef, 1, 'md') end
 if text == "الملصقات" then if DevAbs:get(raqi..'Abs:Lock:Stickers'..msg.chat_id_) then lock_sticker = 'مقفوله' else lock_sticker = 'مفتوحة' end local devyousef = "\n" .."🇸🇦︙الملصقات -› "..lock_sticker.."\n" Dev_Abs(msg.chat_id_, msg.id_, 1, devyousef, 1, 'md') end
