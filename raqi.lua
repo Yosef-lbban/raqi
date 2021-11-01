@@ -8479,7 +8479,7 @@ end
 end
 end
 --     Source dev yousef     --
-if text and text:match("^قفلالتفليش$") or text and text:match("^تفعيل الحماية القصوى$") then
+if text and text:match("^قفل لتفليش$") or text and text:match("^تفعيل الحماية القصوى$") then
 if not Constructor(msg) then
 Dev_Abs(msg.chat_id_, msg.id_, 1, '🇸🇦︙للمنشئين فقط', 1, 'md')
 else
@@ -9286,7 +9286,7 @@ absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(m
 DevAbs:set(raqi..'Abs:Lock:Stupid'..msg.chat_id_,true)
 end
 --     Source dev yousef     --
-if text and (text == 'تعطيل التحقق' or text == 'قفلالتحقق' or text == 'تعطيل تنبيه الدخول') and Manager(msg) and ChCheck(msg) then 
+if text and (text == 'تعطيل التحقق' or text == 'قفل لتحقق' or text == 'تعطيل تنبيه الدخول') and Manager(msg) and ChCheck(msg) then 
 local devyousef = '🇸🇦︙اهلا عزيزي -› '..AbsRank(msg)..' \n🇸🇦︙تم تعطيل التحقق بنجاح'
 absmoned(msg.chat_id_, msg.sender_user_id_, msg.id_, devyousef, 14, string.len(msg.sender_user_id_))
 DevAbs:del(raqi..'Abs:Lock:Robot'..msg.chat_id_)
