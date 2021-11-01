@@ -4452,7 +4452,7 @@ end
 if text == "السورس" or text == "سورس" then
 Text = [[
 Welcome To Source
-𓄇[˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🦇.](https://t.me/yousef_labban)
+🇸🇦[˛ 𝒅𝒆𝒇 𝒚𝒐𝒖𝒔𝒆𝒇  🇸🇦](https://t.me/yousef_labban)
 ]]
 keyboard = {} 
 keyboard.inline_keyboard = {
