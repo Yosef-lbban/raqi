@@ -824,11 +824,11 @@ MsgText = 'يجدح جدح'
 elseif tonumber(msgs) < 7000 then 
 MsgText = 'خيالي' 
 elseif tonumber(msgs) < 8000 then 
-MsgText = 'رب التفاعل' 
+MsgText = 'أنت على القمة' 
 elseif tonumber(msgs) < 9000 then 
-MsgText = 'كافر بالتفاعل' 
+MsgText = 'فوق القمة' 
 elseif tonumber(msgs) < 10000000000 then 
-MsgText = "معلك لربك" 
+MsgText = "وصلت السحاب" 
 end 
 return MsgText
 end
